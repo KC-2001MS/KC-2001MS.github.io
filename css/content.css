@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+table {
+    width: 220px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+h2:before {
+    content: "";
+    padding-right: 10px;
+}
+
+h2.n1:before {
+    border-left: 7px solid var(--accentColor1);
+}
+
+h2.n2:before {
+    border-left: 7px solid var(--accentColor2);
+}
+
+h2.n3:before {
+    border-left: 7px solid var(--accentColor3);
+}
+
+h2.n4:before {
+    border-left: 7px solid var(--accentColor4);
+}
+
+h2.n5:before {
+    border-left: 7px solid var(--accentColor5);
+}
+
+h2.n6:before {
+    border-left: 7px solid var(--accentColor6);
+}
+
+.h2card > p,.h2card > div {
+    margin: 5px;
+}
+
+.h3card > p,.h3card > div {
+    margin: 5px;
+}
+
+.h4card > p,.h4card > div {
+    margin: 5px var(--h3size);
+}
+
+th.os {
+    background-color: var(--accentColor1);
+    width: 150px;
+}
+
+.vr {
+    background-color: var(--accentColor3);
+    width: 150px;
+}
+
+.osItem {
+    width: 150px;
+}
+
+.vrItem {
+    width: 150px;
+}
