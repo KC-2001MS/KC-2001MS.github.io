@@ -35,21 +35,29 @@ h2.n6:before {
     border-left: 7px solid var(--accentColor6);
 }
 
-.h2card > p,.h2card > div {
+.h2card>p,
+.h2card>div {
     margin: 5px;
 }
 
-.h3card > p,.h3card > div {
+.h3card>p,
+.h3card>div {
     margin: 5px;
 }
 
-.h4card > p,.h4card > div {
+.h4card>p,
+.h4card>div {
     margin: 5px var(--h3size);
 }
 
+table {
+        width: 280px;
+    }
+    
+
 th.os {
     background-color: var(--accentColor1);
-    width: 150px;
+    width: 130px;
 }
 
 .vr {
@@ -58,7 +66,7 @@ th.os {
 }
 
 .osItem {
-    width: 150px;
+    width: 130px;
 }
 
 .vrItem {

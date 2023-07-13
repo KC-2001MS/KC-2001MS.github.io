@@ -1,5 +1,40 @@
 @charset "utf-8";
+@import url("var.css");
 
 .plice {
     color: rgb(255, 80, 80);
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.appInfoButtom {
+    height: 60px;
+}
+
+.appInfoTop {
+    height: 100px;
+    margin: 10px;
+}
+
+.buttonPadding {
+    margin: 10px;
+}
+
+.appIcon {
+    height: 100px;
+}
+
+.appTitle {
+    margin: calc((100px - var(--h4size))/2) 0;
+    vertical-align: middle;
 }
