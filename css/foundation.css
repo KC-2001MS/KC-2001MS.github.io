@@ -53,10 +53,6 @@ p {
     font-size: var(--psize);
 }
 
-h5 {
-    font-size: var(--h5size);
-}
-
 #backgroundImage {
     width: 100%;
     height: 100vh;
@@ -67,6 +63,16 @@ h5 {
 #goal {
     padding: 1em;
     
+}
+
+#copyright {
+    display: block;
+    font-size: var(--h5size);
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 @media (max-width: 1080px) and (orientation: portrait) {
