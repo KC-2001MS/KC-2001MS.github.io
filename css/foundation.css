@@ -70,13 +70,13 @@ h5 {
     
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
     #backgroundImage {
-        background-image: url("image/出雲大社1080.jpg");
+        background-image: url("image/出雲大社1440.jpg");
     }
 }
 
-@media (min-width: 1080px) and (max-width: 3456px) {
+@media (min-width: 1440px) and (max-width: 3456px) {
     #backgroundImage {
         background-image: image-set(url(image/出雲大社1920.jpg) 1x, url(image/出雲大社3456.jpg) 2x);
     }
