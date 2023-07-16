@@ -71,37 +71,37 @@ h5 {
 
 @media (max-width: 1080px) and (orientation: portrait) {
     #backgroundImage {
-        background-image: url("image/出雲大社607P.jpg");
+        background-image: url("image/出雲大社607P.avif");
     }
 }
 
 @media (max-width: 1080px) and (orientation: landscape) {
     #backgroundImage {
-        background-image: url("image/出雲大社1080.jpg");
+        background-image: url("image/出雲大社1080.avif");
     }
 }
 
 @media (min-width: 1080px) and (max-width: 1620px) and (orientation: portrait) {
     #backgroundImage {
-        background-image: image-set(url(image/出雲大社1080P.jpg) 1x, url(image/出雲大社1440P.jpg) 2x);
+        background-image: image-set(url(image/出雲大社1080P.avif) 1x, url(image/出雲大社1440P.avif) 2x);
     }
 }
 
 @media (min-width: 1080px) and (max-width: 1620px) and (orientation: landscape) {
     #backgroundImage {
-        background-image: image-set(url(image/出雲大社1920.jpg) 1x, url(image/出雲大社2160.jpg) 2x);
+        background-image: image-set(url(image/出雲大社1920.avif) 1x, url(image/出雲大社2160.avif) 2x);
     }
 }
 
 @media (min-width: 1620px) and (max-width: 3456px) {
     #backgroundImage {
-        background-image: image-set(url(image/出雲大社1920.jpg) 1x, url(image/出雲大社3456.jpg) 2x);
+        background-image: image-set(url(image/出雲大社1920.avif) 1x, url(image/出雲大社3456.avif) 2x);
     }
 }
 
 @media (min-width: 3456px) {
     #backgroundImage {
-        background-image: image-set(url(image/出雲大社3840.jpg) 1x, url(image/出雲大社5120.jpg) 2x);
+        background-image: image-set(url(image/出雲大社3840.avif) 1x, url(image/出雲大社5120.avif) 2x);
     }
 }
 
