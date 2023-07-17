@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: -apple-system, sans-serif;
 }
 
 header,
@@ -65,8 +65,17 @@ p {
 }
 
 #goal {
-    padding: 1em;
-    
+    padding: 0 3em;
+}
+
+#goalTitle {
+    font-size: var(--h1size);
+    text-shadow: #404040 1px 0 10px;
+}
+
+#goalSubtitle {
+    font-size: var(--h3size);
+    text-shadow: #404040 1px 0 5px;
 }
 
 #copyright {

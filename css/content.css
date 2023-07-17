@@ -45,8 +45,12 @@ h2.n6:before {
     margin: 5px;
 }
 
-.h4card>p,
 .h4card>div {
+    margin: 0;
+}
+
+.h4card>table,
+.h4card>p {
     margin: 5px var(--h3size);
 }
 

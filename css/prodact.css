@@ -22,7 +22,7 @@
 
 .appInfoTop {
     height: 100px;
-    margin: 10px;
+    margin: 0;
 }
 
 .buttonPadding {
@@ -36,4 +36,18 @@
 .appTitle {
     margin: calc((100px - var(--h4size))/2) 0;
     vertical-align: middle;
+}
+
+iframe {
+    display: block;
+}
+
+.pToTitle {
+    font-size: var(--h4size);
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
