@@ -70,12 +70,12 @@ p {
 
 #goalTitle {
     font-size: var(--h1size);
-    text-shadow: #404040 1px 0 10px;
+    text-shadow: #202020 1px 0 10px;
 }
 
 #goalSubtitle {
     font-size: var(--h3size);
-    text-shadow: #404040 1px 0 5px;
+    text-shadow: #202020 1px 0 5px;
 }
 
 #copyright {

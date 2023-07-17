@@ -40,6 +40,9 @@
 
 iframe {
     display: block;
+    width: 100%; /* 任意の横幅を指定 */
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 .pToTitle {
