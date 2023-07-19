@@ -55,9 +55,9 @@ h2.n6:before {
 }
 
 table {
-        width: 280px;
-    }
-    
+    width: 280px;
+}
+
 
 th.os {
     background-color: var(--accentColor1);

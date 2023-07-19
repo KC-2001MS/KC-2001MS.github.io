@@ -8,7 +8,6 @@ body {
 
 header,
 footer {
-    padding: 5px;
     text-align: center;
 }
 
@@ -19,13 +18,53 @@ main {
 
 ul.tabContainaer {
     padding: 0;
-    margin:0 auto
+    margin: 0 auto
 }
 
 li.tab {
     display: inline-block;
-    margin: 5px;
+    margin: 10px 5px;
     width: 85px;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width: 85px;
+}
+
+.underline::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 3px;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.underline:hover::after {
+    transform: scale(1, 1);
+}
+
+#language {
+    padding: 5px;
+    background-color: rgb(20,20,20,.25);
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    color: var(--defaultWhite);
+}
+
+#languageItem {
+    color: var(--defaultWhite);
+}
+
+#languageItem:hover {
+    text-decoration: underline;
 }
 
 a {
@@ -57,7 +96,16 @@ p {
     font-size: var(--psize);
 }
 
+hr {
+    margin: 3em 0 10px 0;
+}
+
+.caption {
+    font-size: 10px;
+}
+
 #backgroundImage {
+    position: relative;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -172,6 +220,10 @@ p {
     #goal {
         color: var(--defaultWhite);
     }
+
+    .underline::after {
+        background: var(--defaultBlack);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -207,5 +259,9 @@ p {
 
     #goal {
         color: var(--defaultWhite);
+    }
+
+    .underline::after {
+        background: var(--defaultWhite);
     }
 }
