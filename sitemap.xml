@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.kc-2001ms.github.io/</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/”/>
+	</url>
+	<url>
+		<loc>https://www.kc-2001ms.github.io/prodact.html</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/prodact.html”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/prodact.html”/>
+	</url>
+	<url>
+		<loc>https://www.kc-2001ms.github.io/contact.html</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/contact.html”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/contact.html”/>
+	</url>
+</urlset>
