@@ -25,12 +25,26 @@
     margin: 0;
 }
 
+.flex {
+    display:flex;
+}
+
+.summary {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .buttonPadding {
     margin: 10px;
 }
 
 .appIcon {
     height: 100px;
+}
+
+.pMove {
+    display: inline-block;
 }
 
 .appTitle {
@@ -49,12 +63,20 @@ iframe {
     iframe {
         width: 100%;
     }
+
+    .largeAppIcon {
+        width: 100%;
+    }
 }
 
 @media (min-width: 560px) {
     iframe {
         width: 560px;
         height: 315px;
+    }
+
+    .largeAppIcon {
+        height: 250px;
     }
 }
 

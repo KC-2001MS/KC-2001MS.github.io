@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-	<url>
-		<loc>https://www.kc-2001ms.github.io/contact.html</loc>
-		<lastmod>NaN-NaN-NaN</lastmod>
-	</url>
-	<url>
-		<loc>https://www.kc-2001ms.github.io/prodact.html</loc>
-		<lastmod>2023-07-20</lastmod>
-	</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.kc-2001ms.github.io/</loc>
-		<lastmod>NaN-NaN-NaN</lastmod>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/”/>
+	</url>
+	<url>
+		<loc>https://www.kc-2001ms.github.io/product.html</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/product.html”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/product.html”/>
+	</url>
+	<url>
+		<loc>https://www.kc-2001ms.github.io/contact.html</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/contact.html”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/contact.html”/>
+	</url>
+		<url>
+		<loc>https://www.kc-2001ms.github.io/product/uncheckx.html</loc>
+		<xhtml:link rel=”alternate” hreflang=”en” href=”https://www.kc-2001ms.github.io/en/product/uncheckx.html”/>
+		<xhtml:link rel=”alternate” hreflang=”ja” href=” https://www.kc-2001ms.github.io/product/uncheckx.html”/>
 	</url>
 </urlset>
