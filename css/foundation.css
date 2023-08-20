@@ -52,7 +52,7 @@ li.tab {
 
 #language {
     padding: 5px;
-    background-color: rgb(20,20,20,.25);
+    background-color: rgb(20, 20, 20, .25);
     position: absolute;
     right: 15px;
     bottom: 5px;
@@ -224,6 +224,10 @@ hr {
     .underline::after {
         background: var(--defaultBlack);
     }
+
+    .isDarkMode {
+        display: none;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -263,5 +267,9 @@ hr {
 
     .underline::after {
         background: var(--defaultWhite);
+    }
+
+    .isLightMode {
+        display: none;
     }
 }

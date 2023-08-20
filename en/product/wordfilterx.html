@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon" href="../../css/image/apple-touch-icon.png" />
     <meta name="format-detection" content="email=no,telephone=no,address=no">
     <meta name="google" content="nositelinkssearchbox">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' platform.twitter.com">
     <meta name="language" content="Japanese">
     <meta http-equiv="content-language" content="en">
     <meta name="author" content="Keisuke Chinone">
@@ -50,7 +50,7 @@
 
 <body>
     <header id="header">
-        <a class="header" href="./index.html">
+        <a class="header" href="../index.html">
             <h1 class="header">Iroiro's portfolio</h1>
         </a>
         <ul class="tabContainaer">
@@ -75,16 +75,23 @@
                     </a>
                     <div class="right summary">
                         <p>
-                            <strong>Word Filter X</strong> is an application that hides words you don't like on Safari websites, allowing you to put your own mind at ease by hiding the words you don't like on Safari.
-                            This application is a derivative version of the browser extension and iOS application <a href="https://bondavi.jp">"Hiyoko Filter(Support for Japanese language only)"</a> with additional features such as the ability to synchronize settings and change the words to be replaced.
+                            <strong>Word Filter X</strong> is an application that hides words you don't like on Safari
+                            websites, allowing you to put your own mind at ease by hiding the words you don't like on
+                            Safari.
+                            This application is a derivative version of the browser extension and iOS application <a
+                                href="https://bondavi.jp">"Hiyoko Filter(Support for Japanese language only)"</a> with
+                            additional features such as the ability to synchronize settings and change the words to be
+                            replaced.
                         </p>
                     </div>
                 </div>
                 <div class="clear">
                     <p>This extension has the following features</p>
                     <ul>
-                        <li>iCloud synchronization is supported to synchronize settings such as words to block and sites not to filter.</li>
-                        <li>It is possible to set which words to block, which words to replace, and which text color to display.</li>
+                        <li>iCloud synchronization is supported to synchronize settings such as words to block and sites
+                            not to filter.</li>
+                        <li>It is possible to set which words to block, which words to replace, and which text color to
+                            display.</li>
                         <li>Settings can be shared via json files.</li>
                         <li>It is available not only in Japanese, but also in English and French.</li>
                     </ul>
@@ -110,11 +117,33 @@
                     <p>Privacy Policy</p>
                     <p>For more information, please click <a href="../privacy.html">here</a>.</p>
                     <p>Notice</p>
-                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today I am very pleased to announce that I am deploying the following Safari extensions for visionOS.<br>・Uncheck X<br>・Death To _blank<br>・Word Filter X<br><br>They have now been tested on actual devices and will be available for download from the Vision Pro release.</p>&mdash; いろいろ(Iroiro) (@IroIro1234work) <a href="https://twitter.com/IroIro1234work/status/1691774310145544264?ref_src=twsrc%5Etfw">August 16, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div class="isLightMode">
+                        <blockquote class="twitter-tweet" data-lang="en">
+                            <p lang="en" dir="ltr">Today I am very pleased to announce that I am deploying the following
+                                Safari extensions for visionOS.<br>・Uncheck X<br>・Death To _blank<br>・Word Filter
+                                X<br><br>They have now been tested on actual devices and will be available for download
+                                from the Vision Pro release.</p>&mdash; いろいろ(Iroiro) (@IroIro1234work) <a
+                                href="https://twitter.com/IroIro1234work/status/1691774310145544264?ref_src=twsrc%5Etfw">August
+                                16, 2023</a>
+                        </blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    <div class="isDarkMode">
+                        <blockquote class="twitter-tweet" data-theme="dark">
+                            <p lang="en" dir="ltr">Today I am very pleased to announce that I am deploying the following
+                                Safari extensions for visionOS.<br>・Uncheck X<br>・Death To _blank<br>・Word Filter
+                                X<br><br>They have now been tested on actual devices and will be available for download
+                                from the Vision Pro release.</p>&mdash; いろいろ(Iroiro) (@IroIro1234work) <a
+                                href="https://twitter.com/IroIro1234work/status/1691774310145544264?ref_src=twsrc%5Etfw">August
+                                16, 2023</a>
+                        </blockquote>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
                 </div>
                 <div class="h3card">
                     <h3>How to Activate and Configure</h3>
-                    <p>See <a href="./tips/safari_settings.html">how to activate and configure Safari extensions</a>.</p>
+                    <p>See <a href="./tips/safari_settings.html">how to activate and configure Safari extensions</a>.
+                    </p>
                     <div class="h4card">
                         <h4>1. Add words to be blocked</h4>
                         <p>
@@ -131,14 +160,17 @@
                 </div>
                 <div class="h3card">
                     <h3>Toolbar Buttons</h3>
-                    <p>You can turn the Word Filter X extension on and off by clicking or tapping the button on the toolbar. You can also use the keyboard shortcut ⌘⇧E to do the same.</p>
+                    <p>You can turn the Word Filter X extension on and off by clicking or tapping the button on the
+                        toolbar. You can also use the keyboard shortcut ⌘⇧E to do the same.</p>
                     <div class="h4card">
                         <h4>Click the icon on the toolbar</h4>
-                        <p>There is an icon on the Safari toolbar. You can turn this extension on and off by clicking on this icon.</p>
+                        <p>There is an icon on the Safari toolbar. You can turn this extension on and off by clicking on
+                            this icon.</p>
                     </div>
                     <div class="h4card">
                         <h4>Toolbar button display and extension status</h4>
-                        <p>If the extension is on, a filter icon will be displayed. If the extension is off, you will see an icon with a slash added.</p>
+                        <p>If the extension is on, a filter icon will be displayed. If the extension is off, you will
+                            see an icon with a slash added.</p>
                     </div>
                 </div>
                 <div class="h3card">
@@ -164,7 +196,8 @@
                     <div class="h4card">
                         <h4>Add Word Filter X action to shortcut app</h4>
                         <p>1. Add a new shortcut from the shortcut application.</p>
-                        <p>2. From Actions in Word Filter X, select the action you want to add to the shortcut and add it by drag-and-drop.</p>
+                        <p>2. From Actions in Word Filter X, select the action you want to add to the shortcut and add
+                            it by drag-and-drop.</p>
                         <p>3. If the action has a setting item, tap to select the item.</p>
                     </div>
                 </div>
