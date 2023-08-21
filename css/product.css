@@ -38,11 +38,12 @@
 .buttonPadding {
     margin: 10px;
 }
-
+/*
 .appIcon {
     height: 100px;
+    width: 100px;
 }
-
+*/
 .pMove {
     display: inline-block;
 }
