@@ -1,0 +1,14 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: *
+Disallow: /prodact/
+Disallow: /prodact.html
+Disallow: /en/prodact/
+Disallow: /en/prodact.html
+Allow: /
+
+Sitemap: https://kc-2001ms.github.io/sitemap.xml
