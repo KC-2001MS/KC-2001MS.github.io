@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: https://ogp.me/ns#">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L32Y5LGJEB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-L32Y5LGJEB');
+    </script>
+    <!-- Preconnect to Domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <!-- Info -->
+    <meta charset="UTF-8">
+    <title>What is the MPSZ format for representing mahjong tiles?</title>
+    <meta name="description" content="This section explains how the MPSZ format is used to represent mahjong tiles.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Uncheck, Safari">
+    <meta name="date" content="2023-10-27">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="What is the MPSZ format for representing mahjong tiles?" />
+    <meta property="og:description" content="This section explains how the MPSZ format is used to represent mahjong tiles." />
+    <meta property="og:site_name" content="What is the MPSZ format for representing mahjong tiles?" />
+    <meta property="og:image" content="https://kc-2001ms.github.io/css/image/出雲大社1080.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@IroIro1234work" />
+    <link rel="icon" href="../../../css/image/favicon.ico" />
+    <link rel="apple-touch-icon" href="../../../css/image/apple-touch-icon.png" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+    <meta name="language" content="Japanese">
+    <meta http-equiv="content-language" content="en">
+    <meta name="author" content="Keisuke Chinone">
+    <meta name="copyright" content="© 2023 Keisuke Chinone">
+    <link rel="canonical" href="https://kc-2001ms.github.io/en/product/deathto_blank.html">
+    <link href="../../../css/var.css" rel="stylesheet">
+    <link href="../../../css/foundation.css" rel="stylesheet">
+    <link href="../../../css/product.css" rel="stylesheet">
+    <link href="../../../css/content.css" rel="stylesheet">
+    <link rel="alternate" hreflang="en" href="https://kc-2001ms.github.io/en/product/tips/mpsz.html">
+    <link rel="alternate" hreflang="ja" href="https://kc-2001ms.github.io/product/tips/mpsz.html">
+    <link rel="alternate" hreflang="x-default" href="https://kc-2001ms.github.io/en/product/tips/mpsz.html">
+    <meta http-equiv='x-dns-prefetch-control' content='on'>
+    <meta http-equiv="Expires" content="604800">
+    <link rel="me" href="https://mastodon.social/@Iroiro">
+</head>
+
+<body>
+    <header id="header">
+        <a class="header" href="../../index.html">
+            <h1 class="header">Iroiro's portfolio</h1>
+        </a>
+        <ul class="tabContainaer">
+            <li class="tab underline">
+                <a class="header underline" href="../../index.html">Home</a>
+            </li>
+            <li class="tab underline">
+                <a class="header underline" href="../../product.html">Contents</a>
+            </li>
+            <li class="tab underline">
+                <a class="header underline" href="../../contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div id="maincard">
+            <div class="h2card">
+                <h2 class="n5">MPSZ format for representing mahjong tiles</h2>
+                <div>
+                    The MPSZ format is the standard format used in Japanese mahjong to represent the appearance of tiles. The following rules are used to represent the tiles.
+                    <ul>
+                        <li>Tiles are represented by MPSZ style tile symbols, which are a combination of tile numbers (0~9) and tile type symbols (m,p,s,z).</li>
+                        <p>Example）1m = 🀇</p>
+                        <li>Any number of MPSZ format tile symbols can be lined up</li>
+                        <p>Example）1m2m3m1s2s3s7s8s9s1p2p3p9p9p</p>
+                        <li>When followed by MPSZ style tile symbols of the same tile type, all the tile type symbols of the same type on the left side can be omitted</li>
+                        <p>Example）1z1m2m3m1z -> 1z123m1z</p>
+                    </ul>
+                    The MPSZ format tile symbol assignments can be found below.
+                </div>
+                <div>
+                    <h3>MPSZ format tile symbols and tile assignments</h3>
+                    <p>The tiles are represented according to the following assignments.</p>
+                    <table>
+                        <tr>
+                            <th>MPSZ format tile symbol</th>
+                            <th>Assignment</th>
+                        </tr>
+                        <tr>
+                            <td>0m</td>
+                            <td>🀋</td>
+                        </tr>
+                        <tr>
+                            <td>1m</td>
+                            <td>🀇</td>
+                        </tr>
+                        <tr>
+                            <td>2m</td>
+                            <td>🀈</td>
+                        </tr>
+                        <tr>
+                            <td>3m</td>
+                            <td>🀉</td>
+                        </tr>
+                        <tr>
+                            <td>4m</td>
+                            <td>🀊</td>
+                        </tr>
+                        <tr>
+                            <td>5m</td>
+                            <td>🀋</td>
+                        </tr>
+                        <tr>
+                            <td>6m</td>
+                            <td>🀌</td>
+                        </tr>
+                        <tr>
+                            <td>7m</td>
+                            <td>🀍</td>
+                        </tr>
+                        <tr>
+                            <td>8m</td>
+                            <td>🀎</td>
+                        </tr>
+                        <tr>
+                            <td>9m</td>
+                            <td>🀏</td>
+                        </tr>
+                        <tr>
+                            <td>0p</td>
+                            <td>🀝</td>
+                        </tr>
+                        <tr>
+                            <td>1p</td>
+                            <td>🀙</td>
+                        </tr>
+                        <tr>
+                            <td>2p</td>
+                            <td>🀚</td>
+                        </tr>
+                        <tr>
+                            <td>3p</td>
+                            <td>🀛</td>
+                        </tr>
+                        <tr>
+                            <td>4p</td>
+                            <td>🀜</td>
+                        </tr>
+                        <tr>
+                            <td>5p</td>
+                            <td>🀝</td>
+                        </tr>
+                        <tr>
+                            <td>6p</td>
+                            <td>🀞</td>
+                        </tr>
+                        <tr>
+                            <td>7p</td>
+                            <td>🀟</td>
+                        </tr>
+                        <tr>
+                            <td>8p</td>
+                            <td>🀠</td>
+                        </tr>
+                        <tr>
+                            <td>9p</td>
+                            <td>🀡</td>
+                        </tr>
+                        <tr>
+                            <td>0s</td>
+                            <td>🀔</td>
+                        </tr>
+                        <tr>
+                            <td>1s</td>
+                            <td>🀐</td>
+                        </tr>
+                        <tr>
+                            <td>2s</td>
+                            <td>🀑</td>
+                        </tr>
+                        <tr>
+                            <td>3s</td>
+                            <td>🀒</td>
+                        </tr>
+                        <tr>
+                            <td>4s</td>
+                            <td>🀓</td>
+                        </tr>
+                        <tr>
+                            <td>5s</td>
+                            <td>🀔</td>
+                        </tr>
+                        <tr>
+                            <td>6s</td>
+                            <td>🀕</td>
+                        </tr>
+                        <tr>
+                            <td>7s</td>
+                            <td>🀖</td>
+                        </tr>
+                        <tr>
+                            <td>8s</td>
+                            <td>🀗</td>
+                        </tr>
+                        <tr>
+                            <td>9s</td>
+                            <td>🀘</td>
+                        </tr>
+                        <tr>
+                            <td>1z</td>
+                            <td>🀀</td>
+                        </tr>
+                        <tr>
+                            <td>2z</td>
+                            <td>🀁</td>
+                        </tr>
+                        <tr>
+                            <td>3z</td>
+                            <td>🀂</td>
+                        </tr>
+                        <tr>
+                            <td>4z</td>
+                            <td>🀃</td>
+                        </tr>
+                        <tr>
+                            <td>5z</td>
+                            <td>🀆</td>
+                        </tr>
+                        <tr>
+                            <td>6z</td>
+                            <td>🀅</td>
+                        </tr>
+                        <tr>
+                            <td>7z</td>
+                            <td>🀄︎</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>MPSZ format to tile conversion tool</h3>
+                    <div class="h4card">
+                        <h4><a href="https://apps.apple.com/app/mahjong-tile-converter/id6470128646">Mahjong Tile Converter</a></h4>
+                        <p>This is a macOS-only menu bar application for restoring graphical tiles from MPSZ format using Unicode, which can be freely copied and pasted and the history of created tiles can be checked. It is also possible to convert to any notation other than MPSZ format.</p>    
+                        </div>
+                    <div class="h4card">
+                    <h4><a href="https://mahjong.org/program_018/">[Mahjong] Creating a program to restore MPSZ format tile symbols to tile form using Javascript.</a></h4>
+                    <p>"[Mahjong] Creating a Javascript Program to Restore MPSZ Tile Symbols to Tile Forms" is a web application that restores graphical tile forms from MPSZ format.</p>    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a class="header" href="../../contact.html">
+            <p id="copyright">© 2023 Keisuke Chinone</p>
+        </a>
+    </footer>
+</body>
+
+</html>
