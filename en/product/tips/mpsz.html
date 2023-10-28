@@ -19,7 +19,7 @@
     <meta name="description" content="This section explains how the MPSZ format is used to represent mahjong tiles.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Mahjong, mpsz">
-    <meta name="date" content="2023-10-27">
+    <meta name="date" content="2023-10-28">
     <meta property="og:type" content="article" />
     <meta property="og:title" content="What is the MPSZ format for representing mahjong tiles?" />
     <meta property="og:description" content="This section explains how the MPSZ format is used to represent mahjong tiles." />
@@ -79,6 +79,9 @@
                         <p>Example）1m2m3m1s2s3s7s8s9s1p2p3p9p9p</p>
                         <li>When followed by MPSZ style tile symbols of the same tile type, all the tile type symbols of the same type on the left side can be omitted</li>
                         <p>Example）1z1m2m3m1z -> 1z123m1z</p>
+                        <li>Red tiles can be represented by adding an "r" in front of the MPSZ format tile symbol</li>
+                        <p>例）r5m = <span style="color:red">🀋</span></p>
+                        <li>There exists an MPSZ-style tile symbol - which can be represented by a single letter and represents the back side of the tile 🀫.</li>
                     </ul>
                     The MPSZ format tile symbol assignments can be found below.
                 </div>
@@ -209,6 +212,10 @@
                         <tr>
                             <td>9s</td>
                             <td>🀘</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>🀫</td>
                         </tr>
                         <tr>
                             <td>1z</td>

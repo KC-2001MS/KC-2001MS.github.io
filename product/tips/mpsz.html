@@ -19,7 +19,7 @@
     <meta name="description" content="麻雀の牌姿を表現するMPSZ形式とは、どのような表記方法なのか説明します。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="麻雀, mpsz">
-    <meta name="date" content="2023-10-27">
+    <meta name="date" content="2023-10-28">
     <meta property="og:type" content="article" />
     <meta property="og:title" content="麻雀の牌姿を表現するMPSZ形式とは" />
     <meta property="og:description" content="麻雀の牌姿を表現するMPSZ形式とは、どのような表記方法なのか説明します。" />
@@ -75,10 +75,13 @@
                     <ul>
                         <li>牌番号(0~9)と牌種記号(m,p,s,z)を組み合わせたMPSZ形式牌記号で牌を表現します</li>
                         <p>例）1m = 🀇</p>
-                        <li>任意の個数だけMPSZ形式牌記号を並べることができます</li>
+                        <li>任意の個数だけMPSZ形式牌記号を並べます</li>
                         <p>例）1m2m3m1s2s3s7s8s9s1p2p3p9p9p</p>
                         <li>同じ牌種記号のMPSZ形式牌記号が続く場合、左側のすべての同種の牌種記号を省略できます</li>
                         <p>例）1z1m2m3m1z -> 1z123m1z</p>
+                        <li>MPSZ形式牌記号の前にrをつけることで、赤牌を表現できます</li>
+                        <p>例）r5m = <span style="color:red">🀋</span></p>
+                        <li>1文字で表せるMPSZ形式牌記号-が存在し、牌の裏側🀫を表します</li>
                     </ul>
                     MPSZ形式牌記号の割り当てについては、下記で確認できます。
                 </div>
@@ -209,6 +212,10 @@
                         <tr>
                             <td>9s</td>
                             <td>🀘</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>🀫</td>
                         </tr>
                         <tr>
                             <td>1z</td>
