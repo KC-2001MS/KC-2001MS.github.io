@@ -35,7 +35,7 @@
     <link rel="apple-touch-icon" href="css/image/apple-touch-icon.png" />
     <meta name="format-detection" content="email=no,telephone=no,address=no">
     <meta name="google" content="nositelinkssearchbox">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;">
     <meta name="language" content="Japanese">
     <meta http-equiv="content-language" content="ja">
     <meta name="author" content="茅根啓介">
@@ -51,6 +51,49 @@
     <meta http-equiv='x-dns-prefetch-control' content='on'>
     <meta http-equiv="Expires" content="604800">
     <link rel="me" href="https://mastodon.social/@Iroiro">
+    <script>
+        // 各アプリの名前、ID、および地域の対応
+        const apps = [
+          { name: "MahjongTileConverter", id: 6470128646, region: "jp" },
+          { name: "MyWordX", id: 6450119338, region: "jp" },
+          { name: "WordFilterX", id: 1668831130, region: "jp" },
+          { name: "UncheckX", id: 6446932202, region: "jp" },
+          { name: "SimpleEditorX", id: 1612026794, region: "jp" },
+          { name: "DeathTo_blank", id: 1672080999, region: "jp" },
+          { name: "DeclutterForSafari", id: 1574021257, region: "jp" },
+        ];
+    
+        // App Store Lookup APIエンドポイントのベースURL
+        const apiBaseURL = 'https://itunes.apple.com/lookup?';
+    
+        // 各アプリの価格を取得し、表示する
+        apps.forEach(app => {
+          const apiEndpoint = `${apiBaseURL}id=${app.id}&country=${app.region}`;
+    
+          fetch(apiEndpoint)
+            .then(response => response.json())
+            .then(data => {
+              const appInfo = data.results[0];
+    
+              if (appInfo) {
+                const price = appInfo.formattedPrice;
+                displayAppPrice(app.name, price);
+              } else {
+                displayAppPrice(app.name, "App not found");
+              }
+            })
+            .catch(error => {
+              console.error(`Error fetching data for ${app.name}:`, error);
+              displayAppPrice(app.name, "Error fetching data");
+            });
+        });
+    
+        // 結果を表示する関数
+        function displayAppPrice(appName, price) {
+          const resultElement = document.getElementById(`${appName}PriceResult`);
+          resultElement.textContent = `${price}`;
+        }
+      </script>
 </head>
 
 <body>
@@ -104,7 +147,7 @@
                         <h4><a href="./product/mahjongtileconverter.html">サポートページ</a></h4>
                         <h4><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">100円</span>（税込）</p>
+                            <p class="right">価格：<span id="MahjongTileConverterPriceResult" class="plice"></span>（税込）</p>
                             <a class="right" href="https://apps.apple.com/app/mahjong-tile-converter/id6470128646">
                                 <img src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード">
@@ -159,7 +202,7 @@
                         <h4><a href="./product/mywordx.html">サポートページ</a></h4>
                         <h4><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">500円</span>（税込）</p>
+                            <p class="right">価格：<span id="MyWordXPriceResult" class="plice"></span>（税込）</p>
                             <a class="right" href="https://apps.apple.com/us/app/my-word-x/id6450119338">
                                 <img src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード">
@@ -209,7 +252,7 @@
                         <h4><a href="./product/wordfilterx.html">サポートページ</a></h4>
                         <h4><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">400円</span>（税込）</p>
+                            <p class="right">価格：<span id="WordFilterXPriceResult" class="plice"></span>（税込）</p>
                             <a class="right" href="https://apps.apple.com/jp/app/word-filter-x/id1668831130">
                                 <img src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード">
@@ -274,7 +317,7 @@
                         <h4><a href="./product/uncheckx.html">サポートページ</a></h4>
                         <h4><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">無料</span></p>
+                            <p class="right">価格：<span id="UncheckXPriceResult" class="plice"></span></p>
                             <a class="right" href="https://apps.apple.com/us/app/uncheck-x/id6446932202">
                                 <img src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード">
@@ -318,7 +361,7 @@
                         <h4><a href="./product/simpleeditorx.html">サポートページ</a></h4>
                         <h4><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">100円</span>（税込）</p>
+                            <p class="right">価格：<span id="SimpleEditorXPriceResult" class="plice"></span>（税込）</p>
                             <a class="right" href="https://apps.apple.com/us/app/simple-editor-x/id1612026794">
                                 <img src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード">
@@ -384,7 +427,7 @@
                                 href="mailto:jbarker@jbarker.net">Chrome版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。
                         </p>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">無料</span></p>
+                            <p class="right">価格：<span id="DeathTo_blankPriceResult" class="plice"></span></p>
                             <a class="right" href="https://apps.apple.com/us/app/death-to-blank/id1672080999"><img
                                     src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード"></a>
@@ -416,7 +459,7 @@
                         <h4><a href="https://github.com/brandonlee503/DeclutterInfo">サポートページ</a></h4>
                         <h4><a href="mailto:declutterappextension@gmail.com">フィードバック</a></h4>
                         <div class="appInfoButtom">
-                            <p class="right">価格：<span class="plice">無料</span></p>
+                            <p class="right">価格：<span id="DeclutterForSafariPriceResult" class="plice"></span></p>
                             <a class="right" href="https://apps.apple.com/jp/app/id1574021257"><img
                                     src="css/image/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg"
                                     class="buttonPadding" alt="App Storeからダウンロード"></a>
@@ -435,6 +478,16 @@
                     <h4><a
                             href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">ダウンロード</a>
                     </h4>
+                    </p>
+                </div>
+            </div>
+            <div class="h2card clear">
+                <h2 class="n2">フレームワーク・パッケージ</h2>
+                <div class="h3card">
+                    <h3>OnboardingUI</h3>
+                    <p>
+                        SwiftUIで簡単にオンボーディングを作成するためのパッケージ。
+                        概要は<a href="https://github.com/KC-2001MS/OnboardingUI">OnboardingUIリポジトリ</a>からご確認ください。
                     </p>
                 </div>
             </div>
