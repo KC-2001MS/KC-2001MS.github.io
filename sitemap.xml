@@ -63,6 +63,13 @@
 			href="https://www.kc-2001ms.github.io/product/wordfilterx.html" />
 	</url>
 	<url>
+		<loc>https://www.kc-2001ms.github.io/product/bluesky_swift-feed.html</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://www.kc-2001ms.github.io/en/product/bluesky_swift-feed.html" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://www.kc-2001ms.github.io/product/bluesky_swift-feed.html" />
+	</url>
+	<url>
 		<loc>https://www.kc-2001ms.github.io/product/tips/mpsz.html</loc>
 		<xhtml:link rel="alternate" hreflang="en"
 			href="https://www.kc-2001ms.github.io/en/product/tips/mpsz.html" />
