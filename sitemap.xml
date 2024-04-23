@@ -5,75 +5,104 @@
 		<loc>https://www.kc-2001ms.github.io/</loc>
 		<xhtml:link rel="alternate" hreflang="en" href="https://www.kc-2001ms.github.io/en/" />
 		<xhtml:link rel="alternate" hreflang="ja" href="https://www.kc-2001ms.github.io/" />
+		<changefreq>never</changefreq>
+		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product.html" />
+			href="https://www.kc-2001ms.github.io/en/product" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product.html" />
+			href="https://www.kc-2001ms.github.io/product" />
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/contact.html</loc>
+		<loc>https://www.kc-2001ms.github.io/contact</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/contact.html" />
+			href="https://www.kc-2001ms.github.io/en/contact" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/contact.html" />
+			href="https://www.kc-2001ms.github.io/contact" />
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/deathto_blank.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/deathto_blank</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/deathto_blank.html" />
+			href="https://www.kc-2001ms.github.io/en/product/deathto_blank" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/deathto_blank.html" />
+			href="https://www.kc-2001ms.github.io/product/deathto_blank" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/mahjongtileconverter.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/mahjongtileconverter</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/mahjongtileconverter.html" />
+			href="https://www.kc-2001ms.github.io/en/product/mahjongtileconverter" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/mahjongtileconverter.html" />
+			href="https://www.kc-2001ms.github.io/product/mahjongtileconverter" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/mywordx.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/mywordx</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/mywordx.html" />
+			href="https://www.kc-2001ms.github.io/en/product/mywordx" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/mywordx.html" />
+			href="https://www.kc-2001ms.github.io/product/mywordx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/simpleeditorx.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/simpleeditorx</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/simpleeditorx.html" />
+			href="https://www.kc-2001ms.github.io/en/product/simpleeditorx" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/simpleeditorx.html" />
+			href="https://www.kc-2001ms.github.io/product/simpleeditorx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/uncheckx.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/uncheckx</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/uncheckx.html" />
+			href="https://www.kc-2001ms.github.io/en/product/uncheckx" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/uncheckx.html" />
+			href="https://www.kc-2001ms.github.io/product/uncheckx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/wordfilterx.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/wordfilterx</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/wordfilterx.html" />
+			href="https://www.kc-2001ms.github.io/en/product/wordfilterx" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/wordfilterx.html" />
+			href="https://www.kc-2001ms.github.io/product/wordfilterx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/bluesky_swift-feed.html</loc>
-		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/bluesky_swift-feed.html" />
+		<loc>https://www.kc-2001ms.github.io/product/japancorpinfo</loc>
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/bluesky_swift-feed.html" />
+			href="https://www.kc-2001ms.github.io/product/japancorpinfo" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>https://www.kc-2001ms.github.io/product/tips/mpsz.html</loc>
+		<loc>https://www.kc-2001ms.github.io/product/bluesky_swift-feed</loc>
 		<xhtml:link rel="alternate" hreflang="en"
-			href="https://www.kc-2001ms.github.io/en/product/tips/mpsz.html" />
+			href="https://www.kc-2001ms.github.io/en/product/bluesky_swift-feed" />
 		<xhtml:link rel="alternate" hreflang="ja"
-			href="https://www.kc-2001ms.github.io/product/tips/mpsz.html" />
+			href="https://www.kc-2001ms.github.io/product/bluesky_swift-feed" />
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://www.kc-2001ms.github.io/product/tips/mpsz</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://www.kc-2001ms.github.io/en/product/tips/mpsz" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://www.kc-2001ms.github.io/product/tips/mpsz" />
+		<changefreq>yearly</changefreq>
+		<priority>0.3</priority>
 	</url>
 </urlset>
