@@ -9,6 +9,7 @@ Disallow: /prodact/
 Disallow: /prodact.html
 Disallow: /en/prodact/
 Disallow: /en/prodact.html
+Disallow: /test-page/
 Allow: /
 
 Sitemap: https://kc-2001ms.github.io/sitemap.xml
