@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://iroiro.dev/</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://iroiro.dev/en/" />
+		<xhtml:link rel="alternate" hreflang="ja" href="https://iroiro.dev/" />
+		<changefreq>never</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product" />
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/contact</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/contact" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/contact" />
+		<changefreq>monthly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/deathto_blank</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/deathto_blank" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/deathto_blank" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/mahjongtileconverter</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/mahjongtileconverter" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/mahjongtileconverter" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/mywordx</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/mywordx" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/mywordx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/simpleeditorx</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/simpleeditorx" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/simpleeditorx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/uncheckx</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/uncheckx" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/uncheckx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/wordfilterx</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/wordfilterx" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/wordfilterx" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/japancorpinfo</loc>
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/japancorpinfo" />
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/bluesky_swift-feed</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/bluesky_swift-feed" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/bluesky_swift-feed" />
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://iroiro.dev/product/tips/mpsz</loc>
+		<xhtml:link rel="alternate" hreflang="en"
+			href="https://iroiro.dev/en/product/tips/mpsz" />
+		<xhtml:link rel="alternate" hreflang="ja"
+			href="https://iroiro.dev/product/tips/mpsz" />
+		<changefreq>yearly</changefreq>
+		<priority>0.3</priority>
+	</url>
+</urlset>
