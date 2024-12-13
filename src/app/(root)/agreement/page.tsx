@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   publisher: "茅根啓介",
   generator: "Next.js",
   keywords: ["利用規約", "茅根啓介"],
-  // このデータは、テストが完了したら反転させる。
   robots: {
     index: true,
     follow: true,
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: "いろいろポートフォリオ", // アプリ名は変えない
+    title: "いろいろポートフォリオ",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {

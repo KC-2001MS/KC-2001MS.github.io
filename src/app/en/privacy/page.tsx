@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   publisher: "Keisuke Chinone",
   generator: "Next.js",
   keywords: ["Privacy", "Policy", "Keisuke", "Chinone"],
-  // 
   robots: {
     index: true,
     follow: true,

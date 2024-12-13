@@ -1,6 +1,6 @@
 type YouTubeEmbedProps = {
-  videoId: string; // YouTube動画のIDを指定
-};
+  videoId: string;
+}
 
 const YouTubeEmbed = ({ videoId }: YouTubeEmbedProps) => {
 

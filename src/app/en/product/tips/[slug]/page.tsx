@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: TipsPageProps): Promise<Metad
     publisher: "Keisuke Chinone",
     generator: "Next.js",
     keywords: data.keywords || [],
-  robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: `https://iroiro.dev/en/product/tips/${slug}`,
       languages: {

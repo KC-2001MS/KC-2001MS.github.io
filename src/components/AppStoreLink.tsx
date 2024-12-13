@@ -3,7 +3,7 @@ import Link from "next/link";
 
 type AppStoreLinkProps = {
     lang?: Language
-    appId: string; // YouTube動画のIDを指定
+    appId: string;
 };
 
 const AppStoreLink = ({ lang = Language.Japanese, appId }: AppStoreLinkProps) => {

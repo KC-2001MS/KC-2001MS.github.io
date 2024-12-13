@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   publisher: "茅根啓介",
   generator: 'Next.js',
   keywords: ["SwiftUI", "茅根啓介"],
-  // 
   robots: {
     index: true,
     follow: true,
@@ -89,6 +88,10 @@ export default function Contact() {
                   <tr>
                     <td>2023/7/19</td>
                     <td>こちらのサイトを設立</td>
+                  </tr>
+                  <tr>
+                    <td>2024/12/3</td>
+                    <td>このサイトのリニューアル</td>
                   </tr>
                 </tbody>
               </table>

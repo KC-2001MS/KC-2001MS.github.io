@@ -17,11 +17,10 @@ export const metadata: Metadata = {
     publisher: "Keisuke Chinone",
     generator: "Next.js",
     keywords: ["Agreement", "Keisuke", "Chinone"],
-    // 
-  robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+        index: true,
+        follow: true,
+    },
     alternates: {
         canonical: "https://iroiro.dev/en/agreement",
         languages: {

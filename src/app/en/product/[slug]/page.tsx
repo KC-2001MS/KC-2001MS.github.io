@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     publisher: "Keisuke Chinone",
     generator: "Next.js",
     keywords: data.keywords || [],
-  robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: `https://iroiro.dev/en/product/${slug}`,
       languages: {

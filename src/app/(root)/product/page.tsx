@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     publisher: "茅根啓介",
     generator: "Next.js",
     keywords: ["SwiftUI", "茅根啓介"],
-  robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+        index: true,
+        follow: true,
+    },
     alternates: {
         canonical: "https://iroiro.dev/product",
         languages: {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
     appleWebApp: {
         capable: true,
-        title: "いろいろポートフォリオ", // アプリ名は変えない
+        title: "いろいろポートフォリオ",
         statusBarStyle: "black-translucent",
     },
     formatDetection: {

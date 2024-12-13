@@ -40,10 +40,10 @@ export async function generateMetadata({ params }: TipsPageProps): Promise<Metad
     publisher: "茅根啓介",
     generator: 'Next.js',
     keywords: data.keywords || [],
-   robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: `https://iroiro.dev/en/product/tips/${slug}`,
       languages: {
@@ -106,13 +106,13 @@ async function getTip(slug: string) {
 
   const { content } = matter(fileContents);
   const processedContent = await remark()
-  .use(remarkGfm)
-  .use(remarkBreaks)
-  .use(remarkRehype, {
-    allowDangerousHtml: true,
-  })
-  .use(rehypeRaw)
-  .use(rehypeStringify)
+    .use(remarkGfm)
+    .use(remarkBreaks)
+    .use(remarkRehype, {
+      allowDangerousHtml: true,
+    })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
     .process(content);
 
   return {

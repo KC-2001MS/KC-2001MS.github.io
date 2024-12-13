@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   publisher: "茅根啓介",
   generator: 'Next.js',
   keywords: ["SwiftUI", "茅根啓介"],
-  // 
   robots: {
     index: true,
     follow: true,

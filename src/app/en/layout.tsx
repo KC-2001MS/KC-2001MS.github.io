@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   publisher: "Keisuke Chinone",
   generator: "Next.js",
   keywords: ["SwiftUI", "Keisuke", "Chinone"],
-  // 
   robots: {
     index: true,
     follow: true,
