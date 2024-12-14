@@ -130,10 +130,11 @@ hr {
 
 #goalTitle {
     font-size: var(--h1size);
+    font-weight:bold;
     text-shadow: #202020 1px 0 10px;
 }
 
-#goalSubtitle {
+.goalSubtitle {
     font-size: var(--h3size);
     text-shadow: #202020 1px 0 5px;
 }
@@ -262,10 +263,6 @@ hr {
     main {
         background-color: var(--defaultBlack);
         color: var(--defaultWhite);
-    }
-
-    h3 {
-        border-bottom: solid 1px var(--defaultWhite);
     }
 
     #goal {

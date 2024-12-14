@@ -95,13 +95,13 @@ export default async function Product() {
     return (
         <main>
             <div id="maincard">
-                <div className="h2card">
-                    <h2 className="n1">App</h2>
-                    <div className="h3card">
-                        <h3>Development</h3>
-                        <div className="h4card clear">
+                <div className="card">
+                    <h1 className="n1">App</h1>
+                    <div className="card">
+                        <h2>Development</h2>
+                        <div className="card clear">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">Mahjong Tile Converter</h4>
+                                <h3 className="left appTitle">Mahjong Tile Converter</h3>
                                 <a href="https://apps.apple.com/app/id6470128646">
                                     <Image src={`/images/Mahjong Tile Converter.avif`} className="appIcon left" height={100} width={100} alt="Mahjong Tile Converter Icon" />
                                 </a>
@@ -112,7 +112,7 @@ export default async function Product() {
                                     graphical representation using Unicode.
                                 </p>
                             </div>
-                            <h4>Supported platforms</h4>
+                            <h3>Supported platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -127,16 +127,16 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4><a href="./product/mahjongtileconverter">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
+                            <h3><a href="./product/mahjongtileconverter">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6470128646" lang={Language.EnglishUS} />
                                 <AppPrice id={6470128646} prices={prices} lang={Language.EnglishUS} />
                             </div>
                         </div>
-                        <div className="h4card clear">
+                        <div className="card clear">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">My Word X</h4>
+                                <h3 className="left appTitle">My Word X</h3>
                                 <a href="https://apps.apple.com/app/id6450119338">
                                     <Image src={`/images/My Word X.avif`} className="appIcon left" height={100} width={100} alt="My Word X Icon" />
                                 </a>
@@ -146,7 +146,7 @@ export default async function Product() {
                                 register various information so that you can memorize the word in more detail.</p>
                             <p>Supported platforms are as follows
                             </p>
-                            <h4>Supported Platforms</h4>
+                            <h3>Supported Platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -181,16 +181,16 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4><a href="./product/mywordx">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
+                            <h3><a href="./product/mywordx">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6450119338" lang={Language.EnglishUS} />
                                 <AppPrice id={6450119338} prices={prices} lang={Language.EnglishUS} />
                             </div>
                         </div>
-                        <div className="h4card clear">
+                        <div className="card clear">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">Word Filter X</h4>
+                                <h3 className="left appTitle">Word Filter X</h3>
                                 <a href="https://apps.apple.com/app/id1668831130">
                                     <Image src={`/images/Word Filter X.avif`} className="appIcon left" height={100} width={100} alt="Word Filter X Icon" />
                                 </a>
@@ -205,7 +205,7 @@ export default async function Product() {
                                     replaced.</p>
                                 <p>Supported platforms are as follows</p>
                             </div>
-                            <h4>Supported Platforms</h4>
+                            <h3>Supported Platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -232,16 +232,16 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4><a href="./product/wordfilterx">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
+                            <h3><a href="./product/wordfilterx">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1668831130" lang={Language.EnglishUS} />
                                 <AppPrice id={1668831130} prices={prices} lang={Language.EnglishUS} />
                             </div>
                         </div>
-                        <div className="h4card clear">
+                        <div className="card clear">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">Uncheck X</h4>
+                                <h3 className="left appTitle">Uncheck X</h3>
                                 <a href="https://apps.apple.com/app/id6446932202">
                                     <Image src={`/images/Uncheck X.avif`} className="appIcon left" height={100} width={100} alt="Uncheck X Icon" />
                                 </a>
@@ -256,7 +256,7 @@ export default async function Product() {
                             <p>You will no longer receive the newsletter any time soon.</p>
                             <p>Supported platforms are as follows
                             </p>
-                            <h4>Supported Platforms</h4>
+                            <h3>Supported Platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -283,17 +283,17 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4><a href="./product/uncheckx">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
+                            <h3><a href="./product/uncheckx">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6446932202" lang={Language.EnglishUS} />
                                 <AppPrice id={6446932202} prices={prices} lang={Language.EnglishUS} />
                             </div>
 
                         </div>
-                        <div className="h4card clear">
+                        <div className="card clear">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">Simple Editor X</h4>
+                                <h3 className="left appTitle">Simple Editor X</h3>
                                 <a href="https://apps.apple.com/app/id1612026794">
                                     <Image src={`/images/Simple Editor X.avif`} className="appIcon left" height={100} width={100} alt="Simple Editor X Icon" />
                                 </a>
@@ -306,7 +306,7 @@ export default async function Product() {
                                     ability to insert canned text.
                                 </p>
                             </div>
-                            <h4>Supported platforms</h4>
+                            <h3>Supported platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -329,8 +329,8 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4><a href="./product/simpleeditorx">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
+                            <h3><a href="./product/simpleeditorx">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1612026794" lang={Language.EnglishUS} />
                                 <AppPrice id={1612026794} prices={prices} lang={Language.EnglishUS} />
@@ -338,11 +338,11 @@ export default async function Product() {
                         </div>
                     </div>
 
-                    <div className="h3card clear">
-                        <h3>Transplanting</h3>
-                        <div className="h4card">
+                    <div className="card clear">
+                        <h2>Transplanting</h2>
+                        <div className="card">
                             <div className="appInfoTop">
-                                <h4 className="left appTitle">Death To _blank</h4>
+                                <h3 className="left appTitle">Death To _blank</h3>
                                 <a href="https://apps.apple.com/app/id1672080999">
                                     <Image src={`/images/Death To _blank.avif`} className="appIcon left" height={100} width={100} alt="Death To _blank Icon" />
                                 </a>
@@ -357,7 +357,7 @@ export default async function Product() {
                                 in new pages (e.g. &quot;blank&quot; and &quot;new&quot;).</p>
                             <p>Supported platforms are as follows
                             </p>
-                            <h4>Supported platforms</h4>
+                            <h3>Supported platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -384,13 +384,13 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4>Media</h4>
+                            <h3>Media</h3>
                             <p><a
                                 href="https://books.google.co.jp/books?id=7E_HEAAAQBAJ&pg=PA131&lpg=PA131&dq=Keisuke+Chinone&source=bl&ots=-VqKdV3EKn&sig=ACfU3U3dAboshCgCcqkN2BbWpcwA6YvOYg&hl=ja&sa=X&ved=2ahUKEwiT646nmreAAxXgglYBHb2MANQQ6AF6BAgREAI#v=onepage&q=Keisuke%20Chinone&f=false">Mac
                                 Fan(Japanese magazine specializing in Apple products)</a></p>
-                            <h4><a href="./product/deathto_blank">Support Page</a></h4>
-                            <h4><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h4>
-                            <h4>About Chrome version</h4>
+                            <h3><a href="./product/deathto_blank">Support Page</a></h3>
+                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
+                            <h3>About Chrome version</h3>
                             <p>
                                 There is a Chrome extension that is the original Safari extension. If you wish to use it
                                 with Chrome, please use <a
@@ -408,16 +408,16 @@ export default async function Product() {
                         </div>
                     </div>
 
-                    <div className="h3card clear">
-                        <h3>Translation</h3>
-                        <div className="h4card">
-                            <h4>Declutter for Safari</h4>
+                    <div className="card clear">
+                        <h2>Translation</h2>
+                        <div className="card">
+                            <h3>Declutter for Safari</h3>
                             <p className="clear">
                                 Declutter for Safari is a lightweight extension that automatically closes duplicate tabs.</p>
                             <p>If you have any questions and feedback, please contact declutterappextension@gmail.com
                                 in English.
                             </p>
-                            <h4>Supported platforms</h4>
+                            <h3>Supported platforms</h3>
                             <table>
                                 <thead>
                                     <tr>
@@ -432,11 +432,11 @@ export default async function Product() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <h4>Media</h4>
+                            <h3>Media</h3>
                             <p><a href="https://book.mynavi.jp/macfan/detail_summary/id=124346">Mac Fan(Japanese magazine
                                 specializing in Apple products)</a></p>
-                            <h4><a href="https://github.com/brandonlee503/DeclutterInfo">Support Page</a></h4>
-                            <h4><a href="mailto:declutterappextension@gmail.com">Feedback</a></h4>
+                            <h3><a href="https://github.com/brandonlee503/DeclutterInfo">Support Page</a></h3>
+                            <h3><a href="mailto:declutterappextension@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1574021257" lang={Language.EnglishUS} />
                                 <AppPrice id={1574021257} prices={prices} lang={Language.EnglishUS} />
@@ -444,98 +444,98 @@ export default async function Product() {
                         </div>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n2">Templates</h2>
-                    <div className="h3card">
-                        <h3>Word-Filter-X-Templates</h3>
+                <div className="card clear">
+                    <h1 className="n2">Templates</h1>
+                    <div className="card">
+                        <h2>Word-Filter-X-Templates</h2>
                         <div>
                             Template site for Word Filter X configuration data.
                             An overview is available from the <a
                                 href="https://iroiro.dev/Word-Filter-X-Templates/">Word-Filter-X-Templates
                                 repository</a>.
-                            <h4><a
+                            <h3><a
                                 href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">Download</a>
-                            </h4>
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n6">Bluesky Feed</h2>
-                    <div className="h3card">
-                        <h3>Swift</h3>
+                <div className="card clear">
+                    <h1 className="n6">Bluesky Feed</h1>
+                    <div className="card">
+                        <h2>Swift</h2>
                         <p>
                             This feed provides information related to the Swift language.
                             Please see the <a href="./product/bluesky_swift-feed">More about Bluesky Swift feed</a> for an overview.
                         </p>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n5">Brave Goggle</h2>
-                    <div className="h3card">
-                        <h3>Swift</h3>
+                <div className="card clear">
+                    <h1 className="n5">Brave Goggle</h1>
+                    <div className="card">
+                        <h2>Swift</h2>
                         <p>
                             This goggle provides information related to the Swift language.
                             Please see the <a href="./product/brave_swift-goggle">More about Brave Swift goggle</a> for an overview.
                         </p>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n4">Framework & Packages</h2>
-                    <div className="h3card">
-                        <h3>SwiftStorage</h3>
+                <div className="card clear">
+                    <h1 className="n4">Framework & Packages</h1>
+                    <div className="card">
+                        <h2>SwiftStorage</h2>
                         <p>
                             Macro to generate Observation code for persistence by Userdefaults.
                             Please visit the <a href="https://github.com/KC-2001MS/SwiftStorage">SwiftStorage repository</a> for an overview.
                         </p>
                     </div>
-                    <div className="h3card">
-                        <h3>SwiftLI</h3>
+                    <div className="card">
+                        <h2>SwiftLI</h2>
                         <p>
                             A package that makes it easy to create a CUI for a command line tool.
                             Please visit the <a href="https://github.com/KC-2001MS/SwiftLI">SwiftLI repository</a> for an overview.
                         </p>
                     </div>
-                    <div className="h3card">
-                        <h3>OnboardingUI</h3>
+                    <div className="card">
+                        <h2>OnboardingUI</h2>
                         <p>
                             Package for creating easy onboarding with SwiftUI.
                             Please visit the <a href="https://github.com/KC-2001MS/OnboardingUI">OnboardingUI repository</a> for an overview.
                         </p>
                     </div>
-                    <div className="h3card">
-                        <h3>AboutUI</h3>
+                    <div className="card">
+                        <h2>AboutUI</h2>
                         <p>
                             Package to create a window about macOS apps in SwiftUI.
                             Please visit the <a href="https://github.com/KC-2001MS/AboutUI">AboutUI repository</a> for an overview.
                         </p>
                     </div>
-                    <div className="h3card">
-                        <h3>ArticleUI</h3>
+                    <div className="card">
+                        <h2>ArticleUI</h2>
                         <p>
                             A package that allows you to create a UI for articles like List in SwiftUI.
                             Please visit the <a href="https://github.com/KC-2001MS/ArticleUI">ArticleUI repository</a> for an overview.
                         </p>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n5">Shell Script</h2>
-                    <div className="h3card">
-                        <h3>Shell-Config-Setup</h3>
+                <div className="card clear">
+                    <h1 className="n5">Shell Script</h1>
+                    <div className="card">
+                        <h2>Shell-Config-Setup</h2>
                         <div>
                             Shell scripts to easily configure the OS and download applications.
                             An overview is available from the <a
                                 href="https://github.com/KC-2001MS/Shell-Config-Setup">Shell-Config-Setup repository</a>.
-                            <h4>
+                            <h3>
                                 <a
                                     href="https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip">Download</a>
-                            </h4>
+                            </h3>
                         </div>
                     </div>
                 </div>
-                <div className="h2card clear">
-                    <h2 className="n3">Website</h2>
-                    <div className="h3card">
-                        <h3>Iroiro&apos;s portfolio</h3>
+                <div className="card clear">
+                    <h1 className="n3">Website</h1>
+                    <div className="card">
+                        <h2>Iroiro&apos;s portfolio</h2>
                         <p>
                             This is the homepage. The purpose of this site is to introduce and support the services we have
                             made available to the public.</p>

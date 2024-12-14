@@ -68,18 +68,18 @@ export default function Privacy() {
   return (
     <main>
       <div id="maincard">
-        <div className="h2card">
-          <h2 className="n5">Privacy Policy</h2>
+        <div className="card">
+          <h1 className="n5">Privacy Policy</h1>
           <p>Our privacy policy is <strong>a statement that defines how we treat the information we collect from you</strong>. All of our services provide a better experience by treating the information we collect as described in our privacy policy.</p>
           <p>This page describes the privacy policy for services provided by Keisuke Chinone (activity name:
             Iroiro).</p>
-          <div className="h3card">
-            <h3>How is the information generally handled</h3>
+          <div className="card">
+            <h1>How is the information generally handled</h1>
             <p>
               In general, information is used within the service for the following purposes
             </p>
-            <div className="h4card">
-              <h4>1. Realization of application functions</h4>
+            <div className="card">
+              <h2>1. Realization of application functions</h2>
               <p>
                 Without the storage of customer information, some of the basic functions that make up the
                 service may not be possible. An example of this is the storage of settings.</p>
@@ -87,8 +87,8 @@ export default function Privacy() {
                 will not be possible in the first place.
               </p>
             </div>
-            <div className="h4card">
-              <h4>2. Analysis of applications and marketing</h4>
+            <div className="card">
+              <h2>2. Analysis of applications and marketing</h2>
               <p>
                 By analyzing how the app is being used and what kind of customers are using it, we can make
                 the app better.</p>
@@ -96,8 +96,8 @@ export default function Privacy() {
                 problem can help us solve the problem faster.
               </p>
             </div>
-            <div className="h4card">
-              <h4>3. Proposals and Advertisements</h4>
+            <div className="card">
+              <h2>3. Proposals and Advertisements</h2>
               <p>
                 By analyzing how the application is being used and what kind of customers are using it, we
                 can suggest content and behavior that customers are looking for.</p>
@@ -105,8 +105,8 @@ export default function Privacy() {
               </p>
             </div>
           </div>
-          <div className="h3card">
-            <h3>What is personal information?</h3>
+          <div className="card">
+            <h1>What is personal information?</h1>
             <p>Personal information generally refers to the following information about a customer and
               information that can be used to identify the following information</p>
             <ul>
@@ -119,8 +119,8 @@ export default function Privacy() {
             <p>In addition, any data entered and stored by you within the Service is also included in your
               personal information. Hereafter, personal information is based on this definition.</p>
           </div>
-          <div className="h3card">
-            <h3>Information to be obtained by the service</h3>
+          <div className="card">
+            <h1>Information to be obtained by the service</h1>
             <p>Iroiro&apos;s app does not collect any information. However, we do use App Analytics to collect the
               following information on the App Store; please check with Apple regarding App Store privacy.</p>
             <ul>
@@ -141,8 +141,8 @@ export default function Privacy() {
                 personal information)</li>
             </ul>
           </div>
-          <div className="h3card">
-            <h3>Information not obtained by the service</h3>
+          <div className="card">
+            <h1>Information not obtained by the service</h1>
             <p>
               Iroiro&apos;s services do not collect any information other than the above. We do not collect any
               personal information.</p>

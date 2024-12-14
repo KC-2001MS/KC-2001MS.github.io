@@ -7,7 +7,9 @@ import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
+import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import "@styles/content.css";
 
 type ProductPageProps = {
   params: Promise<{ slug: string; }>;
@@ -96,7 +98,7 @@ export default async function ProductDetail({ params }: ProductPageProps) {
   return (
     <main>
       <div id="maincard">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </main>
   );
@@ -105,6 +107,14 @@ export default async function ProductDetail({ params }: ProductPageProps) {
 async function getProduct(slug: string) {
   const filePath = path.join(process.cwd(), "content/ja/product", `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf-8");
+
+  function getRandomString(): string {
+    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
+  
+    const randomIndex = Math.floor(Math.random() * options.length);
+  
+    return options[randomIndex];
+  }
 
   const { content } = matter(fileContents);
   const processedContent = await remark()
@@ -115,6 +125,10 @@ async function getProduct(slug: string) {
     })
     .use(rehypeRaw)
     .use(rehypeStringify)
+    .use(addClasses, {
+      'div': 'title',
+      'h1': getRandomString()
+    })
     .process(content);
 
   return {

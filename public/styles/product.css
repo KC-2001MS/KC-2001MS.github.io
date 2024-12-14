@@ -49,13 +49,14 @@
 }
 
 .appTitle {
+    border-bottom-style: none;
+    font-size: var(--h4size);
     margin: calc((100px - var(--h4size))/2) 0;
     vertical-align: middle;
 }
 
 iframe {
     display: block;
-    /* 任意の横幅を指定 */
     height: auto;
     aspect-ratio: 16/9;
 }

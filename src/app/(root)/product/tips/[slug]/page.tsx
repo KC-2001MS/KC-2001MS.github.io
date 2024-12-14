@@ -7,7 +7,9 @@ import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
+import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import "@styles/content.css";
 
 type TipsPageProps = {
   params: Promise<{ slug: string; }>;
@@ -93,7 +95,7 @@ export default async function Tips({ params }: TipsPageProps) {
   return (
     <main>
       <div id="maincard">
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </main>
   );
@@ -104,6 +106,14 @@ async function getTip(slug: string) {
   const filePath = path.join(process.cwd(), "content/ja/tips", `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf-8");
 
+  function getRandomString(): string {
+    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
+  
+    const randomIndex = Math.floor(Math.random() * options.length);
+  
+    return options[randomIndex];
+  }
+
   const { content } = matter(fileContents);
   const processedContent = await remark()
     .use(remarkGfm)
@@ -113,6 +123,10 @@ async function getTip(slug: string) {
     })
     .use(rehypeRaw)
     .use(rehypeStringify)
+    .use(addClasses, {
+      'div': 'title',
+      'h1': getRandomString()
+    })
     .process(content);
 
   return {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@styles/content.css";
 
 export const metadata: Metadata = {
     title: "Terms of Use",
@@ -67,8 +68,8 @@ export default function Agreement() {
     return (
         <main>
             <div id="maincard">
-                <div className="h2card">
-                    <h2 className="n5">Terms of Use</h2>
+                <div className="card">
+                    <h1 className="n5">Terms of Use</h1>
                     <p>
                         These terms and conditions of use (hereinafter referred to as &quot;Terms and Conditions&quot;) shall be
                         governed by and construed in accordance with the laws of Japan. This Terms of Use (hereinafter
@@ -81,8 +82,8 @@ export default function Agreement() {
                         &quot;Users&quot;) are requested to comply with these Terms of Use. Users are requested to use the Service in
                         accordance with these Terms of Use.
                     </p>
-                    <div className="h3card">
-                        <h3>Application</h3>
+                    <div className="card">
+                        <h2>Application</h2>
                         <p>1. These Terms of Use shall apply to all relationships between the user and SBM concerning the
                             use of the Service.</p>
                         <p>2. In addition to the Terms of Service, the Company may stipulate various rules regarding the use
@@ -94,16 +95,16 @@ export default function Agreement() {
                             individual provisions of the preceding Article, the provisions of the individual provisions
                             shall prevail unless otherwise specified in the individual provisions.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Agreement</h3>
+                    <div className="card">
+                        <h2>Agreement</h2>
                         <p>1. In this application, each prospective registrant agrees to be bound by these Terms and
                             Conditions for each application.</p>
                         <p>2. This site is a portfolio and support site and is not a service covered by this agreement.
                             However, we will adhere to our <a href="./privacy.html">privacy policy</a> on this site as well.
                         </p>
                     </div>
-                    <div className="h3card">
-                        <h3>Prohibitions</h3>
+                    <div className="card">
+                        <h2>Prohibitions</h2>
                         <p>In using the Service, the User shall not engage in any of the following acts</p>
                         <ul>
                             <li>Acts that violate laws and regulations or public order and morals</li>
@@ -122,8 +123,8 @@ export default function Agreement() {
                             <li>Other actions that the Company deems inappropriate.</li>
                         </ul>
                     </div>
-                    <div className="h3card">
-                        <h3>Suspension, etc., of the Provision of this Service</h3>
+                    <div className="card">
+                        <h2>Suspension, etc., of the Provision of this Service</h2>
                         <p>1. MCC reserves the right to suspend or discontinue all or part of the Service without prior
                             notice to the user for any of the following reasons</p>
                         <ul>
@@ -137,8 +138,8 @@ export default function Agreement() {
                         <p>2. We shall not be liable for any disadvantage or damage incurred by the user or any third party
                             due to the suspension or interruption of the provision of the Service.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Restrictions on Use and Cancellation of Registration</h3>
+                    <div className="card">
+                        <h2>Restrictions on Use and Cancellation of Registration</h2>
                         <p>Our company may restrict a user from using all or part of the Service or terminate the user&apos;s
                             registration as a user without prior notice if the user falls into any of the following
                             categories and the app is a service that requires the implementation of blocks stipulated in the
@@ -149,8 +150,8 @@ export default function Agreement() {
                             </li>
                         </ul>
                     </div>
-                    <div className="h3card">
-                        <h3>Disclaimer of Warranty and Disclaimer of Liability</h3>
+                    <div className="card">
+                        <h2>Disclaimer of Warranty and Disclaimer of Liability</h2>
                         <p>1. We do not warrant, expressly or impliedly, that the Service is free from defects in fact or in
                             law (including safety, reliability, accuracy, completeness, validity, fitness for a particular
                             purpose, security or other defects, errors or bugs, infringement of rights, etc.). (including,
@@ -180,13 +181,13 @@ export default function Agreement() {
                         <p>4. We are not responsible for any transactions, communications, or disputes that occur between
                             users and other users or third parties in connection with the Service.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Changes in service content, etc.</h3>
+                    <div className="card">
+                        <h2>Changes in service content, etc.</h2>
                         <p>Our company reserves the right to change, add, or discontinue the Service with prior notice to
                             the User, and the User agrees to such changes, additions, or discontinuation.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Changes to Terms of Use</h3>
+                    <div className="card">
+                        <h2>Changes to Terms of Use</h2>
                         <p>1. We reserve the right to modify these Terms of Use without requiring individual user consent in
                             the following cases</p>
                         <ul>
@@ -201,19 +202,19 @@ export default function Agreement() {
                             notify the User in advance of the amendment, the contents of the amended Terms of Use, and the
                             effective date of the amendment.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Handling of Personal Information</h3>
+                    <div className="card">
+                        <h2>Handling of Personal Information</h2>
                         <p>The Company shall appropriately handle personal information obtained through the use of the
                             Service in accordance with the Company&apos;s &quot;<a href="./privacy.html">Privacy Policy</a>&quot;.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Prohibition of transfer of rights and obligations</h3>
+                    <div className="card">
+                        <h2>Prohibition of transfer of rights and obligations</h2>
                         <p>The User may not transfer or offer as security his/her position under the Service Agreement or
                             his/her rights or obligations under this Agreement to any third party without prior written
                             consent of the Company.</p>
                     </div>
-                    <div className="h3card">
-                        <h3>Governing Law and Jurisdiction</h3>
+                    <div className="card">
+                        <h2>Governing Law and Jurisdiction</h2>
                         <p>1. These Terms and Conditions shall be governed by and construed in accordance with the laws of
                             Japan.</p>
                         <p>2. In the event of any dispute concerning the Service, the court having jurisdiction over the

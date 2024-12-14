@@ -68,17 +68,17 @@ export default function Contact() {
   return (
     <main>
       <div id="maincard">
-        <div className="h2card">
-          <h2 className="n1">Profile</h2>
-          <div className="h3card">
-            <h3>Keisuke Chinone</h3>
+        <div className="card">
+          <h1 className="n1">Profile</h1>
+          <div className="card">
+            <h2>Keisuke Chinone</h2>
             <p>
               I work under the account name &quot;Iroiro.&quot; My main focus is on developing applications in SwiftUI
               and creating apps for my needs. I am also
               in contact with other developers to improve and port their apps.
             </p>
-            <div className="h4card">
-              <h4>Career</h4>
+            <div className="card">
+              <h3>Career</h3>
               <table>
                 <thead>
                   <tr>
@@ -98,8 +98,8 @@ export default function Contact() {
                 </tbody>
               </table>
             </div>
-            <div className="h4card">
-              <h4>Contact</h4>
+            <div className="card">
+              <h3>Contact</h3>
               <p>Email Address：<a href="mailto:iroiro.work1234@gmail.com">iroiro.work1234@gmail.com</a></p>
               <p>Twitter：<a href="https://twitter.com/IroIro1234work">https://twitter.com</a></p>
               <p>Bluesky：<a href="https://bsky.app/profile/bluesky.iroiro.me">https://bsky.app</a></p>
@@ -109,20 +109,20 @@ export default function Contact() {
               <p>Stack Overflow：<a
                 href="https://stackoverflow.com/users/21741409/iroiro">https://stackoverflow.com</a></p>
             </div>
-            <div className="h4card">
-              <h4>Sales</h4>
+            <div className="card">
+              <h3>Sales</h3>
               <p>App Store：<a
                 href="https://apps.apple.com/jp/developer/keisuke-chinone/id1586934587">https://apps.apple.com</a>
               </p>
             </div>
 
-            <div className="h4card">
-              <h4>Movie</h4>
+            <div className="card">
+              <h3>Movie</h3>
               <p>YouTube：
                 <a href="https://www.youtube.com/@IroiroWork">https://www.youtube.com</a>
               </p>
-              <div className="h4card">
-                <h4>Contribution</h4>
+              <div className="card">
+                <h3>Contribution</h3>
                 <p>If you would like to make a donation, please click here. The money you donate will be used to improve my programming skills and maintain the application.</p>
                 <p>
                   <a href="https://www.buymeacoffee.com/iroiro" target="_top">

@@ -67,9 +67,8 @@ export default function Error404() {
     return (
         <main id="backgroundImage">
             <div id="goal">
-                <h2 id="goalTitle"><strong>404</strong></h2>
-                <p id="goalSubtitle">This page does not exist.</p>
-                <p id="goalSubtitle">This page does not appear to have been created; please check to see if the URL is correct.</p>
+                <h1 id="goalTitle"><strong>404</strong></h1>
+                <p className="goalSubtitle">This page does not exist.<br />This page does not appear to have been created; please check to see if the URL is correct.</p>
             </div>
             <div id="language">
                 Language : <a id="languageItem" href="../">日本語</a>
