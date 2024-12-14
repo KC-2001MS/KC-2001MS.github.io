@@ -33,7 +33,7 @@ In addition, the following information can be registered in the word information
 - Meaning
 - Example
 
-Supported Platforms
+## Supported Platforms
 | OS | Version |
 | ---- | ---- |
 | iOS | 17 ~ |
@@ -43,10 +43,10 @@ Supported Platforms
 | watchOS | 10 ~ |
 | tvOS | 17 ~ |
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="en" data-theme="light">
         <p lang="en" dir="ltr">Today, I am very happy to announce that we have rolled out My Word X,

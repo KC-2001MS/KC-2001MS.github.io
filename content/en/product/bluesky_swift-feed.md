@@ -33,11 +33,11 @@ Information is also available including the following URLs
 - developer.apple.com
 - testflight.apple.com
 
-Supported Platforms
+## Supported Platforms
 
 Bluesky
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
 ## Tips

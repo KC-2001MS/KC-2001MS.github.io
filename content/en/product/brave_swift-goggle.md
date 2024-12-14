@@ -4,13 +4,13 @@ Brave Search Goggle to make it easier to get information about the Swift languag
 About this Goggle
 This Goggle is designed to make it easy to find information about Swift. However, it is incomplete because Brave Seach Goggle currently does not allow you to change the index by content. Please understand.
 
-Supported Platforms
+## Supported Platforms
 Brave Search
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="en" data-theme="light">
         <p lang="en" dir="ltr">I have prepared something that makes it easier to search the <a

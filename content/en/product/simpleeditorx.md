@@ -23,7 +23,7 @@ Registered text can be inserted.
 
 *Please refer to the terms and conditions of Apple's operating system for handling audio files produced with this application.
 
-Supported Platforms
+## Supported Platforms
 | OS | Version |
 | ---- | ---- |
 | iOS | 17 ~ |
@@ -31,10 +31,10 @@ Supported Platforms
 | visionOS | 1 ~ |
 | macOS | 14(Sonoma) ~ |
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="en">
         <p lang="en" dir="ltr">Important Notice<br>Due to the EU Digital Services Act (DSA), it has

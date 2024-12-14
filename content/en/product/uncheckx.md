@@ -18,7 +18,7 @@ This extension has the following features
 - Supports shortcut applications and actions can be set
 - Turn extensions on and off from Siri
 
-Supported Platforms
+## Supported Platforms
 | OS | Version |
 | ---- | ---- |
 | iOS | 17 ~ |
@@ -26,10 +26,10 @@ Supported Platforms
 | visionOS | 1 ~ |
 | macOS | 14(Sonoma) ~ |
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="en">
         <p lang="en" dir="ltr">Today I am very pleased to announce that I am deploying the following

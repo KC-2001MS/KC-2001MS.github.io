@@ -14,7 +14,7 @@ This extension has the following features
 - Settings can be shared via json files.
 - It is available not only in Japanese, but also in English and French.
 
-Supported Platforms
+## Supported Platforms
 | OS | Version |
 | ---- | ---- |
 | iOS | 16 ~ |
@@ -22,10 +22,10 @@ Supported Platforms
 | visionOS | 1 ~ |
 | macOS | 13(Ventura) ~ |
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
 <blockquote class="twitter-tweet" data-lang="en">
         <p lang="en" dir="ltr">Today I am very pleased to announce that I am deploying the following

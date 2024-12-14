@@ -16,7 +16,7 @@ appId: "6477782786"
 - タグ付け
 - メモ機能
 
-対応プラットフォーム
+## 対応プラットフォーム
 | OS | バージョン |
 | ---- | ---- |
 | iOS | 17 ~ |
@@ -24,10 +24,10 @@ appId: "6477782786"
 | visionOS | 1 ~ |
 | macOS | 14(Sonoma) ~ |
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="en" data-theme="light">
         <p lang="ja" dir="ltr">本日、日本の法人情報を簡単に閲覧できる <a

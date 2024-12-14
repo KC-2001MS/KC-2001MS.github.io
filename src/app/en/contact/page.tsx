@@ -1,4 +1,14 @@
-import type { Metadata } from "next";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { remark } from "remark";
+import remarkBreaks from "remark-breaks";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeRaw from "rehype-raw";
+import rehypeStringify from "rehype-stringify";
+import addClasses from "rehype-class-names";
+import { Metadata } from "next";
 import "@styles/content.css";
 
 export const metadata: Metadata = {
@@ -64,79 +74,46 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Contact() {
+export default async function Contact() {
+  const { content } = await getContact();
+
   return (
     <main>
       <div id="maincard">
-        <div className="card">
-          <h1 className="n1">Profile</h1>
-          <div className="card">
-            <h2>Keisuke Chinone</h2>
-            <p>
-              I work under the account name &quot;Iroiro.&quot; My main focus is on developing applications in SwiftUI
-              and creating apps for my needs. I am also
-              in contact with other developers to improve and port their apps.
-            </p>
-            <div className="card">
-              <h3>Career</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>2023/7/19</td>
-                    <td>Established this site</td>
-                  </tr>
-                  <tr>
-                    <td>2024/12/3</td>
-                    <td>Renewal of this sitee</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="card">
-              <h3>Contact</h3>
-              <p>Email Address：<a href="mailto:iroiro.work1234@gmail.com">iroiro.work1234@gmail.com</a></p>
-              <p>Twitter：<a href="https://twitter.com/IroIro1234work">https://twitter.com</a></p>
-              <p>Bluesky：<a href="https://bsky.app/profile/bluesky.iroiro.me">https://bsky.app</a></p>
-              <p>mastodon：<a rel="me" href="https://mastodon.social/@Iroiro">https://mastodon.social</a></p>
-              <p>GitHub：<a href="https://github.com/KC-2001MS">https://github.com</a></p>
-              <p>Hugging Face：<a href="https://huggingface.co/Iroiro">https://huggingface.co</a></p>
-              <p>Stack Overflow：<a
-                href="https://stackoverflow.com/users/21741409/iroiro">https://stackoverflow.com</a></p>
-            </div>
-            <div className="card">
-              <h3>Sales</h3>
-              <p>App Store：<a
-                href="https://apps.apple.com/jp/developer/keisuke-chinone/id1586934587">https://apps.apple.com</a>
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Movie</h3>
-              <p>YouTube：
-                <a href="https://www.youtube.com/@IroiroWork">https://www.youtube.com</a>
-              </p>
-              <div className="card">
-                <h3>Contribution</h3>
-                <p>If you would like to make a donation, please click here. The money you donate will be used to improve my programming skills and maintain the application.</p>
-                <p>
-                  <a href="https://www.buymeacoffee.com/iroiro" target="_top">
-                    <img src={`https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png`} alt="Buy Me A Coffee" style={{ "height": "60px", "width": "217px" }} />
-                  </a>
-                </p>
-                <p>
-                  <a href="https://paypal.me/iroiroWork" style={{ borderRadius: '20px', display: 'block', width: '217px', padding: '15px', boxSizing: 'border-box', background: '#0070ba', color: '#FFF', textDecoration: 'none', textAlign: 'center' }}>Pay by PayPal</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </main>
   );
+}
+
+async function getContact() {
+  const filePath = path.join(process.cwd(), "content/en/", "contact.md");
+  const fileContents = fs.readFileSync(filePath, "utf-8");
+
+  function getRandomString(): string {
+    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
+  
+    const randomIndex = Math.floor(Math.random() * options.length);
+  
+    return options[randomIndex];
+  }
+
+  const { content } = matter(fileContents);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(remarkBreaks)
+    .use(remarkRehype, {
+      allowDangerousHtml: true,
+    })
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .use(addClasses, {
+      'div': 'title',
+      'h1': getRandomString()
+    })
+    .process(content);
+
+  return {
+    content: processedContent.toString(),
+  };
 }

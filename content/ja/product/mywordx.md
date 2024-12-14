@@ -33,7 +33,7 @@ My Word Xには以下の特徴があります。
 - 意味
 - 例
 
-対応プラットフォーム
+## 対応プラットフォーム
 | OS       | バージョン   |
 | -------- | ------------ |
 | iOS      | 17 ~         |
@@ -43,10 +43,10 @@ My Word Xには以下の特徴があります。
 | watchOS  | 10 ~         |
 | tvOS     | 17 ~         |
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">
         <p lang="ja" dir="ltr">本日、自分で作る辞書アプリMy Word

@@ -12,15 +12,15 @@ appId: "6470128646"
 1. 高度な変換（一二三①②③⑦⑧⑨123東東）も対応（ただし全ての表記方法に対応しているわけではありません。）
 2. 変換の履歴
 
-対応プラットフォーム
+## 対応プラットフォーム
 | OS | バージョン |
 | ---- | ---- |
 | macOS | 14(Sonoma) ~ |
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">
         <p lang="ja" dir="ltr">本日、macOS 14 Sonoma向けに <a

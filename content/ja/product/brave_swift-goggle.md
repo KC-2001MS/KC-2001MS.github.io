@@ -5,13 +5,13 @@ Swift言語に関する情報を取得しやすくするBrave Search Goggle
 このゴーグルについて
 このGoggleは、Swiftに関する情報を簡単に見つけることができるように設計されています。しかし、現在Brave Seach Goggleでは、内容によってインデックスを変更することができないため、不完全なものとなっています。ご了承ください。
 
-対応プラットフォーム
+## 対応プラットフォーム
 Brave Search
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">
         <p lang="ja" dir="ltr">Brave SeachのGogglesを使って、 <a

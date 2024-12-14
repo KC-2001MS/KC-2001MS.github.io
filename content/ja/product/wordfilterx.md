@@ -17,7 +17,7 @@ Word Filter Xには以下の特徴があります。
 - 設定をjsonファイルを通じて共有可能。
 - 日本語だけでなく、英語やフランス語にも対応。
 
-対応プラットフォーム
+## 対応プラットフォーム
 | OS       | バージョン   |
 | -------- | ------------ |
 | iOS      | 16 ~         |
@@ -25,10 +25,10 @@ Word Filter Xには以下の特徴があります。
 | visionOS | 1 ~          |
 | macOS    | 13(Ventura) ~ |
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">
         <p lang="ja" dir="ltr">本日、私の展開する以下のSafari拡張機能をvisionOS向けに展開できること発表でき、とても嬉しく思います。<br>・Uncheck

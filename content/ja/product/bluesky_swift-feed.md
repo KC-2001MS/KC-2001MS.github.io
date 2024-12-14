@@ -33,13 +33,13 @@ Swiftフィードは、Swift言語だけでなく、以下の情報も簡単に�
 - developer.apple.com
 - testflight.apple.com
 
-対応プラットフォーム
+## 対応プラットフォーム
 Bluesky
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 <blockquote class="bluesky-embed"
     data-bluesky-uri="at://did:plc:hp4di5zhc3q3uksjasitxfe4/app.bsky.feed.post/3kphmwuddsy2d"
     data-bluesky-cid="bafyreigqpianc6qts3s2wpnrvprhyoh7wokems3vm3wafgf75jwwvg5apa">

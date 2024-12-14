@@ -17,7 +17,7 @@ appId: "1672080999"
 - ショートカットアプリに対応し、アクションを設定
 - Siriから拡張機能をオン・オフ
 
-対応プラットフォーム
+## 対応プラットフォーム
 | OS | バージョン |
 | ---- | ---- |
 | iOS | 17 ~ |
@@ -25,10 +25,10 @@ appId: "1672080999"
 | visionOS | 1 ~ |
 | macOS | 14(Sonoma) ~ |
 
-プライバシーポリシー
+## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。
 
-お知らせ
+## お知らせ
 
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">

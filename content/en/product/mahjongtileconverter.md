@@ -12,15 +12,15 @@ The following features also make it easier to use
 1. Advanced conversions (一二三①②③⑦⑧⑨123東東) are also supported (however, not all notation methods are supported).
 2. Conversion History
 
-Supported Platforms
+## Supported Platforms
 | OS | Version |
 | ---- | ---- |
 | macOS | 14(Sonoma) ~ |
 
-Privacy Policy
+## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
 
-Notice
+## Notice
 <div class="isLightMode">
     <blockquote class="twitter-tweet" data-lang="ja">
         <p lang="ja" dir="ltr">本日、macOS 14 Sonoma向けに <a
