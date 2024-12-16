@@ -2,20 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
-import AppPrice from '@/components/AppPrice';
 import "@styles/content.css";
 import "@styles/product.css";
-
-
-interface AppInfo {
-    id: number;
-    region: string;
-}
-
-interface AppPriceData {
-    id: number;
-    price: string;
-}
+import AppStorePriceTag from "@/components/AppStorePriceTag";
 
 export const metadata: Metadata = {
     title: "いろいろが開発したアプリや貢献したプロジェクト・サービス",
@@ -80,20 +69,7 @@ export const metadata: Metadata = {
     },
 };
 
-const apps: AppInfo[] = [
-    { id: 6477782786, region: "jp" },
-    { id: 6470128646, region: "jp" },
-    { id: 6450119338, region: "jp" },
-    { id: 1668831130, region: "jp" },
-    { id: 6446932202, region: "jp" },
-    { id: 1612026794, region: "jp" },
-    { id: 1672080999, region: "jp" },
-    { id: 1574021257, region: "jp" },
-];
-
 export default async function Product() {
-    const prices = await fetchPrices();
-
     return (
         <main>
             <div id="maincard">
@@ -143,7 +119,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6477782786" />
-                                <AppPrice id={6477782786} prices={prices} />
+                                <AppStorePriceTag id={6477782786} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -176,7 +152,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6470128646" />
-                                <AppPrice id={6470128646} prices={prices} />
+                                <AppStorePriceTag id={6470128646} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -229,7 +205,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6450119338" />
-                                <AppPrice id={6450119338} prices={prices} />
+                                <AppStorePriceTag id={6450119338} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -277,7 +253,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1668831130" />
-                                <AppPrice id={1668831130} prices={prices} />
+                                <AppStorePriceTag id={1668831130} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -331,7 +307,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6446932202" />
-                                <AppPrice id={6446932202} prices={prices} />
+                                <AppStorePriceTag id={6446932202} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -373,7 +349,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1612026794" />
-                                <AppPrice id={1612026794} prices={prices} />
+                                <AppStorePriceTag id={1612026794} />
                             </div>
 
                         </div>
@@ -436,7 +412,7 @@ export default async function Product() {
                             <p>※Chrome版のサポートは<a href="mailto:jbarker@jbarker.net">Chrome版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1672080999" />
-                                <AppPrice id={1672080999} prices={prices} />
+                                <AppStorePriceTag id={1672080999} />
                             </div>
                         </div>
                     </div>
@@ -470,7 +446,7 @@ export default async function Product() {
                             <h3><a href="mailto:declutterappextension@gmail.com">フィードバック</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1574021257" />
-                                <AppPrice id={1574021257} prices={prices} />
+                                <AppStorePriceTag id={1574021257} />
                             </div>
                         </div>
                     </div>
@@ -572,6 +548,8 @@ export default async function Product() {
                     </div>
                 </div>
 
+                <hr />
+                
                 <p className="caption">1.ＤＭＭは合同会社ＤＭＭ．ｃｏｍの商標もしくは商標登録です。</p>
                 <p className="caption">2.ＦＡＮＺＡは株式会社デジタルコマースの商標もしくは商標登録です。</p>
                 <p className="caption">3.楽天は楽天グループ株式会社の商標もしくは商標登録です。</p>
@@ -579,30 +557,3 @@ export default async function Product() {
         </main>
     );
 }
-
-
-async function fetchPrices(): Promise<AppPriceData[]> {
-    const apiBaseURL = "https://itunes.apple.com/lookup?";
-    const prices: AppPriceData[] = [];
-
-    for (const app of apps) {
-        const apiEndpoint = `${apiBaseURL}id=${app.id}&country=${app.region}`;
-        try {
-            const response = await fetch(apiEndpoint);
-            const data = await response.json();
-            if (data.results && data.results[0]) {
-                prices.push({
-                    id: app.id,
-                    price: data.results[0].formattedPrice || "Free",
-                });
-            } else {
-                prices.push({ id: app.id, price: "App not found" });
-            }
-        } catch (err) {
-            console.error(`Error fetching data for ${app.id}:`, err);
-            prices.push({ id: app.id, price: "Error fetching data" });
-        }
-    }
-
-    return prices
-};

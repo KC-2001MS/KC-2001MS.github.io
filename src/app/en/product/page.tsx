@@ -1,20 +1,10 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import AppStoreLink from '@/components/AppStoreLink';
-import AppPrice from '@/components/AppPrice';
 import "@styles/content.css";
 import "@styles/product.css";
 import { Language } from "@/lib/Language";
-
-interface AppInfo {
-    id: number;
-    region: string;
-}
-
-interface AppPriceData {
-    id: number;
-    price: string;
-}
+import AppStorePriceTag from "@/components/AppStorePriceTag";
 
 export const metadata: Metadata = {
     title: "Applications developed and projects/services contributed to by the Iroiro",
@@ -79,19 +69,7 @@ export const metadata: Metadata = {
     },
 };
 
-const apps: AppInfo[] = [
-    { id: 6470128646, region: "us" },
-    { id: 6450119338, region: "us" },
-    { id: 1668831130, region: "us" },
-    { id: 6446932202, region: "us" },
-    { id: 1612026794, region: "us" },
-    { id: 1672080999, region: "us" },
-    { id: 1574021257, region: "us" },
-];
-
-export default async function Product() {
-    const prices = await fetchPrices();
-
+export default function Product() {
     return (
         <main>
             <div id="maincard">
@@ -131,7 +109,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6470128646" lang={Language.EnglishUS} />
-                                <AppPrice id={6470128646} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={6470128646} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -185,7 +163,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6450119338" lang={Language.EnglishUS} />
-                                <AppPrice id={6450119338} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={6450119338} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -236,7 +214,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1668831130" lang={Language.EnglishUS} />
-                                <AppPrice id={1668831130} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={1668831130} />
                             </div>
                         </div>
                         <div className="card clear">
@@ -287,7 +265,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id6446932202" lang={Language.EnglishUS} />
-                                <AppPrice id={6446932202} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={6446932202} />
                             </div>
 
                         </div>
@@ -333,7 +311,7 @@ export default async function Product() {
                             <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1612026794" lang={Language.EnglishUS} />
-                                <AppPrice id={1612026794} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={1612026794} />
                             </div>
                         </div>
                     </div>
@@ -402,7 +380,7 @@ export default async function Product() {
                             </p>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1672080999" lang={Language.EnglishUS} />
-                                <AppPrice id={1672080999} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={1672080999} />
                             </div>
 
                         </div>
@@ -439,7 +417,7 @@ export default async function Product() {
                             <h3><a href="mailto:declutterappextension@gmail.com">Feedback</a></h3>
                             <div className="appInfoButtom">
                                 <AppStoreLink appId="id1574021257" lang={Language.EnglishUS} />
-                                <AppPrice id={1574021257} prices={prices} lang={Language.EnglishUS} />
+                                <AppStorePriceTag lang={Language.EnglishUS} id={1574021257} />
                             </div>
                         </div>
                     </div>
@@ -549,29 +527,3 @@ export default async function Product() {
         </main>
     );
 }
-
-async function fetchPrices(): Promise<AppPriceData[]> {
-    const apiBaseURL = "https://itunes.apple.com/lookup?";
-    const prices: AppPriceData[] = [];
-
-    for (const app of apps) {
-        const apiEndpoint = `${apiBaseURL}id=${app.id}&country=${app.region}`;
-        try {
-            const response = await fetch(apiEndpoint);
-            const data = await response.json();
-            if (data.results && data.results[0]) {
-                prices.push({
-                    id: app.id,
-                    price: data.results[0].formattedPrice || "Free",
-                });
-            } else {
-                prices.push({ id: app.id, price: "App not found" });
-            }
-        } catch (err) {
-            console.error(`Error fetching data for ${app.id}:`, err);
-            prices.push({ id: app.id, price: "Error fetching data" });
-        }
-    }
-
-    return prices
-};
