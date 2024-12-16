@@ -431,9 +431,7 @@ export default function Product() {
                             An overview is available from the <a
                                 href="https://iroiro.dev/Word-Filter-X-Templates/">Word-Filter-X-Templates
                                 repository</a>.
-                            <h3><a
-                                href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">Download</a>
-                            </h3>
+                            <a href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">Download</a>
                         </div>
                     </div>
                 </div>

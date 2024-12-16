@@ -533,9 +533,7 @@ export default async function Product() {
                             OSの設定とアプリのダウンロードを簡単に行うシェルスクリプト。
                             概要は<a
                                 href="https://github.com/KC-2001MS/Shell-Config-Setup">Shell-Config-Setupリポジトリ</a>からご確認ください。
-                            <h3>
                                 <a href="https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip">ダウンロード</a>
-                            </h3>
                         </div>
                     </div>
                 </div>
@@ -549,7 +547,7 @@ export default async function Product() {
                 </div>
 
                 <hr />
-                
+
                 <p className="caption">1.ＤＭＭは合同会社ＤＭＭ．ｃｏｍの商標もしくは商標登録です。</p>
                 <p className="caption">2.ＦＡＮＺＡは株式会社デジタルコマースの商標もしくは商標登録です。</p>
                 <p className="caption">3.楽天は楽天グループ株式会社の商標もしくは商標登録です。</p>
