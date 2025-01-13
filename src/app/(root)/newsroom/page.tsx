@@ -107,7 +107,7 @@ async function getNewsroom() {
         description: data.description || '',
         genre: data.genre || '',
         date: data.date || '',
-        path: path.join('/en/newsroom', filename.replace(/\.md$/, "")),
+        path: path.join('/newsroom', filename.replace(/\.md$/, "")),
       };
     });
 

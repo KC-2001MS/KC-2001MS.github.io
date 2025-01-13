@@ -107,7 +107,7 @@ async function getBlog() {
         description: data.description || '',
         genre: data.genre || '',
         date: data.date || '',
-        path: path.join('/en/blog', filename.replace(/\.md$/, "")),
+        path: path.join('/blog', filename.replace(/\.md$/, "")),
       };
     });
 
