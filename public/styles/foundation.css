@@ -21,9 +21,13 @@ body {
 header,
 footer {
     text-align: center;
+    font-size: 16px;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 195px);
     padding: 5px 0 10px 0;
     width: 100%;
 }
@@ -35,8 +39,6 @@ ul.tabContainaer {
 
 li.tab {
     display: inline-block;
-    margin: 10px 5px;
-    width: 85px;
 }
 
 .underline {
@@ -149,6 +151,46 @@ hr {
     font-weight: bold;
 }
 
+.material-symbols-outlined{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.iconLabel {
+    font-size: 8px;
+}
+
+.pageCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media (max-width: 540px) or (orientation: portrait) {
+    .landscape-only {
+        display: none;
+    }
+
+    li.tab {
+        width: 55px;
+        margin: 10px 0px;
+    }
+}
+
+@media (min-width: 540px) and (orientation: landscape) {
+    .portrait-only {
+        display: none;
+    }
+
+    li.tab {
+        width: 110px;
+        margin: 10px 5px;
+    }
+}
+
 @media (max-width: 1080px) and (orientation: portrait) {
     #backgroundImage {
         background-image: url(../images/出雲大社607P.avif);
@@ -187,6 +229,7 @@ hr {
 
 @media (min-width: 1200px) {
     div#maincard {
+        flex: 1;
         width: 1200px;
         margin-right: auto;
         margin-left: auto;
@@ -195,6 +238,7 @@ hr {
 
 @media (max-width: 1199px) {
     div#maincard {
+        flex: 1;
         margin: 10px;
     }
 }
@@ -209,6 +253,7 @@ hr {
     .header,
     .footer {
         color: var(--defaultBlack);
+        flex-shrink: 0;
     }
 
     .header:visited,
@@ -240,6 +285,18 @@ hr {
 
     .isDarkMode {
         display: none;
+    }
+
+    a.pageCard {
+        color: var(--defaultBlack)
+    }
+
+    a.pageCard {
+        background-color: var(--cardLight);
+    }
+
+    a.pageCard:hover {
+        background-color: var(--cardLightVisited);
     }
 }
 
@@ -275,5 +332,17 @@ hr {
 
     .isLightMode {
         display: none;
+    }
+
+    a.pageCard {
+        color: var(--defaultWhite)
+    }
+
+    a.pageCard {
+        background-color: var(--cardDark);
+    }
+
+    a.pageCard:hover {
+        background-color: var(--cardDarkVisited);
     }
 }

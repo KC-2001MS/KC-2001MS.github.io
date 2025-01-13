@@ -13,6 +13,10 @@
     --accentColor4: rgb(200, 200, 100);
     --accentColor5: rgb(200, 100, 200);
     --accentColor6: rgb(100, 200, 200);
+    --cardDark: rgb(55, 55, 55, 1);
+    --cardLight: rgb(200, 200, 200, 1);
+    --cardDarkVisited: rgb(45, 45, 45, 1);
+    --cardLightVisited: rgb(210, 210, 210, 1);
 }
 
 @media (min-width: 800px) {
