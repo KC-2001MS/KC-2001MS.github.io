@@ -177,7 +177,7 @@ hr {
     li.tab {
         width: 55px;
     
-        margin: 10px calc();
+        margin: 10px 0;
     }
 }
 

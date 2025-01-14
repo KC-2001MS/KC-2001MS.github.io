@@ -114,7 +114,7 @@ Let's see how the Swift project is organized.
 - dependencies.lock
   A file that defines dependencies. Since it is defined here that esp32c6 is used, it is not necessary to describe it in idf_component.yml.
 - diagram.json
-  This is a json file that defines the board type and connections in a board simulator called Wokwi. you can check the actual board by installing the Wokwi extension in Visual Studio Code. This project launches a simulator for the Esp32-C6-Bug board. Since it does not simulate, we will not touch it this time.
+  This is a json file that defines the board type and connections in a board simulator called Wokwi. you can check the actual board by installing the Wokwi extension in Visual Studio Code. This project launches a simulator for the [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) board. Since it does not simulate, we will not touch it this time.
 - sdkconfig
   file, it seems to be an auto-generated file.
 - sdkconfig.old
@@ -134,9 +134,10 @@ $ export TOOLCHAINS=org.swift.59202406031a
 $ . <path-to-esp-idf>/export.sh
 $ idf.py set-target esp32c6
 $ idf.py build
+$ idf.py flash
 ```
 ### If you leave it as it is, it builds but does not work.
-It should be able to build, but it should not work. This is because the sample project uses a different board [Esp32-C6-Bug]() and this board is programmed to work.
+It should be able to build, but it should not work. This is because the sample project uses a different board [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) and this board is programmed to work.
 Check out the [M5Stack NanoC6 documentation](https://docs.m5stack.com/ja/core/M5NanoC6). Notice the description of the pin map.
 ![M5Stack NanoC6 Pinmap](/images/m5stacknanoc6-pinmap.png "Pinmap")
 Source : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
@@ -177,10 +178,12 @@ func main() {
 ````
 
 Run it again and you should see the LED blink.
+![M5Stack NanoC6の点滅(消灯時)](/images/m5stacknanoc6-blinking1.jpg "点滅(消灯時)")
+![M5Stack NanoC6の点滅(点灯時)](/images/m5stacknanoc6-blinking2.jpg "点滅(点灯時)")
 
 ## Finally
 This time, I modified the sample code to blink LEDs on the M5Stack NanoC6. This time, I learned that it is very important to look at the spec sheet in the development of embedded devices, just as it is important to look at the documentation in programming. I hope I can share this importance with others.
-Also, since the ESP32-C6-BUG is not easy to obtain and costs 4,785 yen, I was able to tell them that they can experience Embedded Swift with the M5Stack NanoC6, which costs 1,276 yen. This would be very meaningful. We hope this is useful, especially since there are not many articles on Embedded Swift in the Japanese-speaking world.
+Also, since the [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) is not easy to obtain and costs 4,785 yen, I was able to tell them that they can experience Embedded Swift with the M5Stack NanoC6, which costs 1,276 yen. This would be very meaningful. We hope this is useful, especially since there are not many articles on Embedded Swift in the Japanese-speaking world.
 
 ## References
 - [Go small with Embedded Swift](https://developer.apple.com/videos/play/wwdc2024/10197/)
@@ -194,3 +197,4 @@ Also, since the ESP32-C6-BUG is not easy to obtain and costs 4,785 yen, I was ab
 - [idf_component.yml Manifest File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/manifest_file.html)
 - [Dependencies.lock File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/dependencies_lock.html)
 - [Build System (CMake) -  -  — ESP-IDF Programming Guide release-v3.3 documentation](https://docs.espressif.com/projects/esp-idf/en/release-v3.3/api-guides/build-system-cmake.html)
+- [ESP32-C6-BUG Prokyber | Mouser Japan](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-)

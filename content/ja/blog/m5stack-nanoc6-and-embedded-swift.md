@@ -119,7 +119,7 @@ $ python3 -m pip install -r Tools/requirements.txt
 - dependencies.lock
   依存関係を定義するファイル。こちらで、esp32c6を使用することが定義されていることから、idf_component.ymlに記載する必要がないと思われる。
 - diagram.json
-  Wokwiという基板のシミュレータで基板の種類や接続を定義するjsonファイル。Visual Studio CodeのWokwi拡張機能をインストールすると実際の基板を確認できる。このプロジェクトでは、Esp32-C6-Bugの基板のシミュレータが立ち上がる。シミュレートはしないため今回は触らない。
+  Wokwiという基板のシミュレータで基板の種類や接続を定義するjsonファイル。Visual Studio CodeのWokwi拡張機能をインストールすると実際の基板を確認できる。このプロジェクトでは、[Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-)の基板のシミュレータが立ち上がる。シミュレートはしないため今回は触らない。
 - sdkconfig
   ファイルのコメントを見ると、自動生成されているファイルのようだ。
 - sdkconfig.old
@@ -140,9 +140,10 @@ $ export TOOLCHAINS=org.swift.59202406031a
 $ . <path-to-esp-idf>/export.sh
 $ idf.py set-target esp32c6
 $ idf.py build
+$ idf.py flash
 ```
 ### そのままだとビルドはできても動かない
-ビルドできているはずなのに動かないはずだ。これは、サンプルプロジェクトでは、異なる基板[Esp32-C6-Bug]()を使用しており、このボードが動くようにプログラミングされているためだ。
+ビルドできているはずなのに動かないはずだ。これは、サンプルプロジェクトでは、異なる基板[Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-)を使用しており、このボードが動くようにプログラミングされているためだ。
 [M5Stack NanoC6のドキュメント](https://docs.m5stack.com/ja/core/M5NanoC6)を確認してみよう。注目して欲しいのは、ピンマップに関する記載だ。
 ![M5Stack NanoC6 ピンマップ](/images/m5stacknanoc6-pinmap.png "ピンマップ")
 出典 : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
@@ -184,6 +185,8 @@ func main() {
 に変えれば良い。
 
 もう一度実行してみると、LEDが点滅するのが確認できるはずだ。
+! [M5Stack NanoC6 blinking (lights off)](/images/m5stacknanoc6-blinking1.jpg “Blinking (lights off)”)
+! [M5Stack NanoC6 blinking (light on)](/images/m5stacknanoc6-blinking2.jpg “Blinking (light on)”)
 
 ## 最後に
 今回は、M5Stack NanoC6でサンプルコードを修正してLEDを点滅させた。今回、プログラミングでドキュメントを見る大切さと同じく、埋め込みの開発においてスペックシートを見ることがとても重要だと学ぶことができた。皆にもこの大切さを共有できれば幸いだ。
@@ -201,3 +204,4 @@ func main() {
 - [idf_component.yml Manifest File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/manifest_file.html)
 - [Dependencies.lock File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/dependencies_lock.html)
 - [Build System (CMake) -  -  — ESP-IDF Programming Guide release-v3.3 documentation](https://docs.espressif.com/projects/esp-idf/en/release-v3.3/api-guides/build-system-cmake.html)
+- [ESP32-C6-BUG Prokyber | Mouser 日本](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-)
