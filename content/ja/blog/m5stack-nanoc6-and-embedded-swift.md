@@ -7,7 +7,8 @@ date: 2025/1/14
 ---
 # Embedded SwiftでM5Stack NanoC6を動かす
 これから、Embedded Swiftを使用して、サンプルプロジェクトのesp32-led-blink-sdkを利用してM5Stack NanoC6でLEDを点滅させる。
-
+![M5Stack NanoC6](/images/m5stacknanoc6.png "M5Stack NanoC6")
+出典 : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 ## はじめに
 WWDC2024では、Embedded Swiftが発表され、SwiftでAppleデバイスではなく、組み込み機器の開発ができるようになる予定だ。（現在は、正式なリリースはされていないようで、SwiftのSnapshotをインストールして使用する必要があるようだ。）
 そこで、Appleデバイスの開発だけでなく組み込み機器の開発に挑戦してみることにした。今回は、**M5Stack NanoC6を使用してLEDを点滅させることを目指す**。組み込み機器については初めてなので間違っていることがあるかもしれないが、暖かく見守っていただけると幸いだ。
@@ -143,7 +144,8 @@ $ idf.py build
 ### そのままだとビルドはできても動かない
 ビルドできているはずなのに動かないはずだ。これは、サンプルプロジェクトでは、異なる基板[Esp32-C6-Bug]()を使用しており、このボードが動くようにプログラミングされているためだ。
 [M5Stack NanoC6のドキュメント](https://docs.m5stack.com/ja/core/M5NanoC6)を確認してみよう。注目して欲しいのは、ピンマップに関する記載だ。
-![M5Stack nano c6 ピンマップ](/images/m5stacknanoc6-pinmap.png "ピンマップ")
+![M5Stack NanoC6 ピンマップ](/images/m5stacknanoc6-pinmap.png "ピンマップ")
+出典 : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 LED(Blue)はGPI07に割り当てられている。対して、サンプルプロジェクトでの図によるとGPI08に割り当てられていることに気づくはずだ。
 つまり、数字を変更する必要があるのだ。
 ```swift:Main.swift
@@ -187,7 +189,7 @@ func main() {
 今回は、M5Stack NanoC6でサンプルコードを修正してLEDを点滅させた。今回、プログラミングでドキュメントを見る大切さと同じく、埋め込みの開発においてスペックシートを見ることがとても重要だと学ぶことができた。皆にもこの大切さを共有できれば幸いだ。
 また、ESP32-C6-BUGは簡単には手に入らず、値段も高めの4785円のため、1276円のM5Stack NanoC6でEmbedded Swiftを体験できることを伝えられた。これはとても有意義なことではないだろうか。特に、Embedded Swiftに関して実際に動かしてみた記事は日本語圏では多くないため、役に立てば幸いだ。
 
-##　参考資料
+## 参考資料
 - [Embedded Swiftでサイズを縮小](https://developer.apple.com/jp/videos/play/wwdc2024/10197/)
 - [Byte-sized Swift: Building Tiny Games for the Playdate](https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/)
 - [Get Started with Embedded Swift on ARM and RISC-V Microcontrollers](https://www.swift.org/blog/embedded-swift-examples/)

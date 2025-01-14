@@ -7,7 +7,8 @@ date: "2025/1/14"
 ---
 # Running the M5Stack NanoC6 with Embedded Swift
 I will now use Embedded Swift to blink LEDs on the M5Stack NanoC6 using the sample project esp32-led-blink-sdk.
-
+![M5Stack NanoC6](/images/m5stacknanoc6-pinmap.png "M5Stack NanoC6")
+Source : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 ## Introduction
 Embedded Swift was announced at WWDC2024 and will allow development of embedded devices instead of Apple devices with Swift. (Currently, it does not appear to be officially released and requires Swift Snapshot to be installed and used.)
 So I decided to try my hand at developing embedded devices as well as Apple devices. This time, **I aim to use M5Stack NanoC6 to blink LEDs**. I am new to embedded devices, so I may get some things wrong, but I hope you will keep a warm eye on me.
@@ -137,7 +138,8 @@ $ idf.py build
 ### If you leave it as it is, it builds but does not work.
 It should be able to build, but it should not work. This is because the sample project uses a different board [Esp32-C6-Bug]() and this board is programmed to work.
 Check out the [M5Stack NanoC6 documentation](https://docs.m5stack.com/ja/core/M5NanoC6). Notice the description of the pin map.
-![M5Stack nano c6 Pinmap](/images/m5stacknanoc6-pinmap.png "Pinmap")
+![M5Stack NanoC6 Pinmap](/images/m5stacknanoc6-pinmap.png "Pinmap")
+Source : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 LED (Blue) is assigned to GPI07. In contrast, you will notice that it is assigned to GPI08 according to the diagram in the sample project.
 This means that the numbers need to be changed.
 ```swift:Main.swift
