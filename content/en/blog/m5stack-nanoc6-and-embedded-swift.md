@@ -178,8 +178,8 @@ func main() {
 ````
 
 Run it again and you should see the LED blink.
-![M5Stack NanoC6の点滅(消灯時)](/images/m5stacknanoc6-blinking1.jpg "点滅(消灯時)")
-![M5Stack NanoC6の点滅(点灯時)](/images/m5stacknanoc6-blinking2.jpg "点滅(点灯時)")
+![M5Stack NanoC6 blinking (lights off)](/images/m5stacknanoc6-blinking1.jpg "Blinking (lights off)")
+![M5Stack NanoC6 blinking (light on)](/images/m5stacknanoc6-blinking2.jpg "Blinking (light on)")
 
 ## Finally
 This time, I modified the sample code to blink LEDs on the M5Stack NanoC6. This time, I learned that it is very important to look at the spec sheet in the development of embedded devices, just as it is important to look at the documentation in programming. I hope I can share this importance with others.

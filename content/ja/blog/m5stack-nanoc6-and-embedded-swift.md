@@ -185,8 +185,8 @@ func main() {
 に変えれば良い。
 
 もう一度実行してみると、LEDが点滅するのが確認できるはずだ。
-! [M5Stack NanoC6 blinking (lights off)](/images/m5stacknanoc6-blinking1.jpg “Blinking (lights off)”)
-! [M5Stack NanoC6 blinking (light on)](/images/m5stacknanoc6-blinking2.jpg “Blinking (light on)”)
+![M5Stack NanoC6の点滅(消灯時)](/images/m5stacknanoc6-blinking1.jpg "点滅(消灯時)")
+![M5Stack NanoC6の点滅(点灯時)](/images/m5stacknanoc6-blinking2.jpg "点滅(点灯時)")
 
 ## 最後に
 今回は、M5Stack NanoC6でサンプルコードを修正してLEDを点滅させた。今回、プログラミングでドキュメントを見る大切さと同じく、埋め込みの開発においてスペックシートを見ることがとても重要だと学ぶことができた。皆にもこの大切さを共有できれば幸いだ。
