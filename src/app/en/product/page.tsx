@@ -465,6 +465,13 @@ export default function Product() {
                         </p>
                     </div>
                     <div className="card">
+                        <h2>Hashify</h2>
+                        <p>
+                            Macro that provides compile-time hashing functionality for string literals.
+                            Please visit the <a href="https://github.com/KC-2001MS/Hashify">SwiftStorage repository</a> for an overview.
+                        </p>
+                    </div>
+                    <div className="card">
                         <h2>SwiftLI</h2>
                         <p>
                             A package that makes it easy to create a CUI for a command line tool.

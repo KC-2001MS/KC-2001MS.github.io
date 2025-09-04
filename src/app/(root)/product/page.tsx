@@ -497,6 +497,13 @@ export default async function Product() {
                         </p>
                     </div>
                     <div className="card">
+                        <h2>Hashify</h2>
+                        <p>
+                            文字列リテラルに対してコンパイル時のハッシュ機能を提供するマクロ。
+                            概要は<a href="https://github.com/KC-2001MS/Hashify">Hashifyリポジトリ</a>からご確認ください。
+                        </p>
+                    </div>
+                    <div className="card">
                         <h2>SwiftLI</h2>
                         <p>
                             コマンドラインツールのCUIを簡単に作成することができるパッケージ。
