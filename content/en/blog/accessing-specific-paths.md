@@ -9,8 +9,6 @@ date: 2025/9/9
 Due to sandboxing constraints, macOS apps cannot freely access files. In most cases, this is because URLs within the sandbox are returned. This time, we'll learn how to access specific paths directly under the Home directory while adhering to sandboxing restrictions.
 This method has actually passed App Review, so it's a safe approach. Why not give it a try?
 
-Translated with DeepL.com (free version)
-
 ## 環境
 - macOS 15.4 (Sequoia)
 - Xcode 16.3
