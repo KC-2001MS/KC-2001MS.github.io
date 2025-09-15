@@ -5,6 +5,7 @@ import AppStoreLink from '@/components/AppStoreLink';
 import "@styles/content.css";
 import "@styles/product.css";
 import AppStorePriceTag from "@/components/AppStorePriceTag";
+import productData from '@/../content/ja/product.json';
 
 export const metadata: Metadata = {
     title: "いろいろが開発したアプリや貢献したプロジェクト・サービス",
@@ -70,11 +71,16 @@ export const metadata: Metadata = {
 };
 
 export default async function Product() {
+    const getRandomClassName = () => {
+        const classes = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
+        return classes[Math.floor(Math.random() * classes.length)];
+    };
+
     return (
         <main>
             <div id="maincard">
                 <div className="card">
-                    <h1 className="n1">アプリケーション</h1>
+                    <h1 className={getRandomClassName()}>アプリケーション</h1>
                     <div className="card">
                         <h2>開発</h2>
                         <div className="card clear">
@@ -451,106 +457,65 @@ export default async function Product() {
                         </div>
                     </div>
                 </div>
-                <div className="card clear">
-                    <h1 className="n2">テンプレートファイル</h1>
-                    <div className="card">
-                        <h2>Word-Filter-X-Templates</h2>
-                        <div>
-                            Word Filter Xの設定データのテンプレートサイト。
-                            概要は<a
-                                href="https://iroiro.dev/Word-Filter-X-Templates/">Word-Filter-X-Templatesリポジトリ</a>からご確認ください。
-                            <h3><a
-                                href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">ダウンロード</a>
-                            </h3>
+                {productData.others.map((item) => (
+                    <div key={item.id} className="card clear">
+                        <h1 className={getRandomClassName()}>{item.label === "テンプレート" ? "テンプレートファイル" : item.label}</h1>
+                        <div className="card">
+                            <h2>{item.title}</h2>
+                            {item.label === "テンプレート" ? (
+                                <div>
+                                    {item.description}
+                                    概要は<a href={item.repositoryUrl}>{item.title}リポジトリ</a>からご確認ください。
+                                    {item.downloadUrl && (
+                                        <h3><a href={item.downloadUrl}>ダウンロード</a></h3>
+                                    )}
+                                </div>
+                            ) : (
+                                <p>
+                                    {item.description}
+                                    {item.moreInfoUrl && (
+                                        <>概要は<a href={item.moreInfoUrl}>{item.label} {item.title}【公式】</a>からご確認ください。</>
+                                    )}
+                                </p>
+                            )}
                         </div>
                     </div>
-                </div>
+                ))}
                 <div className="card clear">
-                    <h1 className="n6">Blueskyフィード</h1>
-                    <div className="card">
-                        <h2>Swift</h2>
-                        <p>
-                            Swift言語に関連する情報を提供するフィードです。
-                            概要は<a
-                                href="./product/bluesky_swift-feed">Bluesky Swiftフィード【公式】</a>からご確認ください。
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n6">Brave Goggle</h1>
-                    <div className="card">
-                        <h2>Swift</h2>
-                        <p>
-                            Swift言語に関連する情報を提供するGoggleです。
-                            概要は<a
-                                href="./product/brave_swift-goggle">Brave Swift Goggle【公式】</a>からご確認ください。
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n4">フレームワーク・パッケージ</h1>
-                    <div className="card">
-                        <h2>SwiftStorage</h2>
-                        <p>
-                            Userdefaultsによる永続化に対応したObservationのコードを生成するマクロ。
-                            概要は<a href="https://github.com/KC-2001MS/SwiftStorage">SwiftStorageリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>Hashify</h2>
-                        <p>
-                            文字列リテラルに対してコンパイル時のハッシュ機能を提供するマクロ。
-                            概要は<a href="https://github.com/KC-2001MS/Hashify">Hashifyリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>SwiftLI</h2>
-                        <p>
-                            コマンドラインツールのCUIを簡単に作成することができるパッケージ。
-                            概要は<a href="https://github.com/KC-2001MS/SwiftLI">SwiftLIリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>OnboardingUI</h2>
-                        <p>
-                            SwiftUIで簡単にオンボーディングを作成するためのパッケージ。
-                            概要は<a href="https://github.com/KC-2001MS/OnboardingUI">OnboardingUIリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>AboutUI</h2>
-                        <p>
-                            SwiftUIでmacOSのアプリについてのウインドウを作成するためのパッケージ。
-                            概要は<a href="https://github.com/KC-2001MS/AboutUI">AboutUIリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>ArticleUI</h2>
-                        <p>
-                            SwiftUIのListのように記事のUIを作成できるパッケージ。
-                            概要は<a href="https://github.com/KC-2001MS/ArticleUI">ArticleUIリポジトリ</a>からご確認ください。
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n5">シェルスクリプト</h1>
-                    <div className="card">
-                        <h2>Shell-Config-Setup</h2>
-                        <div>
-                            OSの設定とアプリのダウンロードを簡単に行うシェルスクリプト。
-                            概要は<a
-                                href="https://github.com/KC-2001MS/Shell-Config-Setup">Shell-Config-Setupリポジトリ</a>からご確認ください。
-                                <a href="https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip">ダウンロード</a>
+                    <h1 className={getRandomClassName()}>フレームワーク・パッケージ</h1>
+                    {productData.frameworks.map((framework) => (
+                        <div key={framework.id} className="card">
+                            <h2>{framework.title}</h2>
+                            <p>
+                                {framework.description}
+                                概要は<a href={framework.repositoryUrl}>{framework.title}リポジトリ</a>からご確認ください。
+                            </p>
                         </div>
-                    </div>
+                    ))}
                 </div>
                 <div className="card clear">
-                    <h1 className="n3">ウェブサイト</h1>
-                    <div className="card">
-                        <h2>いろいろポートフォリオ</h2>
-                        <p>こちらのホームページです。公開したサービスの紹介とサポート等を目的としたサイトです。</p>
-                        <p>Webアプリケーションに詳しくなく、今後もメインとする予定がないため最低限の作りとなっております。このホームページを頻繁に更新する予定はありませんが、フィードバックが多ければ対応します。</p>
-                    </div>
+                    <h1 className={getRandomClassName()}>シェルスクリプト</h1>
+                    {productData.shellScripts.map((script) => (
+                        <div key={script.id} className="card">
+                            <h2>{script.title}</h2>
+                            <div>
+                                {script.description}
+                                概要は<a href={script.repositoryUrl}>{script.title}リポジトリ</a>からご確認ください。
+                                {script.downloadUrl && (
+                                    <a href={script.downloadUrl}>ダウンロード</a>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="card clear">
+                    <h1 className={getRandomClassName()}>ウェブサイト</h1>
+                    {productData.websites.map((website) => (
+                        <div key={website.id} className="card">
+                            <h2>{website.title}</h2>
+                            <p>{website.description}</p>
+                        </div>
+                    ))}
                 </div>
 
                 <hr />

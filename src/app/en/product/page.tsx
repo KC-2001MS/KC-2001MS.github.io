@@ -5,6 +5,7 @@ import "@styles/content.css";
 import "@styles/product.css";
 import { Language } from "@/lib/Language";
 import AppStorePriceTag from "@/components/AppStorePriceTag";
+import productData from '@/../content/en/product.json';
 
 export const metadata: Metadata = {
     title: "Applications developed and projects/services contributed to by the Iroiro",
@@ -70,11 +71,16 @@ export const metadata: Metadata = {
 };
 
 export default function Product() {
+    const getRandomClassName = () => {
+        const classes = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
+        return classes[Math.floor(Math.random() * classes.length)];
+    };
+
     return (
         <main>
             <div id="maincard">
                 <div className="card">
-                    <h1 className="n1">App</h1>
+                    <h1 className={getRandomClassName()}>App</h1>
                     <div className="card">
                         <h2>Development</h2>
                         <div className="card clear">
@@ -422,111 +428,67 @@ export default function Product() {
                         </div>
                     </div>
                 </div>
-                <div className="card clear">
-                    <h1 className="n2">Templates</h1>
-                    <div className="card">
-                        <h2>Word-Filter-X-Templates</h2>
-                        <div>
-                            Template site for Word Filter X configuration data.
-                            An overview is available from the <a
-                                href="https://iroiro.dev/Word-Filter-X-Templates/">Word-Filter-X-Templates
-                                repository</a>.
-                            <a href="https://github.com/KC-2001MS/Word-Filter-X-Templates/archive/refs/heads/master.zip">Download</a>
+                {productData.others.map((item) => (
+                    <div key={item.id} className="card clear">
+                        <h1 className={getRandomClassName()}>{item.label}</h1>
+                        <div className="card">
+                            <h2>{item.title}</h2>
+                            {item.label === "Template" ? (
+                                <div>
+                                    {item.description}
+                                    An overview is available from the <a href={item.repositoryUrl}>{item.title} repository</a>.
+                                    {item.downloadUrl && (
+                                        <a href={item.downloadUrl}>Download</a>
+                                    )}
+                                </div>
+                            ) : (
+                                <p>
+                                    {item.description}
+                                    {item.moreInfoUrl && (
+                                        <>Please see the <a href={item.moreInfoUrl}>More about {item.label} {item.title}</a> for an overview.</>
+                                    )}
+                                </p>
+                            )}
                         </div>
                     </div>
-                </div>
+                ))}
                 <div className="card clear">
-                    <h1 className="n6">Bluesky Feed</h1>
-                    <div className="card">
-                        <h2>Swift</h2>
-                        <p>
-                            This feed provides information related to the Swift language.
-                            Please see the <a href="./product/bluesky_swift-feed">More about Bluesky Swift feed</a> for an overview.
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n5">Brave Goggle</h1>
-                    <div className="card">
-                        <h2>Swift</h2>
-                        <p>
-                            This goggle provides information related to the Swift language.
-                            Please see the <a href="./product/brave_swift-goggle">More about Brave Swift goggle</a> for an overview.
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n4">Framework & Packages</h1>
-                    <div className="card">
-                        <h2>SwiftStorage</h2>
-                        <p>
-                            Macro to generate Observation code for persistence by Userdefaults.
-                            Please visit the <a href="https://github.com/KC-2001MS/SwiftStorage">SwiftStorage repository</a> for an overview.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>Hashify</h2>
-                        <p>
-                            Macro that provides compile-time hashing functionality for string literals.
-                            Please visit the <a href="https://github.com/KC-2001MS/Hashify">SwiftStorage repository</a> for an overview.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>SwiftLI</h2>
-                        <p>
-                            A package that makes it easy to create a CUI for a command line tool.
-                            Please visit the <a href="https://github.com/KC-2001MS/SwiftLI">SwiftLI repository</a> for an overview.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>OnboardingUI</h2>
-                        <p>
-                            Package for creating easy onboarding with SwiftUI.
-                            Please visit the <a href="https://github.com/KC-2001MS/OnboardingUI">OnboardingUI repository</a> for an overview.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>AboutUI</h2>
-                        <p>
-                            Package to create a window about macOS apps in SwiftUI.
-                            Please visit the <a href="https://github.com/KC-2001MS/AboutUI">AboutUI repository</a> for an overview.
-                        </p>
-                    </div>
-                    <div className="card">
-                        <h2>ArticleUI</h2>
-                        <p>
-                            A package that allows you to create a UI for articles like List in SwiftUI.
-                            Please visit the <a href="https://github.com/KC-2001MS/ArticleUI">ArticleUI repository</a> for an overview.
-                        </p>
-                    </div>
-                </div>
-                <div className="card clear">
-                    <h1 className="n5">Shell Script</h1>
-                    <div className="card">
-                        <h2>Shell-Config-Setup</h2>
-                        <div>
-                            Shell scripts to easily configure the OS and download applications.
-                            An overview is available from the <a
-                                href="https://github.com/KC-2001MS/Shell-Config-Setup">Shell-Config-Setup repository</a>.
-                            <h3>
-                                <a
-                                    href="https://github.com/KC-2001MS/Shell-Config-Setup/archive/refs/heads/main.zip">Download</a>
-                            </h3>
+                    <h1 className={getRandomClassName()}>Framework & Packages</h1>
+                    {productData.frameworks.map((framework) => (
+                        <div key={framework.id} className="card">
+                            <h2>{framework.title}</h2>
+                            <p>
+                                {framework.description}
+                                Please visit the <a href={framework.repositoryUrl}>{framework.title} repository</a> for an overview.
+                            </p>
                         </div>
-                    </div>
+                    ))}
                 </div>
                 <div className="card clear">
-                    <h1 className="n3">Website</h1>
-                    <div className="card">
-                        <h2>Iroiro&apos;s portfolio</h2>
-                        <p>
-                            This is the homepage. The purpose of this site is to introduce and support the services we have
-                            made available to the public.</p>
-                        <p>It is minimal because we are not familiar with web applications and do not plan to make it
-                            our main focus in the future. We do not plan to update this website frequently, but will respond
-                            if we get a lot of feedback.
-                        </p>
-                    </div>
+                    <h1 className={getRandomClassName()}>Shell Script</h1>
+                    {productData.shellScripts.map((script) => (
+                        <div key={script.id} className="card">
+                            <h2>{script.title}</h2>
+                            <div>
+                                {script.description}
+                                An overview is available from the <a href={script.repositoryUrl}>{script.title} repository</a>.
+                                {script.downloadUrl && (
+                                    <h3>
+                                        <a href={script.downloadUrl}>Download</a>
+                                    </h3>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="card clear">
+                    <h1 className={getRandomClassName()}>Website</h1>
+                    {productData.websites.map((website) => (
+                        <div key={website.id} className="card">
+                            <h2>{website.title}</h2>
+                            <p>{website.description}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </main>
