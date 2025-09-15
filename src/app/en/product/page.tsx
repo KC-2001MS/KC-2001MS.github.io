@@ -113,19 +113,26 @@ export default function Product() {
                                         ))}
                                     </tbody>
                                 </table>
-                                {(app as any).cm?.length && (
-                                    <>
-                                        <h3>CM</h3>
-                                        <div>
-                                            {(app as any).cm.map((cmItem: any, index: number) => (
-                                                <div key={index}>
-                                                    <h5>{cmItem.name}</h5>
-                                                    <YouTubeEmbed videoId={cmItem.url} />
+                                {(() => {
+                                    const appWithCm = app as Record<string, unknown>;
+                                    if ('cm' in app && appWithCm.cm && Array.isArray(appWithCm.cm) && appWithCm.cm.length > 0) {
+                                        const cmItems = appWithCm.cm as { name: string; url: string }[];
+                                        return (
+                                            <>
+                                                <h3>CM</h3>
+                                                <div>
+                                                    {cmItems.map((cmItem: { name: string; url: string }, index: number) => (
+                                                        <div key={index}>
+                                                            <h5>{cmItem.name}</h5>
+                                                            <YouTubeEmbed videoId={cmItem.url} />
+                                                        </div>
+                                                    ))}
                                                 </div>
-                                            ))}
-                                        </div>
-                                    </>
-                                )}
+                                            </>
+                                        );
+                                    }
+                                    return null;
+                                })()}
                                 <h3><a href={app.supportPage}>Support Page</a></h3>
                                 <h3><a href={app.feedback}>Feedback</a></h3>
                                 <div className="appInfoButtom">
