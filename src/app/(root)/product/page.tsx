@@ -83,383 +83,164 @@ export default async function Product() {
                     <h1 className={getRandomClassName()}>アプリケーション</h1>
                     <div className="card">
                         <h2>開発</h2>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">日本企業情報</h3>
-                                <a href="https://apps.apple.com/app/id6477782786">
-                                    <Image src={`/images/Japan Corp Info.avif`} className="appIcon left" height={100} width={100} alt="日本企業情報アイコン" />
-                                </a>
+                        {productData.apps.development.map((app) => (
+                            <div key={app.id} className="card clear">
+                                <div className="appInfoTop">
+                                    <h3 className="left appTitle">{app.title}</h3>
+                                    <a href={`https://apps.apple.com/app/${app.id}`}>
+                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title}アイコン`} />
+                                    </a>
+                                </div>
+                                <div className="clear">
+                                    <p>{app.description}</p>
+                                    <p>対応プラットフォームは次の通りです。</p>
+                                </div>
+                                <h3>対応プラットフォーム</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">バージョン</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {(app as any).cm?.length && (
+                                    <>
+                                        <h3>CM</h3>
+                                        <div>
+                                            {(app as any).cm.map((cmItem: any, index: number) => (
+                                                <div key={index}>
+                                                    <h5>{cmItem.name}</h5>
+                                                    <YouTubeEmbed videoId={cmItem.url} />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>サポートページ</a></h3>
+                                <h3><a href={app.feedback}>フィードバック</a></h3>
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id} />
+                                    <AppStorePriceTag id={parseInt(app.id.replace('id', ''))} />
+                                </div>
                             </div>
-                            <div className="clear">
-                                <p><strong>日本企業情報</strong>は、日本の法人情報を簡単に管理する最適な方法です。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/japancorpinfo">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6477782786" />
-                                <AppStorePriceTag id={6477782786} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">麻雀牌コンバータ</h3>
-                                <a href="https://apps.apple.com/app/id6470128646">
-                                    <Image src={`/images/Mahjong Tile Converter.avif`} className="appIcon left" height={100} width={100} alt="麻雀牌コンバータアイコン" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p><strong>麻雀牌コンバータ</strong>は、MPSZ形式で表現された牌姿をUnicodeを用いたグラフィカルな表記に変換します。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/mahjongtileconverter">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6470128646" />
-                                <AppStorePriceTag id={6470128646} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">My Word X</h3>
-                                <a href="https://apps.apple.com/app/id6450119338">
-                                    <Image src={`/images/My Word X.avif`} className="appIcon left" height={100} width={100} alt="My Word Xアイコン" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p><strong>My Word X</strong>は、オリジナルな単語帳を作成するアプリケーションです。様々な情報を登録できるため、より詳しくその単語を覚えることができます。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">watchOS</td>
-                                        <td className="vrItem">10 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">tvOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/mywordx">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6450119338" />
-                                <AppStorePriceTag id={6450119338} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Word Filter X</h3>
-                                <a href="https://apps.apple.com/app/id1668831130">
-                                    <Image src={`/images/Word Filter X.avif`} className="appIcon left" height={100} width={100} alt="Word Filter Xアイコン" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p><strong>Word Filter
-                                    X</strong>はSafariのWebサイト上の苦手な言葉を隠すアプリケーションです。Safari上の苦手な言葉を隠すことで、自身の心を穏やかにすることができます。</p>
-                                <p>このアプリはブラウザ拡張機能とiOSアプリの「<a
-                                    href="https://bondavi.jp">ひよこフィルター</a>」をベースに設定の同期機能や置き換える単語を変更する機能など機能を追加した派生版です。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/wordfilterx">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1668831130" />
-                                <AppStorePriceTag id={1668831130} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Uncheck X</h3>
-                                <a href="https://apps.apple.com/app/id6446932202">
-                                    <Image src={`/images/Uncheck X.avif`} className="appIcon left" height={100} width={100} alt="Uncheck Xアイコン" />
-                                </a>
-
-                            </div>
-                            <div className="clear">
-                                <p>物を買うときやあるサービスのアカウントを作るとき、自分が同意していない項目に勝手にチェックがつけられていたことはありませんか。</p>
-                                <p>Uncheck Xをインストールすれば、いつの間にかメールマガジンが送られることはありません。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>CM</h3>
-                            <div>
-                                <h5>DMM¹・FANZA²のチェックボックスを外そう iPadOS編</h5>
-                                <YouTubeEmbed videoId="qX81u1Jn8Lc" />
-                                <h5>楽天³のチェックボックスを外そう macOS編</h5>
-                                <YouTubeEmbed videoId="OnYyRR85Op0" />
-                            </div>
-                            <h3><a href="./product/uncheckx">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6446932202" />
-                                <AppStorePriceTag id={6446932202} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Simple Editor X</h3>
-                                <a href="https://apps.apple.com/app/id1612026794">
-                                    <Image src={`/images/Simple Editor X.avif`} className="appIcon left" height={100} width={100} alt="Simple Editor Xアイコン" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p><strong>Simple Editor X</strong>は、テキストファイルとして保存することができるシンプルなメモ帳・テキストエディタです。
-                                    最低限の機能を持つテキストエディターですが、音声の読み上げ機能や定型文の挿入機能があります。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/simpleeditorx">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1612026794" />
-                                <AppStorePriceTag id={1612026794} />
-                            </div>
-
-                        </div>
+                        ))}
                     </div>
 
                     <div className="card clear">
                         <h2>移植</h2>
-                        <div className="card">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Death To _blank</h3>
-                                <a href="https://apps.apple.com/app/id1672080999">
-                                    <Image src={`/images/Death To _blank.avif`} className="appIcon left" height={100} width={100} alt="Death To _blankアイコン" />
-                                </a>
+                        {productData.apps.transplanting.map((app) => (
+                            <div key={app.id} className="card">
+                                <div className="appInfoTop">
+                                    <h3 className="left appTitle">{app.title}</h3>
+                                    <a href={`https://apps.apple.com/app/${app.id}`}>
+                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title}アイコン`} />
+                                    </a>
+                                </div>
+                                <div className="clear">
+                                    <p><strong>{app.title}</strong>{app.description.replace(app.title, '')}</p>
+                                    <p>対応プラットフォームは次の通りです。</p>
+                                </div>
+                                <h3>対応プラットフォーム</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">バージョン</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {app.media && (
+                                    <>
+                                        <h3>メディア</h3>
+                                        {app.media.map((mediaItem, index) => (
+                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                        ))}
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>サポートページ</a></h3>
+                                <h3><a href={app.feedback}>フィードバック</a></h3>
+                                {app.originalSource && (
+                                    <>
+                                        <h3>{app.originalSource.platform}版について</h3>
+                                        <p>
+                                            Safari拡張機能の元となっている{app.originalSource.platform}拡張機能があります。もし、{app.originalSource.platform}で使用したい場合は
+                                            <a href={app.originalSource.url}>こちら</a>
+                                            をご利用ください。
+                                        </p>
+                                        <p>※{app.originalSource.platform}版のサポートは<a href={`mailto:${app.originalSource.supportEmail}`}>{app.originalSource.platform}版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
+                                    </>
+                                )}
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id} />
+                                    <AppStorePriceTag id={parseInt(app.id.replace('id', ''))} />
+                                </div>
                             </div>
-                            <div className="clear">
-                                <p>リンクをクリックしたらタブが増えた経験はありませんか。リンクを新規タブで開く原因である_blank属性をWebサイトから取り除くことで、この現象を無くしてタブをスッキリさせます。</p>
-                                <p>この拡張機能は、&quot;Death To _blank&quot;拡張機能をSafari拡張機能として移植したバージョンとなります。この拡張機能のコードは、開発者との合意に基づいて利用されています。</p>
-                                <p>※ 新規タブを開く効果がある_blank以外の属性でも動作します。</p>
-                                <p>対応プラットフォームは次の通りです。</p>
-                            </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>メディア</h3>
-                            <p><a
-                                href="https://books.google.co.jp/books?id=7E_HEAAAQBAJ&pg=PA131&lpg=PA131&dq=Keisuke+Chinone&source=bl&ots=-VqKdV3EKn&sig=ACfU3U3dAboshCgCcqkN2BbWpcwA6YvOYg&hl=ja&sa=X&ved=2ahUKEwiT646nmreAAxXgglYBHb2MANQQ6AF6BAgREAI#v=onepage&q=Keisuke%20Chinone&f=false">Mac
-                                Fan</a></p>
-                            <h3><a href="./product/deathto_blank">サポートページ</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">フィードバック</a></h3>
-                            <h3>Chrome版について</h3>
-                            <p>
-                                Safari拡張機能の元となっているChrome拡張機能があります。もし、Chromeで使用したい場合は
-                                <a href="https://chrome.google.com/webstore/detail/death-to-blank/gneobebnilffgkejpfhlgkmpkipgbcno?gl=JP&hl=ja">こちら</a>
-                                をご利用ください。
-                            </p>
-                            <p>※Chrome版のサポートは<a href="mailto:jbarker@jbarker.net">Chrome版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1672080999" />
-                                <AppStorePriceTag id={1672080999} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="card clear">
                         <h2>翻訳</h2>
-                        <div className="card">
-                            <h3>Declutter for Safari</h3>
-                            <div className="clear">
-                                <p><strong>Declutter for Safari</strong>は軽量の拡張機能で重複したタブを自動的に閉じることができます。</p>
-                                <p>質問とフィードバックがございましたら、 英語で連絡をお願いします。</p>
+                        {productData.apps.translation.map((app) => (
+                            <div key={app.id} className="card">
+                                <h3>{app.title}</h3>
+                                <div className="clear">
+                                    <p><strong>{app.title}</strong>{app.description.replace(app.title + 'は', 'は')}</p>
+                                </div>
+                                <h3>対応プラットフォーム</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">バージョン</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {app.media && (
+                                    <>
+                                        <h3>メディア</h3>
+                                        {app.media.map((mediaItem, index) => (
+                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                        ))}
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>サポートページ</a></h3>
+                                <h3><a href={app.feedback}>フィードバック</a></h3>
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id.startsWith('id') ? app.id : `id${app.id}`} />
+                                    <AppStorePriceTag id={parseInt(app.id.replace(/^(id|d)/, ''))} />
+                                </div>
                             </div>
-                            <h3>対応プラットフォーム</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">バージョン</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">11.1(Big Sur) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>メディア</h3>
-                            <p><a href="https://book.mynavi.jp/macfan/detail_summary/id=124346">Mac Fan</a></p>
-                            <h3><a href="https://github.com/brandonlee503/DeclutterInfo">サポートページ</a></h3>
-                            <h3><a href="mailto:declutterappextension@gmail.com">フィードバック</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1574021257" />
-                                <AppStorePriceTag id={1574021257} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
                 {productData.others.map((item) => (
                     <div key={item.id} className="card clear">
-                        <h1 className={getRandomClassName()}>{item.label === "テンプレート" ? "テンプレートファイル" : item.label}</h1>
+                        <h1 className={getRandomClassName()}>{item.label}</h1>
                         <div className="card">
                             <h2>{item.title}</h2>
                             {item.label === "テンプレート" ? (
@@ -520,9 +301,9 @@ export default async function Product() {
 
                 <hr />
 
-                <p className="caption">1.ＤＭＭは合同会社ＤＭＭ．ｃｏｍの商標もしくは商標登録です。</p>
-                <p className="caption">2.ＦＡＮＺＡは株式会社デジタルコマースの商標もしくは商標登録です。</p>
-                <p className="caption">3.楽天は楽天グループ株式会社の商標もしくは商標登録です。</p>
+                {productData.trademarkNotices.map((notice, index) => (
+                    <p key={index} className="caption">{index + 1}.{notice}</p>
+                ))}
             </div>
         </main>
     );

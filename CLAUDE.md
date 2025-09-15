@@ -46,3 +46,4 @@ The site includes sections for:
 ### Styling
 
 Uses Tailwind CSS with custom CSS variables for theming. Material Symbols font is loaded for icons.
+- @content/ja/product.json でUncheck Xの項目でCMを追加しなさい。これは２つの要素を持つ配列でnameとurlが必要です。

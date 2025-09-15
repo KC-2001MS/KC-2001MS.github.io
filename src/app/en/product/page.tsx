@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
 import "@styles/content.css";
 import "@styles/product.css";
@@ -83,349 +84,158 @@ export default function Product() {
                     <h1 className={getRandomClassName()}>App</h1>
                     <div className="card">
                         <h2>Development</h2>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Mahjong Tile Converter</h3>
-                                <a href="https://apps.apple.com/app/id6470128646">
-                                    <Image src={`/images/Mahjong Tile Converter.avif`} className="appIcon left" height={100} width={100} alt="Mahjong Tile Converter Icon" />
-                                </a>
+                        {productData.apps.development.map((app) => (
+                            <div key={app.id} className="card clear">
+                                <div className="appInfoTop">
+                                    <h3 className="left appTitle">{app.title}</h3>
+                                    <a href={`https://apps.apple.com/app/${app.id}`}>
+                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title} Icon`} />
+                                    </a>
+                                </div>
+                                <div className="clear">
+                                    <p>{app.description}</p>
+                                    <p>Supported platforms are as follows</p>
+                                </div>
+                                <h3>Supported platforms</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">Version</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {(app as any).cm?.length && (
+                                    <>
+                                        <h3>CM</h3>
+                                        <div>
+                                            {(app as any).cm.map((cmItem: any, index: number) => (
+                                                <div key={index}>
+                                                    <h5>{cmItem.name}</h5>
+                                                    <YouTubeEmbed videoId={cmItem.url} />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>Support Page</a></h3>
+                                <h3><a href={app.feedback}>Feedback</a></h3>
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
+                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
+                                </div>
                             </div>
-                            <div className="clear">
-                                <p>
-                                    <strong>Mahjong Tile Converter</strong> converts tiles represented in MPSZ format into a
-                                    graphical representation using Unicode.
-                                </p>
-                            </div>
-                            <h3>Supported platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/mahjongtileconverter">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6470128646" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={6470128646} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">My Word X</h3>
-                                <a href="https://apps.apple.com/app/id6450119338">
-                                    <Image src={`/images/My Word X.avif`} className="appIcon left" height={100} width={100} alt="My Word X Icon" />
-                                </a>
-                            </div>
-                            <p className="clear">
-                                <strong>My Word X</strong> is an application to create an original word book. You can
-                                register various information so that you can memorize the word in more detail.</p>
-                            <p>Supported platforms are as follows
-                            </p>
-                            <h3>Supported Platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">watchOS</td>
-                                        <td className="vrItem">10 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">tvOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/mywordx">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6450119338" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={6450119338} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Word Filter X</h3>
-                                <a href="https://apps.apple.com/app/id1668831130">
-                                    <Image src={`/images/Word Filter X.avif`} className="appIcon left" height={100} width={100} alt="Word Filter X Icon" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p><strong>Word Filter X</strong> is an application that hides words you don&apos;t like on Safari
-                                    websites.By hiding the words that you have difficulty with on Safari, you can put your own
-                                    mind at ease.</p>
-                                <p>This app is a derivative of the browser extension and iOS app &quot;<a
-                                    href="https://bondavi.jp">Hiyoko Filter(Support for Japanese language only)</a>&quot; with
-                                    additional features such as the ability to sync settings and change the words to be
-                                    replaced.</p>
-                                <p>Supported platforms are as follows</p>
-                            </div>
-                            <h3>Supported Platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/wordfilterx">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1668831130" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={1668831130} />
-                            </div>
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Uncheck X</h3>
-                                <a href="https://apps.apple.com/app/id6446932202">
-                                    <Image src={`/images/Uncheck X.avif`} className="appIcon left" height={100} width={100} alt="Uncheck X Icon" />
-                                </a>
-                            </div>
-                            <p className="clear">
-                                Have you ever checked items that you did not agree to when buying something or creating an
-                                account for a service?</p>
-                            <p><strong>Uncheck X</strong> returns checkboxes and radio buttons that are selected by
-                                default on a
-                                Web site to the deselected state. This reduces the need to uncheck checkboxes and radio
-                                buttons that have been added without your permission.</p>
-                            <p>You will no longer receive the newsletter any time soon.</p>
-                            <p>Supported platforms are as follows
-                            </p>
-                            <h3>Supported Platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/uncheckx">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id6446932202" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={6446932202} />
-                            </div>
-
-                        </div>
-                        <div className="card clear">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Simple Editor X</h3>
-                                <a href="https://apps.apple.com/app/id1612026794">
-                                    <Image src={`/images/Simple Editor X.avif`} className="appIcon left" height={100} width={100} alt="Simple Editor X Icon" />
-                                </a>
-                            </div>
-                            <div className="clear">
-                                <p>
-                                    <strong>Simple Editor X</strong> is a simple notepad and text editor that can be saved as a
-                                    text file.
-                                    Although it is a text editor with minimal features, it has a voice reading function and the
-                                    ability to insert canned text.
-                                </p>
-                            </div>
-                            <h3>Supported platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3><a href="./product/simpleeditorx">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1612026794" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={1612026794} />
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="card clear">
                         <h2>Transplanting</h2>
-                        <div className="card">
-                            <div className="appInfoTop">
-                                <h3 className="left appTitle">Death To _blank</h3>
-                                <a href="https://apps.apple.com/app/id1672080999">
-                                    <Image src={`/images/Death To _blank.avif`} className="appIcon left" height={100} width={100} alt="Death To _blank Icon" />
-                                </a>
+                        {productData.apps.transplanting.map((app) => (
+                            <div key={app.id} className="card">
+                                <div className="appInfoTop">
+                                    <h3 className="left appTitle">{app.title}</h3>
+                                    <a href={`https://apps.apple.com/app/${app.id}`}>
+                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title} Icon`} />
+                                    </a>
+                                </div>
+                                <p className="clear">{app.description}</p>
+                                <p>Supported platforms are as follows</p>
+                                <h3>Supported platforms</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">Version</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {app.media && (
+                                    <>
+                                        <h3>Media</h3>
+                                        {app.media.map((mediaItem, index) => (
+                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                        ))}
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>Support Page</a></h3>
+                                <h3><a href={app.feedback}>Feedback</a></h3>
+                                {app.originalSource && (
+                                    <>
+                                        <h3>About {app.originalSource.platform} version</h3>
+                                        <p>
+                                            There is a {app.originalSource.platform} extension that is the original Safari extension. If you wish to use it
+                                            with {app.originalSource.platform}, please use <a href={app.originalSource.url}>this one</a>.
+                                        </p>
+                                        <p>*Please send support for the {app.originalSource.platform} version to <a href={`mailto:${app.originalSource.supportEmail}`}>the
+                                            email address of the creator of the {app.originalSource.platform} version</a>. Please note that we do not
+                                            accept support here.
+                                        </p>
+                                    </>
+                                )}
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
+                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
+                                </div>
                             </div>
-                            <p className="clear">
-                                Have you ever clicked on a link and had it open a new tab? This is often caused by links
-                                using the &apos;target=_blank&apos; attribute. Death To _blank fixes this problem by removing the
-                                &apos;_blank&apos; attribute from links, meaning that most links will open in the current tab.</p>
-                            <p>This extension is a port of &apos;Death To _blank&apos; for Chrome, and has been developed in
-                                collaboration with its author.</p>
-                            <p>&apos;Death To _blank&apos; also removes a few other &apos;target&apos; values that can cause links to open
-                                in new pages (e.g. &quot;blank&quot; and &quot;new&quot;).</p>
-                            <p>Supported platforms are as follows
-                            </p>
-                            <h3>Supported platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">iOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">iPadOS</td>
-                                        <td className="vrItem">17 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">visionOS</td>
-                                        <td className="vrItem">1 ~</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">14(Sonoma) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>Media</h3>
-                            <p><a
-                                href="https://books.google.co.jp/books?id=7E_HEAAAQBAJ&pg=PA131&lpg=PA131&dq=Keisuke+Chinone&source=bl&ots=-VqKdV3EKn&sig=ACfU3U3dAboshCgCcqkN2BbWpcwA6YvOYg&hl=ja&sa=X&ved=2ahUKEwiT646nmreAAxXgglYBHb2MANQQ6AF6BAgREAI#v=onepage&q=Keisuke%20Chinone&f=false">Mac
-                                Fan(Japanese magazine specializing in Apple products)</a></p>
-                            <h3><a href="./product/deathto_blank">Support Page</a></h3>
-                            <h3><a href="mailto:iroiro.work1234@gmail.com">Feedback</a></h3>
-                            <h3>About Chrome version</h3>
-                            <p>
-                                There is a Chrome extension that is the original Safari extension. If you wish to use it
-                                with Chrome, please use <a
-                                    href="https://chrome.google.com/webstore/detail/death-to-blank/gneobebnilffgkejpfhlgkmpkipgbcno?gl=US&hl=en">this
-                                    one</a>.</p>
-                            <p>*Please send support for the Chrome version to <a href="mailto:jbarker@jbarker.net">the
-                                email address of the creator of the Chrome version</a>. Please note that we do not
-                                accept support here.
-                            </p>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1672080999" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={1672080999} />
-                            </div>
-
-                        </div>
+                        ))}
                     </div>
 
                     <div className="card clear">
                         <h2>Translation</h2>
-                        <div className="card">
-                            <h3>Declutter for Safari</h3>
-                            <p className="clear">
-                                Declutter for Safari is a lightweight extension that automatically closes duplicate tabs.</p>
-                            <p>If you have any questions and feedback, please contact declutterappextension@gmail.com
-                                in English.
-                            </p>
-                            <h3>Supported platforms</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th className="os">OS</th>
-                                        <th className="vr">Version</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="osItem">macOS</td>
-                                        <td className="vrItem">11.1(Big Sur) ~</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>Media</h3>
-                            <p><a href="https://book.mynavi.jp/macfan/detail_summary/id=124346">Mac Fan(Japanese magazine
-                                specializing in Apple products)</a></p>
-                            <h3><a href="https://github.com/brandonlee503/DeclutterInfo">Support Page</a></h3>
-                            <h3><a href="mailto:declutterappextension@gmail.com">Feedback</a></h3>
-                            <div className="appInfoButtom">
-                                <AppStoreLink appId="id1574021257" lang={Language.EnglishUS} />
-                                <AppStorePriceTag lang={Language.EnglishUS} id={1574021257} />
+                        {productData.apps.translation.map((app) => (
+                            <div key={app.id} className="card">
+                                <h3>{app.title}</h3>
+                                <p className="clear">{app.description}</p>
+                                <p>If you have any questions and feedback, please contact {app.feedback.replace('mailto:', '')} in English.</p>
+                                <h3>Supported platforms</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th className="os">OS</th>
+                                            <th className="vr">Version</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {app.supportedPlatforms.map((platform, index) => (
+                                            <tr key={index}>
+                                                <td className="osItem">{platform.os}</td>
+                                                <td className="vrItem">{platform.version} ~</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                                {app.media && (
+                                    <>
+                                        <h3>Media</h3>
+                                        {app.media.map((mediaItem, index) => (
+                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                        ))}
+                                    </>
+                                )}
+                                <h3><a href={app.supportPage}>Support Page</a></h3>
+                                <h3><a href={app.feedback}>Feedback</a></h3>
+                                <div className="appInfoButtom">
+                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
+                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
                 {productData.others.map((item) => (

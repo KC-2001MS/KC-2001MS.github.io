@@ -156,7 +156,8 @@
         ],
         "supportPage": "./product/deathto_blank",
         "feedback": "mailto:iroiro.work1234@gmail.com",
-        "chromeVersion": {
+        "originalSource": {
+          "platform": "Chrome",
           "url": "https://chrome.google.com/webstore/detail/death-to-blank/gneobebnilffgkejpfhlgkmpkipgbcno?gl=US&hl=en",
           "supportEmail": "jbarker@jbarker.net"
         }
