@@ -4,7 +4,8 @@
       {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
-        "icon": "/images/SSH Key Wallet.avif",
+        "icon": "/images/SSH Key Wallet Light.avif",
+        "darkIcon": "/images/SSH Key Wallet Dark.avif",
         "description": "SSH Key Walletは、OpenSSHをベースとした~/.ssh/内のSSH暗号鍵とSSH Configファイルを最も簡単に管理する方法です。",
         "supportedPlatforms": [
           {
@@ -18,7 +19,8 @@
       {
         "id": "id6477782786",
         "title": "日本企業情報",
-        "icon": "/images/Japan Corp Info.avif",
+        "icon": "/images/Japan Corp Info Light.avif",
+        "darkIcon": "/images/Japan Corp Info Dark.avif",
         "description": "日本企業情報は、日本の法人情報を簡単に管理する最適な方法です。",
         "supportedPlatforms": [
           {
@@ -44,7 +46,8 @@
       {
         "id": "id6470128646",
         "title": "麻雀牌コンバータ",
-        "icon": "/images/Mahjong Tile Converter.avif",
+        "icon": "/images/Mahjong Tile Converter Light.avif",
+        "darkIcon": "/images/Mahjong Tile Converter Dark.avif",
         "description": "麻雀牌コンバータは、MPSZ形式で表現された牌姿をUnicodeを用いたグラフィカルな表記に変換します。",
         "supportedPlatforms": [
           {
@@ -58,7 +61,8 @@
       {
         "id": "id6450119338",
         "title": "My Word X",
-        "icon": "/images/My Word X.avif",
+        "icon": "/images/My Word X Light.avif",
+        "darkIcon": "/images/My Word X Dark.avif",
         "description": "My Word Xは、オリジナルな単語帳を作成するアプリケーションです。様々な情報を登録できるため、より詳しくその単語を覚えることができます。",
         "supportedPlatforms": [
           {
@@ -92,7 +96,8 @@
       {
         "id": "id1668831130",
         "title": "Word Filter X",
-        "icon": "/images/Word Filter X.avif",
+        "icon": "/images/Word Filter X Light.avif",
+        "darkIcon": "/images/Word Filter X Dark.avif",
         "description": "Word Filter XはSafariのWebサイト上の苦手な言葉を隠すアプリケーションです。Safari上の苦手な言葉を隠すことで、自身の心を穏やかにすることができます。このアプリはブラウザ拡張機能とiOSアプリの「ひよこフィルター」をベースに設定の同期機能や置き換える単語を変更する機能など機能を追加した派生版です。",
         "supportedPlatforms": [
           {
@@ -118,7 +123,8 @@
       {
         "id": "id6446932202",
         "title": "Uncheck X",
-        "icon": "/images/Uncheck X.avif",
+        "icon": "/images/Uncheck X Light.avif",
+        "darkIcon": "/images/Uncheck X Dark.avif",
         "description": "物を買うときやあるサービスのアカウントを作るとき、自分が同意していない項目に勝手にチェックがつけられていたことはありませんか。Uncheck Xをインストールすれば、いつの間にかメールマガジンが送られることはありません。",
         "supportedPlatforms": [
           {
@@ -144,7 +150,8 @@
       {
         "id": "id1612026794",
         "title": "Simple Editor X",
-        "icon": "/images/Simple Editor X.avif",
+        "icon": "/images/Simple Editor X Light.avif",
+        "darkIcon": "/images/Simple Editor X Dark.avif",
         "description": "Simple Editor Xは、テキストファイルとして保存することができるシンプルなメモ帳・テキストエディタです。最低限の機能を持つテキストエディターですが、音声の読み上げ機能や定型文の挿入機能があります。",
         "supportedPlatforms": [
           {
@@ -168,7 +175,8 @@
       {
         "id": "id1672080999",
         "title": "Death To _blank",
-        "icon": "/images/Death To _blank.avif",
+        "icon": "/images/Death To _blank Light.avif",
+        "darkIcon": "/images/Death To _blank Dark.avif",
         "description": "リンクをクリックしたらタブが増えた経験はありませんか。リンクを新規タブで開く原因である_blank属性をWebサイトから取り除くことで、この現象を無くしてタブをスッキリさせます。この拡張機能は、\"Death To _blank\"拡張機能をSafari拡張機能として移植したバージョンとなります。この拡張機能のコードは、開発者との合意に基づいて利用されています。※ 新規タブを開く効果がある_blank以外の属性でも動作します。",
         "supportedPlatforms": [
           {

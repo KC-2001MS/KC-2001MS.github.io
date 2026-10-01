@@ -4,7 +4,8 @@
       {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
-        "icon": "/images/SSH Key Wallet.avif",
+        "icon": "/images/SSH Key Wallet Light.avif",
+        "darkIcon": "/images/SSH Key Wallet Dark.avif",
         "description": "SSH Key Wallet is the easiest way to manage SSH encryption keys and SSH Config files in ~/.ssh/ based on OpenSSH.",
         "supportedPlatforms": [
           {
@@ -18,7 +19,8 @@
       {
         "id": "id6470128646",
         "title": "Mahjong Tile Converter",
-        "icon": "/images/Mahjong Tile Converter.avif",
+        "icon": "/images/Mahjong Tile Converter Light.avif",
+        "darkIcon": "/images/Mahjong Tile Converter Dark.avif",
         "description": "Mahjong Tile Converter converts tiles represented in MPSZ format into a graphical representation using Unicode.",
         "supportedPlatforms": [
           {
@@ -32,7 +34,8 @@
       {
         "id": "id6450119338",
         "title": "My Word X",
-        "icon": "/images/My Word X.avif",
+        "icon": "/images/My Word X Light.avif",
+        "darkIcon": "/images/My Word X Dark.avif",
         "description": "My Word X is an application to create an original word book. You can register various information so that you can memorize the word in more detail.",
         "supportedPlatforms": [
           {
@@ -66,7 +69,8 @@
       {
         "id": "id1668831130",
         "title": "Word Filter X",
-        "icon": "/images/Word Filter X.avif",
+        "icon": "/images/Word Filter X Light.avif",
+        "darkIcon": "/images/Word Filter X Dark.avif",
         "description": "Word Filter X is an application that hides words you don't like on Safari websites. By hiding the words that you have difficulty with on Safari, you can put your own mind at ease. This app is a derivative of the browser extension and iOS app \"Hiyoko Filter(Support for Japanese language only)\" with additional features such as the ability to sync settings and change the words to be replaced.",
         "supportedPlatforms": [
           {
@@ -92,7 +96,8 @@
       {
         "id": "id6446932202",
         "title": "Uncheck X",
-        "icon": "/images/Uncheck X.avif",
+        "icon": "/images/Uncheck X Light.avif",
+        "darkIcon": "/images/Uncheck X Dark.avif",
         "description": "Have you ever checked items that you did not agree to when buying something or creating an account for a service? Uncheck X returns checkboxes and radio buttons that are selected by default on a Web site to the deselected state. This reduces the need to uncheck checkboxes and radio buttons that have been added without your permission. You will no longer receive the newsletter any time soon.",
         "supportedPlatforms": [
           {
@@ -118,7 +123,8 @@
       {
         "id": "id1612026794",
         "title": "Simple Editor X",
-        "icon": "/images/Simple Editor X.avif",
+        "icon": "/images/Simple Editor X Light.avif",
+        "darkIcon": "/images/Simple Editor X Dark.avif",
         "description": "Simple Editor X is a simple notepad and text editor that can be saved as a text file. Although it is a text editor with minimal features, it has a voice reading function and the ability to insert canned text.",
         "supportedPlatforms": [
           {
@@ -142,7 +148,8 @@
       {
         "id": "id1672080999",
         "title": "Death To _blank",
-        "icon": "/images/Death To _blank.avif",
+        "icon": "/images/Death To _blank Light.avif",
+        "darkIcon": "/images/Death To _blank Dark.avif",
         "description": "Have you ever clicked on a link and had it open a new tab? This is often caused by links using the 'target=_blank' attribute. Death To _blank fixes this problem by removing the '_blank' attribute from links, meaning that most links will open in the current tab. This extension is a port of 'Death To _blank' for Chrome, and has been developed in collaboration with its author. 'Death To _blank' also removes a few other 'target' values that can cause links to open in new pages (e.g. \"blank\" and \"new\").",
         "supportedPlatforms": [
           {
