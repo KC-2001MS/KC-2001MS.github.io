@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import { Metadata } from "next";
 import "@styles/content.css";
 import PageCard from "@/components/PageCard";
+import EmptyMessage from "@/components/EmptyMessage";
+import { readMarkdownFilenames } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "ニュースルーム",
@@ -76,7 +78,9 @@ export default async function Newsroom() {
     <div id="maincard">
       <div className="card">
       <h1 className="n2">Newsroom</h1>
-    {newsroomList.map((newsroom, index) => (
+    {newsroomList.length === 0 ? (
+      <EmptyMessage message="現在、ニュースはありません。" />
+    ) : newsroomList.map((newsroom, index) => (
                 <PageCard key={index} title={newsroom.title} description={newsroom.description} date={newsroom.date} genre={newsroom.genre} path={newsroom.path} />
         ))}
       </div>
@@ -90,7 +94,7 @@ async function getNewsroom() {
   const newsroomDirectory = path.join(process.cwd(), 'content/ja/newsroom');
 
   // 2. ディレクトリ内の全ファイル名を取得
-  const filenames = fs.readdirSync(newsroomDirectory);
+  const filenames = readMarkdownFilenames(newsroomDirectory);
 
   // 3. Markdownファイルを読み込み、必要なデータを抽出
   const newsroomList = filenames

@@ -9,6 +9,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
 import "@styles/content.css";
 
 type BlogDetailPageProps = {
@@ -18,7 +20,7 @@ type BlogDetailPageProps = {
 export async function generateMetadata({ params }: BlogDetailPageProps): Promise<Metadata> {
   const { slug } = await params
   const filePath = path.join(process.cwd(), "content/en/blog", `${slug}.md`);
-  const fileContents = fs.readFileSync(filePath, "utf-8");
+  const fileContents = fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf-8") : "";
 
   const { data } = matter(fileContents);
 
@@ -93,6 +95,9 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
 // ページのコンポーネント
 export default async function BlogDetail({ params }: BlogDetailPageProps) {
   const { slug } = await params
+  if (slug === EMPTY_SLUG) {
+    notFound();
+  }
   const { content } = await getBlogDetail(slug);
 
   return (
@@ -159,19 +164,5 @@ async function getBlogDetail(slug: string) {
 
 // 静的パスを生成
 export async function generateStaticParams() {
-  const blogDir = path.join(process.cwd(), "content/en/blog");
-  let filenames: string[] = [];
-
-  try {
-    filenames = fs.readdirSync(blogDir);
-  } catch {
-    console.warn("No markdown files found in the directory.");
-    return []
-  }
-
-  return filenames
-    .filter((filename) => filename.endsWith('.md'))
-    .map((filename) => ({
-      slug: filename.replace(/\.md$/, ""),
-    }));
+  return getStaticSlugs(path.join(process.cwd(), "content/en/blog"));
 }

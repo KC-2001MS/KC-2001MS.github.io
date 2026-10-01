@@ -4,6 +4,8 @@ import matter from "gray-matter";
 import { Metadata } from "next";
 import "@styles/content.css";
 import PageCard from "@/components/PageCard";
+import EmptyMessage from "@/components/EmptyMessage";
+import { readMarkdownFilenames } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "いろいろのブログ",
@@ -76,7 +78,9 @@ export default async function Blog() {
       <div id="maincard">
         <div className="card">
           <h1 className="n1">Blog</h1>
-            {blogList.map((blog, index) => (
+            {blogList.length === 0 ? (
+              <EmptyMessage message="現在、ブログ記事はありません。" />
+            ) : blogList.map((blog, index) => (
               <PageCard key={index} title={blog.title} description={blog.description} date={blog.date} genre={blog.genre} path={blog.path} />
             ))}
         </div>
@@ -90,7 +94,7 @@ async function getBlog() {
   const blogDirectory = path.join(process.cwd(), 'content/ja/blog');
 
   // 2. ディレクトリ内の全ファイル名を取得
-  const filenames = fs.readdirSync(blogDirectory);
+  const filenames = readMarkdownFilenames(blogDirectory);
 
   // 3. Markdownファイルを読み込み、必要なデータを抽出
   const blogList = filenames

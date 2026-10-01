@@ -92,3 +92,8 @@ pre>code {
         background-color: var(--cardLight);
     }
 }
+
+.emptyMessage {
+    text-align: center;
+    padding: 40px 0;
+}
