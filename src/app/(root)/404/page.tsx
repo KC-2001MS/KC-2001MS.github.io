@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "@styles/home.module.css";
 
 export const metadata: Metadata = {
   title: "このページは存在しない",
@@ -65,13 +66,13 @@ export const metadata: Metadata = {
 
 export default function Error404() {
     return (
-      <main id="backgroundImage">
-        <div id="goal">
-          <h1 id="goalTitle">404</h1>
-          <p className="goalSubtitle">このページは存在しません。<br />このページは作られていないようです。URLが正しいかどうかを確認してください。</p>
+      <main id={styles.backgroundImage}>
+        <div id={styles.goal}>
+          <h1 id={styles.goalTitle}>404</h1>
+          <p className={styles.goalSubtitle}>このページは存在しません。<br />このページは作られていないようです。URLが正しいかどうかを確認してください。</p>
         </div>
-        <div id="language">
-          言語 : <a id="languageItem" href="./en">English</a>
+        <div id={styles.language}>
+          言語 : <a id={styles.languageItem} href="./en">English</a>
         </div>
       </main>
     );

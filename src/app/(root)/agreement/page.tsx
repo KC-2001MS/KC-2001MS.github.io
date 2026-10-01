@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@styles/content.css";
 
 export const metadata: Metadata = {
   title: "利用規約",

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Language } from "@/lib/Language";
 import "@styles/var.css";
 import "@styles/foundation.css";
+import "@styles/content.css";
 
 export const metadata: Metadata = {
   title: "Iroiro's portfolio【SwiftUI】",

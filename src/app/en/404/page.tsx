@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "@styles/home.module.css";
 
 export const metadata: Metadata = {
     title: "This page does not exist.",
@@ -65,13 +66,13 @@ export const metadata: Metadata = {
 
 export default function Error404() {
     return (
-        <main id="backgroundImage">
-            <div id="goal">
-                <h1 id="goalTitle"><strong>404</strong></h1>
-                <p className="goalSubtitle">This page does not exist.<br />This page does not appear to have been created; please check to see if the URL is correct.</p>
+        <main id={styles.backgroundImage}>
+            <div id={styles.goal}>
+                <h1 id={styles.goalTitle}><strong>404</strong></h1>
+                <p className={styles.goalSubtitle}>This page does not exist.<br />This page does not appear to have been created; please check to see if the URL is correct.</p>
             </div>
-            <div id="language">
-                Language : <a id="languageItem" href="../">日本語</a>
+            <div id={styles.language}>
+                Language : <a id={styles.languageItem} href="../">日本語</a>
             </div>
         </main>
     );

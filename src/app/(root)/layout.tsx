@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import "@styles/var.css";
 import "@styles/foundation.css";
+import "@styles/content.css";
 
 export const metadata: Metadata = {
   title: "【SwiftUIアプリ開発】いろいろポートフォリオ",

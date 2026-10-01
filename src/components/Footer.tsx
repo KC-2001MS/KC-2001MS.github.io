@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import { Language } from "@/lib/Language";
-import "@styles/var.css";
-import "@styles/foundation.css";
 
 const Footer = ({ lang = Language.Japanese }) => {
   switch (lang) {

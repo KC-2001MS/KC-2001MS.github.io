@@ -1,12 +1,14 @@
+import styles from "@styles/home.module.css";
+
 export default function Home() {
   return (
-    <main id="backgroundImage">
-      <div id="goal">
-        <h1 id="goalTitle">More efficient.</h1>
-        <p className="goalSubtitle">I create what I want<br />with my own hands.</p>
+    <main id={styles.backgroundImage}>
+      <div id={styles.goal}>
+        <h1 id={styles.goalTitle}>More efficient.</h1>
+        <p className={styles.goalSubtitle}>I create what I want<br />with my own hands.</p>
       </div>
-      <div id="language">
-        Language : <a id="languageItem" href="../">日本語</a>
+      <div id={styles.language}>
+        Language : <a id={styles.languageItem} href="../">日本語</a>
       </div>
     </main>
   );

@@ -9,7 +9,6 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
-import "@styles/content.css";
 
 type ProductPageProps = {
   params: Promise<{ slug: string; }>;

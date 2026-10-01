@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import "@styles/var.css";
-import "@styles/foundation.css";
 
 type PageCardProps = {
     title: string;

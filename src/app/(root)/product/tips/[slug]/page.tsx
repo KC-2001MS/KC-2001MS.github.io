@@ -9,7 +9,6 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
-import "@styles/content.css";
 
 type TipsPageProps = {
   params: Promise<{ slug: string; }>;

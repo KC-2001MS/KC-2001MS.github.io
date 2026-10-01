@@ -25,27 +25,8 @@
     margin: 0;
 }
 
-.flex {
-    display: flex;
-}
-
-.summary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .buttonPadding {
     margin: 10px;
-}
-/*
-.appIcon {
-    height: 100px;
-    width: 100px;
-}
-*/
-.pMove {
-    display: inline-block;
 }
 
 .appIcon {
@@ -59,39 +40,22 @@
     vertical-align: middle;
 }
 
-iframe {
+/* YouTubeEmbedのiframe */
+.youtubeFrame {
     display: block;
     height: auto;
     aspect-ratio: 16/9;
 }
 
 @media (max-width: 560px) {
-    iframe {
-        width: 100%;
-    }
-
-    .largeAppIcon {
+    .youtubeFrame {
         width: 100%;
     }
 }
 
 @media (min-width: 560px) {
-    iframe {
+    .youtubeFrame {
         width: 560px;
         height: 315px;
     }
-
-    .largeAppIcon {
-        height: 250px;
-    }
-}
-
-.pToTitle {
-    font-size: var(--h4size);
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
 }

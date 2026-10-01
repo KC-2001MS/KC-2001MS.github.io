@@ -11,7 +11,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-This is a Next.js 15 portfolio website built with TypeScript and Tailwind CSS, featuring a bilingual setup (Japanese/English).
+This is a Next.js 15 portfolio website built with TypeScript and plain CSS (global CSS + CSS Modules), featuring a bilingual setup (Japanese/English).
 
 ### Project Structure
 
@@ -19,7 +19,7 @@ This is a Next.js 15 portfolio website built with TypeScript and Tailwind CSS, f
 - `src/app/en/` - English version pages
 - `src/components/` - Reusable React components (Header, Footer, AppStoreLink, etc.)
 - `src/lib/` - Utility functions and enums (Language enum)
-- `public/styles/` - CSS files (referenced as `@styles/*` via path mapping)
+- `src/styles/` - CSS files (referenced as `@styles/*` via path mapping)
 
 ### Key Features
 
@@ -33,7 +33,7 @@ This is a Next.js 15 portfolio website built with TypeScript and Tailwind CSS, f
 ### Path Aliases
 
 - `@/*` maps to `./src/*`
-- `@styles/*` maps to `./public/styles/*`
+- `@styles/*` maps to `./src/styles/*`
 
 ### Content Structure
 
@@ -45,5 +45,8 @@ The site includes sections for:
 
 ### Styling
 
-Uses Tailwind CSS with custom CSS variables for theming. Material Symbols font is loaded for icons.
+Plain CSS with custom CSS variables for theming (light/dark via `prefers-color-scheme`). Material Symbols font is loaded for icons.
+
+- Global CSS (`var.css`, `foundation.css`, `content.css`) is imported once in each root layout (`src/app/(root)/layout.tsx`, `src/app/en/layout.tsx`). `content.css` styles Markdown-rendered HTML, so it must stay global.
+- Page/component-specific styles use CSS Modules: `product.module.css` (product list page and its components) and `home.module.css` (home and 404 hero; keeps ID selectors so `#languageItem` wins over `a:visited`).
 - @content/ja/product.json でUncheck Xの項目でCMを追加しなさい。これは２つの要素を持つ配列でnameとurlが必要です。

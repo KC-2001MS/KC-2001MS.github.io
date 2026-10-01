@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* トップページ・404ページの背景と見出し */
+/* 訪問済みリンクの色（a:visited）より優先させるため、IDセレクタのまま記述している */
+
+#backgroundImage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#goal {
+    padding: 0 3em;
+    color: var(--defaultWhite);
+}
+
+#goalTitle {
+    font-size: var(--h1size);
+    font-weight: bold;
+    text-shadow: #202020 1px 0 10px;
+}
+
+.goalSubtitle {
+    font-size: var(--h3size);
+    text-shadow: #202020 1px 0 5px;
+}
+
+#language {
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    color: var(--defaultWhite);
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+#languageItem {
+    color: var(--defaultWhite);
+}
+
+#languageItem:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1080px) and (orientation: portrait) {
+    #backgroundImage {
+        background-image: url(/images/出雲大社607P.avif);
+    }
+}
+
+@media (max-width: 1080px) and (orientation: landscape) {
+    #backgroundImage {
+        background-image: url(/images/出雲大社1080.avif);
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1620px) and (orientation: portrait) {
+    #backgroundImage {
+        background-image: image-set(
+            url(/images/出雲大社1080P.avif) 1x,
+            url(/images/出雲大社1440P.avif) 2x
+        );
+    }
+}
+
+@media (min-width: 1080px) and (max-width: 1620px) and (orientation: landscape) {
+    #backgroundImage {
+        background-image: image-set(url(/images/出雲大社1920.avif) 1x, url(/images/出雲大社2160.avif) 2x);
+    }
+}
+
+@media (min-width: 1620px) and (max-width: 3456px) {
+    #backgroundImage {
+        background-image: image-set(url(/images/出雲大社1920.avif) 1x, url(/images/出雲大社3456.avif) 2x);
+    }
+}
+
+@media (min-width: 3456px) {
+    #backgroundImage {
+        background-image: image-set(url(/images/出雲大社3840.avif) 1x, url(/images/出雲大社5120.avif) 2x);
+    }
+}

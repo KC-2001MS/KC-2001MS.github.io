@@ -11,7 +11,6 @@ import addClasses from "rehype-class-names";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
-import "@styles/content.css";
 
 type NewsroomDetailPageProps = {
   params: Promise<{ slug: string; }>;

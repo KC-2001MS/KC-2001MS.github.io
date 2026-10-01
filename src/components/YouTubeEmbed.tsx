@@ -1,3 +1,5 @@
+import styles from "@styles/product.module.css";
+
 type YouTubeEmbedProps = {
   videoId: string;
 }
@@ -17,6 +19,7 @@ const YouTubeEmbed = ({ videoId }: YouTubeEmbedProps) => {
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
+        className={styles.youtubeFrame}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
       />
     </div>

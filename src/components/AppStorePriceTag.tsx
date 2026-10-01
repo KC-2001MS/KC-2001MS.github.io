@@ -1,4 +1,5 @@
 import { Language } from "@/lib/Language";
+import styles from "@styles/product.module.css";
 
 interface AppStorePriceTagProps {
   lang?: Language,
@@ -12,9 +13,9 @@ export default async function AppStorePriceTag({ lang = Language.Japanese, id }:
   switch (lang) {
     case Language.Japanese:
       return (
-        <p className="right">
+        <p className={styles.right}>
           価格：
-          <span className="plice">
+          <span className={styles.plice}>
             {appPrice}
           </span>
           （税込）
@@ -22,9 +23,9 @@ export default async function AppStorePriceTag({ lang = Language.Japanese, id }:
       );
     case Language.EnglishUS:
       return (
-        <p className="right">
+        <p className={styles.right}>
           Plice：
-          <span className="plice">
+          <span className={styles.plice}>
           {appPrice}
           </span>
         </p>

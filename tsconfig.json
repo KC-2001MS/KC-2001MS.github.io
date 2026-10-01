@@ -27,7 +27,7 @@
         "./src/*"
       ],
       "@styles/*": [
-        "./public/styles/*"
+        "./src/styles/*"
       ]
     }
   },

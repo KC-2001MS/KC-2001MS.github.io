@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
 import AppIcon from "@/components/AppIcon";
-import "@styles/content.css";
-import "@styles/product.css";
+import styles from "@styles/product.module.css";
 import { Language } from "@/lib/Language";
 import AppStorePriceTag from "@/components/AppStorePriceTag";
 import productData from '@/../content/en/product.json';
@@ -85,14 +84,14 @@ export default function Product() {
                     <div className="card">
                         <h2>Development</h2>
                         {productData.apps.development.map((app) => (
-                            <div key={app.id} className="card clear">
-                                <div className="appInfoTop">
-                                    <h3 className="left appTitle">{app.title}</h3>
+                            <div key={app.id} className={`card ${styles.clear}`}>
+                                <div className={styles.appInfoTop}>
+                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
                                         <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
                                     </a>
                                 </div>
-                                <div className="clear">
+                                <div className={styles.clear}>
                                     <p>{app.description}</p>
                                     <p>Supported platforms are as follows</p>
                                 </div>
@@ -135,7 +134,7 @@ export default function Product() {
                                 })()}
                                 <h3><a href={app.supportPage}>Support Page</a></h3>
                                 <h3><a href={app.feedback}>Feedback</a></h3>
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
                                     <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
                                 </div>
@@ -143,17 +142,17 @@ export default function Product() {
                         ))}
                     </div>
 
-                    <div className="card clear">
+                    <div className={`card ${styles.clear}`}>
                         <h2>Transplanting</h2>
                         {productData.apps.transplanting.map((app) => (
                             <div key={app.id} className="card">
-                                <div className="appInfoTop">
-                                    <h3 className="left appTitle">{app.title}</h3>
+                                <div className={styles.appInfoTop}>
+                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
                                         <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
                                     </a>
                                 </div>
-                                <p className="clear">{app.description}</p>
+                                <p className={styles.clear}>{app.description}</p>
                                 <p>Supported platforms are as follows</p>
                                 <h3>Supported platforms</h3>
                                 <table>
@@ -195,7 +194,7 @@ export default function Product() {
                                         </p>
                                     </>
                                 )}
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
                                     <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
                                 </div>
@@ -203,12 +202,12 @@ export default function Product() {
                         ))}
                     </div>
 
-                    <div className="card clear">
+                    <div className={`card ${styles.clear}`}>
                         <h2>Translation</h2>
                         {productData.apps.translation.map((app) => (
                             <div key={app.id} className="card">
                                 <h3>{app.title}</h3>
-                                <p className="clear">{app.description}</p>
+                                <p className={styles.clear}>{app.description}</p>
                                 <p>If you have any questions and feedback, please contact {app.feedback.replace('mailto:', '')} in English.</p>
                                 <h3>Supported platforms</h3>
                                 <table>
@@ -237,7 +236,7 @@ export default function Product() {
                                 )}
                                 <h3><a href={app.supportPage}>Support Page</a></h3>
                                 <h3><a href={app.feedback}>Feedback</a></h3>
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
                                     <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
                                 </div>
@@ -246,7 +245,7 @@ export default function Product() {
                     </div>
                 </div>
                 {productData.others.map((item) => (
-                    <div key={item.id} className="card clear">
+                    <div key={item.id} className={`card ${styles.clear}`}>
                         <h1 className={getRandomClassName()}>{item.label}</h1>
                         <div className="card">
                             <h2>{item.title}</h2>
@@ -269,7 +268,7 @@ export default function Product() {
                         </div>
                     </div>
                 ))}
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>Framework & Packages</h1>
                     {productData.frameworks.map((framework) => (
                         <div key={framework.id} className="card">
@@ -281,7 +280,7 @@ export default function Product() {
                         </div>
                     ))}
                 </div>
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>Shell Script</h1>
                     {productData.shellScripts.map((script) => (
                         <div key={script.id} className="card">
@@ -298,7 +297,7 @@ export default function Product() {
                         </div>
                     ))}
                 </div>
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>Website</h1>
                     {productData.websites.map((website) => (
                         <div key={website.id} className="card">

@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Metadata } from "next";
-import "@styles/content.css";
 import PageCard from "@/components/PageCard";
 import EmptyMessage from "@/components/EmptyMessage";
 import { readMarkdownFilenames } from "@/lib/markdown";

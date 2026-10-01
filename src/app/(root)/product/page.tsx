@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
 import AppIcon from "@/components/AppIcon";
-import "@styles/content.css";
-import "@styles/product.css";
+import styles from "@styles/product.module.css";
 import AppStorePriceTag from "@/components/AppStorePriceTag";
 import productData from '@/../content/ja/product.json';
 
@@ -84,14 +83,14 @@ export default async function Product() {
                     <div className="card">
                         <h2>開発</h2>
                         {productData.apps.development.map((app) => (
-                            <div key={app.id} className="card clear">
-                                <div className="appInfoTop">
-                                    <h3 className="left appTitle">{app.title}</h3>
+                            <div key={app.id} className={`card ${styles.clear}`}>
+                                <div className={styles.appInfoTop}>
+                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
                                         <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title}アイコン`} />
                                     </a>
                                 </div>
-                                <div className="clear">
+                                <div className={styles.clear}>
                                     <p>{app.description}</p>
                                     <p>対応プラットフォームは次の通りです。</p>
                                 </div>
@@ -134,7 +133,7 @@ export default async function Product() {
                                 })()}
                                 <h3><a href={app.supportPage}>サポートページ</a></h3>
                                 <h3><a href={app.feedback}>フィードバック</a></h3>
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id} />
                                     <AppStorePriceTag id={parseInt(app.id.replace('id', ''))} />
                                 </div>
@@ -142,17 +141,17 @@ export default async function Product() {
                         ))}
                     </div>
 
-                    <div className="card clear">
+                    <div className={`card ${styles.clear}`}>
                         <h2>移植</h2>
                         {productData.apps.transplanting.map((app) => (
                             <div key={app.id} className="card">
-                                <div className="appInfoTop">
-                                    <h3 className="left appTitle">{app.title}</h3>
+                                <div className={styles.appInfoTop}>
+                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
                                         <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title}アイコン`} />
                                     </a>
                                 </div>
-                                <div className="clear">
+                                <div className={styles.clear}>
                                     <p><strong>{app.title}</strong>{app.description.replace(app.title, '')}</p>
                                     <p>対応プラットフォームは次の通りです。</p>
                                 </div>
@@ -194,7 +193,7 @@ export default async function Product() {
                                         <p>※{app.originalSource.platform}版のサポートは<a href={`mailto:${app.originalSource.supportEmail}`}>{app.originalSource.platform}版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
                                     </>
                                 )}
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id} />
                                     <AppStorePriceTag id={parseInt(app.id.replace('id', ''))} />
                                 </div>
@@ -202,12 +201,12 @@ export default async function Product() {
                         ))}
                     </div>
 
-                    <div className="card clear">
+                    <div className={`card ${styles.clear}`}>
                         <h2>翻訳</h2>
                         {productData.apps.translation.map((app) => (
                             <div key={app.id} className="card">
                                 <h3>{app.title}</h3>
-                                <div className="clear">
+                                <div className={styles.clear}>
                                     <p><strong>{app.title}</strong>{app.description.replace(app.title + 'は', 'は')}</p>
                                 </div>
                                 <h3>対応プラットフォーム</h3>
@@ -237,7 +236,7 @@ export default async function Product() {
                                 )}
                                 <h3><a href={app.supportPage}>サポートページ</a></h3>
                                 <h3><a href={app.feedback}>フィードバック</a></h3>
-                                <div className="appInfoButtom">
+                                <div className={styles.appInfoButtom}>
                                     <AppStoreLink appId={app.id.startsWith('id') ? app.id : `id${app.id}`} />
                                     <AppStorePriceTag id={parseInt(app.id.replace(/^(id|d)/, ''))} />
                                 </div>
@@ -246,7 +245,7 @@ export default async function Product() {
                     </div>
                 </div>
                 {productData.others.map((item) => (
-                    <div key={item.id} className="card clear">
+                    <div key={item.id} className={`card ${styles.clear}`}>
                         <h1 className={getRandomClassName()}>{item.label}</h1>
                         <div className="card">
                             <h2>{item.title}</h2>
@@ -269,7 +268,7 @@ export default async function Product() {
                         </div>
                     </div>
                 ))}
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>フレームワーク・パッケージ</h1>
                     {productData.frameworks.map((framework) => (
                         <div key={framework.id} className="card">
@@ -281,7 +280,7 @@ export default async function Product() {
                         </div>
                     ))}
                 </div>
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>シェルスクリプト</h1>
                     {productData.shellScripts.map((script) => (
                         <div key={script.id} className="card">
@@ -296,7 +295,7 @@ export default async function Product() {
                         </div>
                     ))}
                 </div>
-                <div className="card clear">
+                <div className={`card ${styles.clear}`}>
                     <h1 className={getRandomClassName()}>ウェブサイト</h1>
                     {productData.websites.map((website) => (
                         <div key={website.id} className="card">
