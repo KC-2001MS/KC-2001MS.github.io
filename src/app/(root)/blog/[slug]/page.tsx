@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import DonationSection from "@/components/DonationSection";
 import { notFound } from "next/navigation";
 import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
 
@@ -103,19 +104,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
-        <hr />
-        <h1>寄付</h1>
-        寄付をご希望の方は、こちらをクリックしてください。ご寄付いただいたお金は、私のプログラミング・スキルの向上とアプリケーションのメンテナンスに使わせていただきます。
-        <p>
-          <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '60px', width: '217px' }} />
-          </a>
-          <br />
-          <a href="https://paypal.me/iroiroWork" style={{ borderRadius: '20px', display: 'block', width: '217px', padding: '15px', boxSizing: 'border-box', background: '#0070ba', color: '#FFF', textDecoration: 'none', textAlign: 'center' }}>
-            Pay by PayPal
-          </a>
-        </p>
-
+        <DonationSection />
       </div>
     </main>
   );

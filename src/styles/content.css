@@ -123,3 +123,63 @@ pre>code {
 .markdown>h2+h3 {
     margin-top: 0.8em;
 }
+
+/* ブログ記事の末尾の「寄付」の見出し（本文のh2と同じ大きさ） */
+.donationTitle {
+    margin: 1.5em 0 0.5em;
+    font-size: var(--h3size);
+    font-feature-settings: "palt";
+    letter-spacing: 0.02em;
+}
+
+/* 寄付のボタン（中央揃えで横に並べ、入りきらない幅では縦に並べる） */
+.donationButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+@media (max-width: 640px) {
+    .donationButtons {
+        flex-direction: column;
+    }
+}
+
+.donationButtons a,
+.donationButtons img,
+.donationButtons iframe {
+    display: block;
+}
+
+.donationButtons img {
+    width: 217px;
+    height: 60px;
+}
+
+.donationButtons iframe {
+    border: 0;
+    border-radius: 6px;
+}
+
+/* PayPalには公式のリンクボタンがないため、Buy Me a Coffeeの公式ボタンと同じ大きさにする */
+.donationButtons .paypal,
+.donationButtons .paypal:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 217px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #0070ba;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.donationButtons .paypal:hover {
+    background-color: #005ea6;
+}

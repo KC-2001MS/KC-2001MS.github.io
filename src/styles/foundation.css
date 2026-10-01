@@ -82,12 +82,17 @@ p {
     font-size: var(--psize);
 }
 
+/* 区切り線（h2の下線と同じく、文字色を薄くした線） */
 hr {
     margin: 3em 0 10px 0;
+    border: none;
+    border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
 }
 
+/* 注釈（本文より控えめな色） */
 .caption {
     font-size: 10px;
+    color: color-mix(in srgb, currentColor 55%, transparent);
 }
 
 #copyright {

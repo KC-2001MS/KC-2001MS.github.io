@@ -9,6 +9,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import DonationSection from "@/components/DonationSection";
+import { Language } from "@/lib/Language";
 import { notFound } from "next/navigation";
 import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
 
@@ -103,6 +105,7 @@ export default async function NewsroomDetail({ params }: NewsroomDetailPageProps
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        <DonationSection lang={Language.EnglishUS} />
       </div>
     </main>
   );

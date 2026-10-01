@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import DonationSection from "@/components/DonationSection";
 
 type TipsPageProps = {
   params: Promise<{ slug: string; }>;
@@ -95,6 +96,7 @@ export default async function Tips({ params }: TipsPageProps) {
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        <DonationSection />
       </div>
     </main>
   );

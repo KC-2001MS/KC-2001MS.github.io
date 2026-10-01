@@ -9,6 +9,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import DonationSection from "@/components/DonationSection";
+import { Language } from "@/lib/Language";
 
 type TipsPageProps = {
   params: Promise<{ slug: string; }>;
@@ -95,6 +97,7 @@ export default async function Tips({ params }: TipsPageProps) {
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        <DonationSection lang={Language.EnglishUS} />
       </div>
     </main>
   );

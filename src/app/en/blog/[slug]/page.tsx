@@ -9,6 +9,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import DonationSection from "@/components/DonationSection";
+import { Language } from "@/lib/Language";
 import { notFound } from "next/navigation";
 import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
 
@@ -103,18 +105,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
-        <hr />
-        <h1>Contribution</h1>
-        If you would like to make a donation, please click here. The money you donate will be used to improve my programming skills and maintain the application.
-        <p>
-          <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: '60px', width: '217px' }} />
-          </a>
-          <br />
-          <a href="https://paypal.me/iroiroWork" style={{ borderRadius: '20px', display: 'block', width: '217px', padding: '15px', boxSizing: 'border-box', background: '#0070ba', color: '#FFF', textDecoration: 'none', textAlign: 'center' }}>
-            Pay by PayPal
-          </a>
-        </p>
+        <DonationSection lang={Language.EnglishUS} />
       </div>
     </main>
   );
