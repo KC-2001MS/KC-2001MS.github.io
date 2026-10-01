@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollbarWidth from '@/components/ScrollbarWidth';
 import { Language } from "@/lib/Language";
 import "@styles/var.css";
 import "@styles/foundation.css";
@@ -105,6 +106,7 @@ export default function RootLayout({
         <meta httpEquiv='x-dns-prefetch-control' content='on' />
         <meta httpEquiv="Expires" content="604800" />
         <link rel="me" href="https://mastodon.social/@Iroiro" />
+        <ScrollbarWidth />
       </head>
       <body>
         <Header lang={Language.EnglishUS} />

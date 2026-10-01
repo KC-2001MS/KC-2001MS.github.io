@@ -29,6 +29,13 @@
     scrollbar-gutter: auto;
 }
 
+/* その代わり、ヘッダーとフッターの右側にスクロールバーの幅だけ余白を取り、中央揃えの位置を他のページと揃える */
+/* （--scrollbarWidthはScrollbarWidthコンポーネントで設定。スクロールバーが重なって表示される環境では0px） */
+:global(body):has(#backgroundImage) :global(header),
+:global(body):has(#backgroundImage) :global(footer) {
+    padding-right: var(--scrollbarWidth, 0px);
+}
+
 #goal {
     /* 下線を一番長い行（見出し）の幅に合わせるため、中身の幅にする */
     width: fit-content;
