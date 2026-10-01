@@ -97,7 +97,7 @@ export default async function ProductDetail({ params }: ProductPageProps) {
   return (
     <main>
       <div id="maincard">
-        <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </main>
   );
@@ -108,13 +108,6 @@ async function getProduct(slug: string) {
   const filePath = path.join(process.cwd(), "content/en/product", `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf-8");
 
-  function getRandomString(): string {
-    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
-  
-    const randomIndex = Math.floor(Math.random() * options.length);
-  
-    return options[randomIndex];
-  }
 
   const { content } = matter(fileContents);
   const processedContent = await remark()
@@ -127,7 +120,6 @@ async function getProduct(slug: string) {
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',
-      'h1': getRandomString()
     })
     .process(content);
 

@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
-import AppStoreLink from '@/components/AppStoreLink';
-import AppIcon from "@/components/AppIcon";
+import AppCard from "@/components/AppCard";
 import styles from "@styles/product.module.css";
 import { Language } from "@/lib/Language";
-import AppStorePriceTag from "@/components/AppStorePriceTag";
 import productData from '@/../content/en/product.json';
 
 export const metadata: Metadata = {
@@ -71,182 +69,98 @@ export const metadata: Metadata = {
 };
 
 export default function Product() {
-    const getRandomClassName = () => {
-        const classes = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
-        return classes[Math.floor(Math.random() * classes.length)];
-    };
 
     return (
         <main>
             <div id="maincard">
                 <div className="card">
-                    <h1 className={getRandomClassName()}>App</h1>
+                    <h1>App</h1>
                     <div className="card">
                         <h2>Development</h2>
-                        {productData.apps.development.map((app) => (
-                            <div key={app.id} className={`card ${styles.clear}`}>
-                                <div className={styles.appInfoTop}>
-                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
-                                    <a href={`https://apps.apple.com/app/${app.id}`}>
-                                        <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
-                                    </a>
-                                </div>
-                                <div className={styles.clear}>
-                                    <p>{app.description}</p>
-                                    <p>Supported platforms are as follows</p>
-                                </div>
-                                <h3>Supported platforms</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th className="os">OS</th>
-                                            <th className="vr">Version</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {app.supportedPlatforms.map((platform, index) => (
-                                            <tr key={index}>
-                                                <td className="osItem">{platform.os}</td>
-                                                <td className="vrItem">{platform.version} ~</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                                {(() => {
-                                    const appWithCm = app as Record<string, unknown>;
-                                    if ('cm' in app && appWithCm.cm && Array.isArray(appWithCm.cm) && appWithCm.cm.length > 0) {
-                                        const cmItems = appWithCm.cm as { name: string; url: string }[];
-                                        return (
-                                            <>
-                                                <h3>CM</h3>
-                                                <div>
-                                                    {cmItems.map((cmItem: { name: string; url: string }, index: number) => (
-                                                        <div key={index}>
-                                                            <h5>{cmItem.name}</h5>
-                                                            <YouTubeEmbed videoId={cmItem.url} />
-                                                        </div>
-                                                    ))}
+                        <div className={styles.appGrid}>
+                            {productData.apps.development.map((app) => (
+                                <AppCard key={app.id} lang={Language.EnglishUS}
+                                    id={app.id}
+                                    title={app.title}
+                                    icon={app.icon}
+                                    darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined}
+                                    platforms={app.supportedPlatforms}
+                                    description={app.description}
+                                    supportPage={app.supportPage}
+                                    feedback={app.feedback}
+                                >
+                                    {"cm" in app && Array.isArray(app.cm) && app.cm.length > 0 && (
+                                        <>
+                                            <h4>CM</h4>
+                                            {(app.cm as { name: string; url: string }[]).map((cmItem, index) => (
+                                                <div key={index}>
+                                                    <h5>{cmItem.name}</h5>
+                                                    <YouTubeEmbed videoId={cmItem.url} />
                                                 </div>
-                                            </>
-                                        );
-                                    }
-                                    return null;
-                                })()}
-                                <h3><a href={app.supportPage}>Support Page</a></h3>
-                                <h3><a href={app.feedback}>Feedback</a></h3>
-                                <div className={styles.appInfoButtom}>
-                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
-                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
-                                </div>
-                            </div>
-                        ))}
+                                            ))}
+                                        </>
+                                    )}
+                                </AppCard>
+                            ))}
+                        </div>
                     </div>
 
                     <div className={`card ${styles.clear}`}>
                         <h2>Transplanting</h2>
-                        {productData.apps.transplanting.map((app) => (
-                            <div key={app.id} className="card">
-                                <div className={styles.appInfoTop}>
-                                    <h3 className={`${styles.left} ${styles.appTitle}`}>{app.title}</h3>
-                                    <a href={`https://apps.apple.com/app/${app.id}`}>
-                                        <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
-                                    </a>
-                                </div>
-                                <p className={styles.clear}>{app.description}</p>
-                                <p>Supported platforms are as follows</p>
-                                <h3>Supported platforms</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th className="os">OS</th>
-                                            <th className="vr">Version</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {app.supportedPlatforms.map((platform, index) => (
-                                            <tr key={index}>
-                                                <td className="osItem">{platform.os}</td>
-                                                <td className="vrItem">{platform.version} ~</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                                {app.media && (
-                                    <>
-                                        <h3>Media</h3>
-                                        {app.media.map((mediaItem, index) => (
-                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
-                                        ))}
-                                    </>
-                                )}
-                                <h3><a href={app.supportPage}>Support Page</a></h3>
-                                <h3><a href={app.feedback}>Feedback</a></h3>
-                                {app.originalSource && (
-                                    <>
-                                        <h3>About {app.originalSource.platform} version</h3>
-                                        <p>
-                                            There is a {app.originalSource.platform} extension that is the original Safari extension. If you wish to use it
-                                            with {app.originalSource.platform}, please use <a href={app.originalSource.url}>this one</a>.
-                                        </p>
-                                        <p>*Please send support for the {app.originalSource.platform} version to <a href={`mailto:${app.originalSource.supportEmail}`}>the
-                                            email address of the creator of the {app.originalSource.platform} version</a>. Please note that we do not
-                                            accept support here.
-                                        </p>
-                                    </>
-                                )}
-                                <div className={styles.appInfoButtom}>
-                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
-                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
-                                </div>
-                            </div>
-                        ))}
+                        <div className={styles.appGrid}>
+                            {productData.apps.transplanting.map((app) => (
+                                <AppCard key={app.id} lang={Language.EnglishUS}
+                                    id={app.id}
+                                    title={app.title}
+                                    icon={app.icon}
+                                    darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined}
+                                    platforms={app.supportedPlatforms}
+                                    description={app.description}
+                                    supportPage={app.supportPage}
+                                    feedback={app.feedback}
+                                >
+                                    {app.media && (
+                                        <>
+                                            <h4>Media</h4>
+                                            {app.media.map((mediaItem, index) => (
+                                                <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                            ))}
+                                        </>
+                                    )}
+                                </AppCard>
+                            ))}
+                        </div>
                     </div>
 
                     <div className={`card ${styles.clear}`}>
                         <h2>Translation</h2>
-                        {productData.apps.translation.map((app) => (
-                            <div key={app.id} className="card">
-                                <h3>{app.title}</h3>
-                                <p className={styles.clear}>{app.description}</p>
-                                <p>If you have any questions and feedback, please contact {app.feedback.replace('mailto:', '')} in English.</p>
-                                <h3>Supported platforms</h3>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th className="os">OS</th>
-                                            <th className="vr">Version</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {app.supportedPlatforms.map((platform, index) => (
-                                            <tr key={index}>
-                                                <td className="osItem">{platform.os}</td>
-                                                <td className="vrItem">{platform.version} ~</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                                {app.media && (
-                                    <>
-                                        <h3>Media</h3>
-                                        {app.media.map((mediaItem, index) => (
-                                            <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
-                                        ))}
-                                    </>
-                                )}
-                                <h3><a href={app.supportPage}>Support Page</a></h3>
-                                <h3><a href={app.feedback}>Feedback</a></h3>
-                                <div className={styles.appInfoButtom}>
-                                    <AppStoreLink appId={app.id} lang={Language.EnglishUS} />
-                                    <AppStorePriceTag lang={Language.EnglishUS} id={parseInt(app.id.replace('id', ''))} />
-                                </div>
-                            </div>
-                        ))}
+                        <div className={styles.appGrid}>
+                            {productData.apps.translation.map((app) => (
+                                <AppCard key={app.id} lang={Language.EnglishUS}
+                                    id={app.id}
+                                    title={app.title}
+                                    platforms={app.supportedPlatforms}
+                                    description={app.description}
+                                    supportPage={app.supportPage}
+                                    feedback={app.feedback}
+                                >
+                                    <p>If you have any questions and feedback, please contact {app.feedback.replace('mailto:', '')} in English.</p>
+                                    {app.media && (
+                                        <>
+                                            <h4>Media</h4>
+                                            {app.media.map((mediaItem, index) => (
+                                                <p key={index}><a href={mediaItem.url}>{mediaItem.title}</a></p>
+                                            ))}
+                                        </>
+                                    )}
+                                </AppCard>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 {productData.others.map((item) => (
                     <div key={item.id} className={`card ${styles.clear}`}>
-                        <h1 className={getRandomClassName()}>{item.label}</h1>
+                        <h1>{item.label}</h1>
                         <div className="card">
                             <h2>{item.title}</h2>
                             {item.label === "Template" ? (
@@ -269,7 +183,7 @@ export default function Product() {
                     </div>
                 ))}
                 <div className={`card ${styles.clear}`}>
-                    <h1 className={getRandomClassName()}>Framework & Packages</h1>
+                    <h1>Framework & Packages</h1>
                     {productData.frameworks.map((framework) => (
                         <div key={framework.id} className="card">
                             <h2>{framework.title}</h2>
@@ -281,7 +195,7 @@ export default function Product() {
                     ))}
                 </div>
                 <div className={`card ${styles.clear}`}>
-                    <h1 className={getRandomClassName()}>Shell Script</h1>
+                    <h1>Shell Script</h1>
                     {productData.shellScripts.map((script) => (
                         <div key={script.id} className="card">
                             <h2>{script.title}</h2>
@@ -298,7 +212,7 @@ export default function Product() {
                     ))}
                 </div>
                 <div className={`card ${styles.clear}`}>
-                    <h1 className={getRandomClassName()}>Website</h1>
+                    <h1>Website</h1>
                     {productData.websites.map((website) => (
                         <div key={website.id} className="card">
                             <h2>{website.title}</h2>

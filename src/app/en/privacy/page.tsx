@@ -68,7 +68,7 @@ export default function Privacy() {
     <main>
       <div id="maincard">
         <div className="card">
-          <h1 className="n5">Privacy Policy</h1>
+          <h1>Privacy Policy</h1>
           <p>Our privacy policy is <strong>a statement that defines how we treat the information we collect from you</strong>. All of our services provide a better experience by treating the information we collect as described in our privacy policy.</p>
           <p>This page describes the privacy policy for services provided by Keisuke Chinone (activity name:
             Iroiro).</p>

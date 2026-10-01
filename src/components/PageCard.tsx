@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import styles from "@styles/pageCard.module.css";
 
 type PageCardProps = {
     title: string;
@@ -11,13 +12,11 @@ type PageCardProps = {
   const PageCard = ({ title, description, date, genre, path }: PageCardProps) => {
 
     return (
-        <Link href={path} className="pageCard">
-            <div>
-                <p>{genre}</p>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <p>{date}</p>
-            </div>
+        <Link href={path} className={styles.pageCard}>
+            <p className={styles.genre}>{genre}</p>
+            <h2 className={styles.title}>{title}</h2>
+            <p className={styles.description}>{description}</p>
+            <p className={styles.date}>{date}</p>
         </Link>
     );
   };

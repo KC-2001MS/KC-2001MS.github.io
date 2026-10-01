@@ -76,7 +76,7 @@ export default async function Blog() {
     <main>
       <div id="maincard">
         <div className="card">
-          <h1 className="n1">Blog</h1>
+          <h1>Blog</h1>
             {blogList.length === 0 ? (
               <EmptyMessage message="現在、ブログ記事はありません。" />
             ) : blogList.map((blog, index) => (

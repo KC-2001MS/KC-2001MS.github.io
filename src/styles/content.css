@@ -1,71 +1,66 @@
 @charset "utf-8";
 
+/* コンテンツの見出し */
+.card>h1,
+.card>h2,
+.card>h3 {
+    font-weight: bold;
+    /* 日本語の見出しは字詰めして間延びを防ぐ */
+    font-feature-settings: "palt";
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
 .card>h1 {
     font-size: var(--h2size);
 }
 
-.card>h1:before {
-    content: "";
-    padding-right: 10px;
-}
-
 .card>h2 {
     font-size: var(--h3size);
+    padding-bottom: 0.3em;
+    /* ライト・ダークどちらでも文字色を薄くした線になる */
+    border-bottom: 1px solid color-mix(in srgb, currentColor 25%, transparent);
 }
 
 .card>h3 {
     font-size: var(--h4size);
 }
 
-.card>h1.n1:before {
-    border-left: 7px solid var(--accentColor1);
-}
-
-.card>h1.n2:before {
-    border-left: 7px solid var(--accentColor2);
-}
-
-.card>h1.n3:before {
-    border-left: 7px solid var(--accentColor3);
-}
-
-.card>h1.n4:before {
-    border-left: 7px solid var(--accentColor4);
-}
-
-.card>h1.n5:before {
-    border-left: 7px solid var(--accentColor5);
-}
-
-.card>h1.n6:before {
-    border-left: 7px solid var(--accentColor6);
-}
-
-.card>h2 {
-    border-bottom: solid 1px var(--defaultWhite);
-}
-
-table {
-    width: 280px;
-}
-
-
-th.os {
-    background-color: var(--accentColor1);
-    width: 130px;
-}
-
-.vr {
+/* h1の左の印（色は1色に固定） */
+.card>h1::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 0.9em;
+    margin-right: 0.45em;
+    border-radius: 2px;
     background-color: var(--accentColor3);
-    width: 150px;
+    vertical-align: -0.1em;
 }
 
-.osItem {
-    width: 130px;
+/* 表（カードと同じく角丸の枠で囲み、行の区切りだけを薄い線で示す） */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: var(--surfaceBorder);
+    border-radius: var(--cornerRadius);
+    overflow: hidden;
 }
 
-.vrItem {
-    width: 150px;
+th,
+td {
+    padding: 8px 16px;
+    text-align: left;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+tr:last-child>td {
+    border-bottom: none;
+}
+
+thead th {
+    font-weight: bold;
+    background-color: color-mix(in srgb, currentColor 8%, transparent);
 }
 
 .markdown-image {
@@ -75,25 +70,56 @@ th.os {
     margin: 10px;
 }
 
+/* コードブロック（カードと同じ面と角丸） */
+pre {
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--cornerRadius);
+    background-color: var(--surfaceBackground);
+    border: var(--surfaceBorder);
+}
+
 pre>code {
-    overflow-x: auto;
     display: block;
+    overflow-x: auto;
     padding: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .card>pre {
-        background-color: var(--cardDark);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    .card>pre {
-        background-color: var(--cardLight);
-    }
+/* 文中のコード */
+:not(pre)>code {
+    padding: 0.1em 0.4em;
+    border-radius: 6px;
+    background-color: color-mix(in srgb, currentColor 10%, transparent);
+    font-size: 0.9em;
 }
 
 .emptyMessage {
     text-align: center;
     padding: 40px 0;
+}
+
+/* 本文の読みやすさ */
+#maincard {
+    line-height: 1.8;
+}
+
+/* コードと表は行間を詰める */
+#maincard pre,
+#maincard table {
+    line-height: 1.5;
+}
+
+/* Markdownの本文の見出しは上を広く・下を狭くして、続く内容とのまとまりを示す */
+.markdown>h2 {
+    margin: 2em 0 0.6em;
+}
+
+.markdown>h3 {
+    margin: 2em 0 0.5em;
+}
+
+/* 大見出しの直後の見出しは、上の余白を詰める */
+.markdown>h1+h2,
+.markdown>h2+h3 {
+    margin-top: 0.8em;
 }

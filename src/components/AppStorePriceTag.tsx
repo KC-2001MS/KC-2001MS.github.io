@@ -13,9 +13,9 @@ export default async function AppStorePriceTag({ lang = Language.Japanese, id }:
   switch (lang) {
     case Language.Japanese:
       return (
-        <p className={styles.right}>
+        <p className={styles.priceTag}>
           価格：
-          <span className={styles.plice}>
+          <span className={styles.price}>
             {appPrice}
           </span>
           （税込）
@@ -23,9 +23,9 @@ export default async function AppStorePriceTag({ lang = Language.Japanese, id }:
       );
     case Language.EnglishUS:
       return (
-        <p className={styles.right}>
-          Plice：
-          <span className={styles.plice}>
+        <p className={styles.priceTag}>
+          Price：
+          <span className={styles.price}>
           {appPrice}
           </span>
         </p>

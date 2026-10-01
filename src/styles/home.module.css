@@ -12,19 +12,40 @@
 }
 
 #goal {
-    padding: 0 3em;
+    padding: clamp(32px, 8vh, 96px) clamp(24px, 6vw, 96px) 0;
     color: var(--defaultWhite);
+    /* 写真の明るい部分でも読めるよう、柔らかく広い影を付ける */
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* 見出しの上の短い線（コンテンツのh1の印と同じ色） */
+#goal::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    background-color: var(--accentColor3);
 }
 
 #goalTitle {
-    font-size: var(--h1size);
+    margin: 0;
+    font-size: clamp(40px, 6vw, 72px);
     font-weight: bold;
-    text-shadow: #202020 1px 0 10px;
+    line-height: 1.2;
+    /* 日本語の字詰め */
+    font-feature-settings: "palt";
+    letter-spacing: 0.04em;
 }
 
 .goalSubtitle {
-    font-size: var(--h3size);
-    text-shadow: #202020 1px 0 5px;
+    margin: 16px 0 0;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.7;
+    font-feature-settings: "palt";
+    letter-spacing: 0.06em;
+    opacity: 0.92;
 }
 
 #language {

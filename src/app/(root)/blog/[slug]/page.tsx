@@ -102,7 +102,7 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
   return (
     <main>
       <div id="maincard">
-        <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
         <hr />
         <h1>寄付</h1>
         寄付をご希望の方は、こちらをクリックしてください。ご寄付いただいたお金は、私のプログラミング・スキルの向上とアプリケーションのメンテナンスに使わせていただきます。
@@ -132,13 +132,6 @@ async function getBlogDetail(slug: string) {
     return { content: "" }; // ファイルが見つからない場合は空のコンテンツを返す
   }
 
-  function getRandomString(): string {
-    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
-  
-    const randomIndex = Math.floor(Math.random() * options.length);
-  
-    return options[randomIndex];
-  }
 
   const { content } = matter(fileContents);
   const processedContent = await remark()
@@ -151,7 +144,6 @@ async function getBlogDetail(slug: string) {
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',
-      'h1': getRandomString(),
       'img': 'markdown-image'
     })
     .process(content);

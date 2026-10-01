@@ -76,7 +76,7 @@ export default async function Newsroom() {
     <main>
     <div id="maincard">
       <div className="card">
-      <h1 className="n2">Newsroom</h1>
+      <h1>Newsroom</h1>
     {newsroomList.length === 0 ? (
       <EmptyMessage message="現在、ニュースはありません。" />
     ) : newsroomList.map((newsroom, index) => (

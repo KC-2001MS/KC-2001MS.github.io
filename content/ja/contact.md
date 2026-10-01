@@ -14,27 +14,21 @@
 
 知り合いで私的な用事のために連絡を取りたい場合は、基本的に私用のメールアドレスで連絡をお願いします。もし、連絡先を知らない場合は、こちらに連絡していただいても構いません。私用のメールアドレスで返信します。
 
-メールアドレス：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
-
-Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
-
-Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
-
-mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
-
-GitHub：[https://github.com](https://github.com/KC-2001MS)
-
-Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
-
-Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)
-
-note：[https://note.com](https://note.com/iroiro_work)
+- メールアドレス：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
+- Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
+- Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
+- mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
+- GitHub：[https://github.com](https://github.com/KC-2001MS)
+- Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
+- Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)
+- note：[https://note.com](https://note.com/iroiro_work)
 
 ### 販売
-App Store：[https://apps.apple.com](https://apps.apple.com/developer/id1586934587)
-booth：[https://iroirowork.booth.pm](https://iroirowork.booth.pm)
+- App Store：[https://apps.apple.com](https://apps.apple.com/developer/id1586934587)
+- booth：[https://iroirowork.booth.pm](https://iroirowork.booth.pm)
+
 ### 動画
-YouTube：[https://www.youtube.com](https://www.youtube.com/@IroiroWork)
+- YouTube：[https://www.youtube.com](https://www.youtube.com/@IroiroWork)
 
 ### 寄付
 寄付をご希望の方は、こちらをクリックしてください。ご寄付いただいたお金は、私のプログラミング・スキルの向上とアプリケーションのメンテナンスに使わせていただきます。

@@ -79,7 +79,7 @@ export default async function Contact() {
   return (
     <main>
       <div id="maincard">
-      <div className="card" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </main>
   );
@@ -89,13 +89,6 @@ async function getContact() {
   const filePath = path.join(process.cwd(), "content/en/", "contact.md");
   const fileContents = fs.readFileSync(filePath, "utf-8");
 
-  function getRandomString(): string {
-    const options = ['n1', 'n2', 'n3', 'n4', 'n5', 'n6'];
-  
-    const randomIndex = Math.floor(Math.random() * options.length);
-  
-    return options[randomIndex];
-  }
 
   const { content } = matter(fileContents);
   const processedContent = await remark()
@@ -108,7 +101,6 @@ async function getContact() {
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',
-      'h1': getRandomString()
     })
     .process(content);
 

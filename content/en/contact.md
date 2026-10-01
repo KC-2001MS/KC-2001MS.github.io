@@ -10,25 +10,19 @@ I work under the account name "Iroiro." My main focus is on developing applicati
 | 2024/12/3 | Renewal of this sitee |
 
 ### Contact
-Email Address：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
-
-Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
-
-Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
-
-mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
-
-GitHub：[https://github.com](https://github.com/KC-2001MS)
-
-Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
-
-Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)
+- Email Address：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
+- Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
+- Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
+- mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
+- GitHub：[https://github.com](https://github.com/KC-2001MS)
+- Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
+- Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)
 
 ### Sales
-App Store：[https://apps.apple.com](https://apps.apple.com/developer/id1586934587)
+- App Store：[https://apps.apple.com](https://apps.apple.com/developer/id1586934587)
 
 ### Video
-YouTube：[https://www.youtube.com](https://www.youtube.com/@IroiroWork)
+- YouTube：[https://www.youtube.com](https://www.youtube.com/@IroiroWork)
 
 ### Contribution
 If you would like to make a donation, please click here. The money you donate will be used to improve my programming skills and maintain the application.

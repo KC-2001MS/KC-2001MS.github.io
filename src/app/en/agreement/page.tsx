@@ -68,7 +68,7 @@ export default function Agreement() {
         <main>
             <div id="maincard">
                 <div className="card">
-                    <h1 className="n5">Terms of Use</h1>
+                    <h1>Terms of Use</h1>
                     <p>
                         These terms and conditions of use (hereinafter referred to as &quot;Terms and Conditions&quot;) shall be
                         governed by and construed in accordance with the laws of Japan. This Terms of Use (hereinafter

@@ -1,16 +1,5 @@
 @charset "utf-8";
 
-table {
-    width: 220px;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-table th,
-table td {
-    border: solid 1px var(--defaultWhite);
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -121,18 +110,6 @@ hr {
     font-size: 8px;
 }
 
-.pageCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-}
-
-.pageCard>div {
-    width: 66%;
-}
-
 @media (max-width: 540px) or (orientation: portrait) {
     .landscape-only {
         display: none;
@@ -195,33 +172,12 @@ hr {
         color: var(--defaultBlack);
     }
 
-    h3 {
-        border-bottom: solid 1px var(--defaultBlack);
-    }
-
-    table th,
-    table td {
-        border: solid 1px var(--defaultBlack);
-    }
-
     .underline::after {
         background: var(--defaultBlack);
     }
 
     .isDarkMode {
         display: none;
-    }
-
-    a.pageCard {
-        color: var(--defaultBlack)
-    }
-
-    a.pageCard {
-        background-color: var(--cardLight);
-    }
-
-    a.pageCard:hover {
-        background-color: var(--cardLightVisited);
     }
 }
 
@@ -255,15 +211,4 @@ hr {
         display: none;
     }
 
-    a.pageCard {
-        color: var(--defaultWhite)
-    }
-
-    a.pageCard {
-        background-color: var(--cardDark);
-    }
-
-    a.pageCard:hover {
-        background-color: var(--cardDarkVisited);
-    }
 }

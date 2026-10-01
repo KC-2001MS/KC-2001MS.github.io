@@ -8,7 +8,7 @@ type AppIconProps = {
 };
 
 const AppIcon = ({ icon, darkIcon, alt }: AppIconProps) => {
-    const image = <Image src={icon} className={`${styles.appIcon} ${styles.left}`} height={100} width={100} alt={alt} />;
+    const image = <Image src={icon} className={styles.appIcon} height={100} width={100} alt={alt} />;
 
     if (!darkIcon) {
         return image;
