@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
+import AppIcon from "@/components/AppIcon";
 import "@styles/content.css";
 import "@styles/product.css";
 import { Language } from "@/lib/Language";
@@ -89,7 +89,7 @@ export default function Product() {
                                 <div className="appInfoTop">
                                     <h3 className="left appTitle">{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
-                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title} Icon`} />
+                                        <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
                                     </a>
                                 </div>
                                 <div className="clear">
@@ -150,7 +150,7 @@ export default function Product() {
                                 <div className="appInfoTop">
                                     <h3 className="left appTitle">{app.title}</h3>
                                     <a href={`https://apps.apple.com/app/${app.id}`}>
-                                        <Image src={app.icon} className="appIcon left" height={100} width={100} alt={`${app.title} Icon`} />
+                                        <AppIcon icon={app.icon} darkIcon={"darkIcon" in app ? (app.darkIcon as string) : undefined} alt={`${app.title} Icon`} />
                                     </a>
                                 </div>
                                 <p className="clear">{app.description}</p>
