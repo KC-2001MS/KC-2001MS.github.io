@@ -89,6 +89,50 @@ pre>code {
     padding: 20px;
 }
 
+/* コードブロック右上のコピーボタン（CodeCopyButtonsで追加） */
+pre.hasCopyButton {
+    position: relative;
+}
+
+/* ボタンと1行目の文字が重ならないよう、右側を空ける */
+pre.hasCopyButton>code {
+    padding-right: 56px;
+}
+
+.copyButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: var(--surfaceBorder);
+    border-radius: 8px;
+    background-color: var(--surfaceBackground);
+    color: inherit;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.copyButton:hover,
+.copyButton:focus-visible {
+    opacity: 1;
+}
+
+/* アイコンフォントの読み込み前に、アイコン名の文字がはみ出さないようにする */
+.copyButton {
+    overflow: hidden;
+}
+
+.copyButton .material-symbols-outlined {
+    font-size: 18px;
+    line-height: 1;
+}
+
 /* 文中のコード */
 :not(pre)>code {
     padding: 0.1em 0.4em;

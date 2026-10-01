@@ -3,6 +3,7 @@ import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollbarWidth from '@/components/ScrollbarWidth';
+import CodeCopyButtons from '@/components/CodeCopyButtons';
 import "@styles/var.css";
 import "@styles/foundation.css";
 import "@styles/content.css";
@@ -107,6 +108,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <CodeCopyButtons />
         <Footer />
       </body>
     </html>

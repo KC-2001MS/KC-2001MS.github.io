@@ -3,6 +3,7 @@ import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollbarWidth from '@/components/ScrollbarWidth';
+import CodeCopyButtons from '@/components/CodeCopyButtons';
 import { Language } from "@/lib/Language";
 import "@styles/var.css";
 import "@styles/foundation.css";
@@ -111,6 +112,7 @@ export default function RootLayout({
       <body>
         <Header lang={Language.EnglishUS} />
         {children}
+        <CodeCopyButtons />
         <Footer lang={Language.EnglishUS} />
       </body>
     </html>

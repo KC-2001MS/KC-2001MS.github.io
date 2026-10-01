@@ -1,47 +1,51 @@
 ---
 title: Running the M5Stack NanoC6 with Embedded Swift
-description: We will now use Embedded Swift to blink LEDs on the M5Stack NanoC6 using the sample project esp32-led-blink-sdk.
-keywords: [“Swift”, “ESP32-C6”, “Embedded Swift”]
+description: Blinking the LED on an M5Stack NanoC6 with esp32-led-blink-sdk, a sample project for Embedded Swift.
+keywords: ["Swift", "ESP32-C6", "Embedded Swift"]
 genre: Embedded Swift
 date: "2025/1/14"
 ---
 # Running the M5Stack NanoC6 with Embedded Swift
-I will now use Embedded Swift to blink LEDs on the M5Stack NanoC6 using the sample project esp32-led-blink-sdk.
-![M5Stack NanoC6](/images/m5stacknanoc6-pinmap.png "M5Stack NanoC6")
+In this article, I use esp32-led-blink-sdk, a sample project for Embedded Swift, to blink the LED on an M5Stack NanoC6.
+![M5Stack NanoC6](/images/m5stacknanoc6.png "M5Stack NanoC6")
 Source : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 ## Introduction
-Embedded Swift was announced at WWDC2024 and will allow development of embedded devices instead of Apple devices with Swift. (Currently, it does not appear to be officially released and requires Swift Snapshot to be installed and used.)
-So I decided to try my hand at developing embedded devices as well as Apple devices. This time, **I aim to use M5Stack NanoC6 to blink LEDs**. I am new to embedded devices, so I may get some things wrong, but I hope you will keep a warm eye on me.
+Embedded Swift was introduced at WWDC2024, and Swift is becoming usable not only for Apple devices but also for embedded devices. However, at the time of writing it has not been officially released, and you need to install a Swift DEVELOPMENT SNAPSHOT to use it.
+So I decided to step outside my usual Apple-device development and try embedded development. My goal this time is **to blink the LED on an M5Stack NanoC6**. This is my first time doing embedded development, so there may be mistakes, and I appreciate your understanding.
 
 ## What is Embedded Swift?
-Embedded Swift is a Swift for Embedded Devices development. As a result, most Swift syntax can be used, although the dependencies are very different. Conversely, there are some syntaxes that cannot be used.
-Although it was the WWDC 2024 session [“Embedded Swift Reduces Size”](https://developer.apple.com/jp/videos/play/wwdc2024/10197/) that attracted a lot of attention, it was actually announced earlier than that. Swift.org blog post [“Byte-sized Swift: Building Tiny Games for the Playdate”](https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/) and [“Get Started with Embedded Swift on ARM and RISC-V Microcontrollers”](https://www.swift.org/blog/embedded-swift-examples/).
-As you can see from the title of this Swift.org blog post, not all embedded devices can use Embedded Swift; it is limited to those on ARM and RISC-V architectures. If you want to develop Embedded Swift, please note that you need to get an embedded device that supports it.
+Embedded Swift is a way to write programs for embedded devices in Swift. Unlike regular Swift, it is built with a dedicated Embedded Swift compilation mode. As a result, the available libraries and other dependencies are quite different, but most of the Swift syntax can be used as is. Conversely, some syntax cannot be used.
+It drew a lot of attention with the WWDC 2024 session ["Go small with Embedded Swift"](https://developer.apple.com/videos/play/wwdc2024/10197/), but it had already been introduced earlier in the Swift.org blog posts ["Byte-sized Swift: Building Tiny Games for the Playdate"](https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/) and ["Get Started with Embedded Swift on ARM and RISC-V Microcontrollers"](https://www.swift.org/blog/embedded-swift-examples/).
+As the title of the latter post suggests, Embedded Swift does not work on every embedded device; it targets microcontrollers with ARM and RISC-V architectures. If you want to develop with Embedded Swift, you need a device that supports it.
 
-## How to select an embedded device
-I chose to use the M5Stack NanoC6, so the following discussion will be based on the M5Stack NanoC6. You may use different devices, but Embedded Swift supports the following, so I will select based on them.
-### Microcontrollers
-Microcontrollers have CPUs, so you can look here. There are probably other microcontrollers that can be used with Embedded Swift, but I have listed only those that have been confirmed to work reliably in our sample projects.
+## How to choose an embedded device
+### Choose by microcontroller
+Whether a device supports Embedded Swift depends on its microcontroller (the chip that contains the CPU), so when choosing a device, check its microcontroller. There are probably other microcontrollers that work, but here I list only those confirmed to work in the sample projects.
 - ARM
   - STM32F746
-  - RP2040
-  The product name Raspberry Pi Pico is more famous. It was introduced under the product name.
+  - RP2040 (introduced in the samples as the Raspberry Pi Pico, which uses it)
   - nRF52840
 - RISC-V
-  - ESP32C6
+  - ESP32-C6
 
-It is considered safe to choose from among these. The following discussion will be about ESP32C6, so if you choose other microcontrollers, the discussion after this will not be valid.
-In addition, it may be possible to make it work with microcontrollers other than these if you have knowledge of embedded systems such as environment construction and C libraries, but I do not know at present.
+Choosing from this list should be safe. With knowledge of embedded development, such as setting up the environment and C libraries, you might be able to use other microcontrollers too, but I don't know enough to say yet.
+### Why I chose the M5Stack NanoC6
+This time I use the M5Stack NanoC6, which has an ESP32-C6. The rest of this article assumes the ESP32-C6, so it may not apply as is to other microcontrollers.
 
-## Building the environment
-Now let's proceed to building the environment. Basically, proceed as described in [Swift Matter Examples Tutorials at Swift Matter Examples Tutorials](https://apple.github.io/swift-matter-examples/tutorials/swiftmatterexamples/setup-macos/).
+## Setting up the environment
+Next, set up the environment. I basically follow the macOS setup steps in [Swift Matter Examples Tutorials](https://apple.github.io/swift-matter-examples/tutorials/swiftmatterexamples/setup-macos/).
+
+First, install Xcode and the latest Swift DEVELOPMENT SNAPSHOT.
+
+Next, check in Terminal that the snapshot is installed, and look up its CFBundleIdentifier value. You will set this value to the TOOLCHAINS environment variable later. The output below is an example, but yours should look similar.
+It is also a good idea to check that the `Target` in the output of the last `swift --version` command matches your Mac's architecture (arm64 for Apple silicon).
 ```zsh
 $ ls ~/Library/Developer/Toolchains/
-swift-development-snapshot-2024-06-03-a.xctoolchain
+swift-DEVELOPMENT-SNAPSHOT-2024-06-03-a.xctoolchain
 swift-latest.xctoolchain
 
 $ plutil -extract CFBundleIdentifier raw \
-  -o - \fst
+  -o - \
   ~/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2024-06-03-a.xctoolchain/Info.plist
 org.swift.59202406031a
 
@@ -49,13 +53,13 @@ $ TOOLCHAINS=org.swift.59202406031a swift --version
 Apple Swift version 6.0-dev (LLVM c7c87ee42989d4b, Swift 0aa0687fe0f4047)
 Target: arm64-apple-macosx14.0
 ```
-Omit the homebrew installation, as I'm sure you can figure it out.
+I will skip how to install Homebrew. Use Homebrew to install cmake, ninja and dfu-util.
 ```zsh
 $ brew install cmake ninja dfu-util
 ```
-Next, create an esp folder in your home directory, clone esp-idf and esp-matter into it, and install them.
-Then, set the toolchain to the CFBundleIdentifier value that you have just confirmed, and finally, run export.sh.
-Here, esp-matter is also installed, but since the project does not appear to be using it, it may not be necessary, but it has not been verified.
+Next, create an esp folder in your home directory, then clone esp-idf and esp-matter into it and install them.
+After that, set the TOOLCHAINS environment variable to the CFBundleIdentifier value you checked earlier, and finally run each export.sh.
+Note that I install esp-matter here because the tutorial does, but this sample project does not seem to use it, so it may not be necessary (I have not verified this).
 ```zsh
 $ mkdir -p ~/esp
 
@@ -68,7 +72,7 @@ $ git clone \
   --jobs 24
 
 $ cd ~/esp/esp-idf
-$ . /install.sh
+$ ./install.sh
 
 $ cd ~/esp
 $ git clone \
@@ -79,7 +83,7 @@ $ git clone \
     --jobs 24
 
 $ cd ~/esp/esp-matter
-$ . /install.sh
+$ ./install.sh
 
 $ export TOOLCHAINS=org.swift.59202406031a
 
@@ -87,47 +91,48 @@ $ . ~/esp/esp-idf/export.sh
 
 $ . ~/esp/esp-matter/export.sh
 ```
-Then execute the following commands in order.
+Then clone [swift-embedded-examples](https://github.com/apple/swift-embedded-examples), which contains the sample projects, create a Python virtual environment in that folder, and install the required packages. Replace `<path to swift-embedded-examples>` with the path to your clone of swift-embedded-examples.
 ```zsh
-$ cd swift-embedded-examples
+$ git clone https://github.com/apple/swift-embedded-examples.git
+$ cd <path to swift-embedded-examples>
 $ python3 -m venv .venv
 $ source .venv/bin/activate
 $ python3 -m pip install -r Tools/requirements.txt
 ```
-Now the environment is ready to be built.
+The environment is now ready.
 
-## Check the file structure of the sample project
-Let's see how the Swift project is organized.
+## Checking the file structure of the sample project
+Before running it, let's look at how the Swift project is organized, going through the files of esp32-led-blink-sdk one by one.
 - main
   - BridgingHeader.h
-  This is a header file in C language. Imported here can be used in Swift.
+  A C header file. Whatever is imported here can be used from Swift.
   - CMakeLists.txt
-  This section defines the configuration in main, which is also made available to Swift.
+  Defines the build settings for main. This is also where Swift is enabled.
   - idf_component.yml
-  This file defines the dependencies of idf. In this case, nothing is described.
+  Defines the dependencies on ESP-IDF components. Nothing is listed in it this time.
   - Led.swift
-  This defines the LED structure. Notice here that the function called here is not defined in Swift. It is defined in the C library.
+  Defines the LED struct. Notice that the functions called here are not defined on the Swift side. They are defined in C libraries and made available through BridgingHeader.h.
   - Main.swift
-  This file is the entry point.
+  The entry point.
 - CMakeLists.txt
-  The `include($ENV{IDF_PATH}/tools/cmake/project.cmake)` is distinctive. it seems to register components to use ESP-EDF. Currently understood as a spell.
+  `include($ENV{IDF_PATH}/tools/cmake/project.cmake)` stands out. It seems to register components so that ESP-IDF can be used, but for now I treat it as a magic incantation.
 - dependencies.lock
-  A file that defines dependencies. Since it is defined here that esp32c6 is used, it is not necessary to describe it in idf_component.yml.
+  Records the resolved dependencies. Since it records that esp32c6 is the target, it apparently does not need to be listed in idf_component.yml.
 - diagram.json
-  This is a json file that defines the board type and connections in a board simulator called Wokwi. you can check the actual board by installing the Wokwi extension in Visual Studio Code. This project launches a simulator for the [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) board. Since it does not simulate, we will not touch it this time.
+  A JSON file that defines the board type and wiring for Wokwi, a board simulator. If you install the Wokwi extension in Visual Studio Code, you can see the board on screen. This project shows an [ESP32-C6-BUG](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) board. I don't use the simulator this time, so I won't go into it.
 - sdkconfig
-  file, it seems to be an auto-generated file.
+  The ESP-IDF configuration file. According to the comments in the file, it appears to be auto-generated.
 - sdkconfig.old
-  file, it seems to be an auto-generated file.
+  A previous version of sdkconfig. It also appears to be auto-generated.
 - wokwi.toml
-  Configuration file of the simulator of the board named Wokwi.
+  The configuration file for Wokwi.
 
-### What we know
-This project is unique in that it does not use the Swift Package Manager. However, [swift-playdate-examples](https://github.com/apple/swift-playdate-examples), which also uses Embedded Swift, uses Swift Package Manager. Therefore, there is room to verify if it is possible to build a project configuration using Swift Package Manager in the future.
+### What the file structure tells us
+This project is notable for building with ESP-IDF's CMake rather than the Swift Package Manager. On the other hand, [swift-playdate-examples](https://github.com/apple/swift-playdate-examples), which also uses Embedded Swift, does use the Swift Package Manager. Whether an ESP32-C6 project can also be structured around the Swift Package Manager is something I'd like to look into.
 
-## Let's run the sample project
-Now, let's try to run the sample project and blink the LEDs, since we have confirmed that the M5Stack NanoC6 is an ESP32C6, we will use the esp32-led-blink-sdk project.
-Now, let's get it working by hitting the following command after connecting the board.
+## Running the sample project
+Now let's run the sample project and blink the LED. The M5Stack NanoC6 has an ESP32-C6, so I use esp32-led-blink-sdk, which targets the ESP32-C6.
+Connect the board to your Mac and run the following commands.
 ```zsh
 $ cd esp32-led-blink-sdk
 $ export TOOLCHAINS=org.swift.59202406031a
@@ -136,17 +141,17 @@ $ idf.py set-target esp32c6
 $ idf.py build
 $ idf.py flash
 ```
-### If you leave it as it is, it builds but does not work.
-It should be able to build, but it should not work. This is because the sample project uses a different board [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) and this board is programmed to work.
-Check out the [M5Stack NanoC6 documentation](https://docs.m5stack.com/ja/core/M5NanoC6). Notice the description of the pin map.
+### The LED does not blink as is
+The build and flash succeed, but the LED does not blink. This is because the sample project is written for a different board, the [ESP32-C6-BUG](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-).
+Check the [M5Stack NanoC6 documentation](https://docs.m5stack.com/ja/core/M5NanoC6), paying attention to the pin map.
 ![M5Stack NanoC6 Pinmap](/images/m5stacknanoc6-pinmap.png "Pinmap")
 Source : [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
-LED (Blue) is assigned to GPI07. In contrast, you will notice that it is assigned to GPI08 according to the diagram in the sample project.
-This means that the numbers need to be changed.
+On the M5Stack NanoC6, the LED (Blue) is assigned to GPIO7. The sample project's Main.swift, on the other hand, specifies GPIO8 as the LED pin.
+In other words, you just need to change the pin number to 7.
 ```swift:Main.swift
-@_cdecl(“app_main”)
+@_cdecl("app_main")
 func main() {
-  print(“Hello from Swift on ESP32-C6!”)
+  print("Hello from Swift on ESP32-C6!")
 
   var ledValue: Bool = false
   let blinkDelayMs: UInt32 = 500
@@ -159,15 +164,15 @@ func main() {
   }
 }
 ```
-You can change it to 
-````swift:Main.swift.
-@_cdecl(“app_main”)
+Change it to the following.
+```swift:Main.swift
+@_cdecl("app_main")
 func main() {
-  print(“Hello from Swift on ESP32-C6!”)
+  print("Hello from Swift on ESP32-C6!")
 
   var ledValue: Bool = false
   let blinkDelayMs: UInt32 = 500
-  let led = Led(gpioPin: 7) // M5NanoC6 built-in LED was GPIO7, so change to this value (default is 8)
+  let led = Led(gpioPin: 7) // The M5Stack NanoC6 built-in LED is on GPIO7 (the sample uses 8)
 
   while true {
     led.setLed(value: ledValue)
@@ -175,26 +180,26 @@ func main() {
     vTaskDelay(blinkDelayMs / (1000 / UInt32(configTICK_RATE_HZ)))
   }
 }
-````
+```
 
-Run it again and you should see the LED blink.
-![M5Stack NanoC6 blinking (lights off)](/images/m5stacknanoc6-blinking1.jpg "Blinking (lights off)")
+Build and flash it again, and the LED should blink.
+![M5Stack NanoC6 blinking (light off)](/images/m5stacknanoc6-blinking1.jpg "Blinking (light off)")
 ![M5Stack NanoC6 blinking (light on)](/images/m5stacknanoc6-blinking2.jpg "Blinking (light on)")
 
-## Finally
-This time, I modified the sample code to blink LEDs on the M5Stack NanoC6. This time, I learned that it is very important to look at the spec sheet in the development of embedded devices, just as it is important to look at the documentation in programming. I hope I can share this importance with others.
-Also, since the [Esp32-C6-Bug](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-) is not easy to obtain and costs 4,785 yen, I was able to tell them that they can experience Embedded Swift with the M5Stack NanoC6, which costs 1,276 yen. This would be very meaningful. We hope this is useful, especially since there are not many articles on Embedded Swift in the Japanese-speaking world.
+## Conclusion
+This time, I fixed the pin number in the sample code and blinked the LED on an M5Stack NanoC6. Just as reading documentation matters in programming, I learned that checking spec sheets and pin maps is very important in embedded development.
+I also found that although the ESP32-C6-BUG assumed by the sample is hard to get and fairly expensive at 4,785 yen, you can try Embedded Swift with the M5Stack NanoC6, which costs 1,276 yen. There are still few articles about actually running Embedded Swift, so I hope this helps anyone who wants to try it.
 
 ## References
 - [Go small with Embedded Swift](https://developer.apple.com/videos/play/wwdc2024/10197/)
 - [Byte-sized Swift: Building Tiny Games for the Playdate](https://www.swift.org/blog/byte-sized-swift-tiny-games-playdate/)
 - [Get Started with Embedded Swift on ARM and RISC-V Microcontrollers](https://www.swift.org/blog/embedded-swift-examples/)
 - [GitHub : apple/swift-embedded-examples](https://github.com/apple/swift-embedded-examples/tree/main)
-- [Swift Matter Examples Tutorials : Swift Matter Examples Tutorials](https://apple.github.io/swift-matter-examples/tutorials/swiftmatterexamples/setup-macos/)
+- [Swift Matter Examples Tutorials](https://apple.github.io/swift-matter-examples/tutorials/swiftmatterexamples/setup-macos/)
 - [NanoC6 - m5-docs - M5Stack](https://docs.m5stack.com/ja/core/M5NanoC6)
 - [M5Stack NanoC6](https://www.switch-science.com/products/9570?srsltid=AfmBOorJRglcRJ3WqE-mQq-XjthkeevmB39LyzU5dFA58r3zqGl8vbjb)
 - [diagram.json File Format](https://docs.wokwi.com/diagram-format)
-- [idf_component.yml Manifest File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/manifest_file.html)
-- [Dependencies.lock File — IDF Component Management  documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/dependencies_lock.html)
-- [Build System (CMake) -  -  — ESP-IDF Programming Guide release-v3.3 documentation](https://docs.espressif.com/projects/esp-idf/en/release-v3.3/api-guides/build-system-cmake.html)
+- [idf_component.yml Manifest File — IDF Component Management documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/manifest_file.html)
+- [Dependencies.lock File — IDF Component Management documentation](https://docs.espressif.com/projects/idf-component-manager/en/latest/reference/dependencies_lock.html)
+- [Build System (CMake) — ESP-IDF Programming Guide release-v3.3 documentation](https://docs.espressif.com/projects/esp-idf/en/release-v3.3/api-guides/build-system-cmake.html)
 - [ESP32-C6-BUG Prokyber | Mouser Japan](https://www.mouser.jp/ProductDetail/Prokyber/ESP32-C6-BUG?qs=ZcfC38r4Pou1X3IbFvgUPQ%3D%3D&srsltid=AfmBOooiRK2CNlgGq1oGmTfcpbewYg8Pd-TurtD67HyhEXK8YB_cZg8-)
