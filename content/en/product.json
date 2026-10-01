@@ -2,6 +2,20 @@
   "apps": {
     "development": [
       {
+        "id": "id6743005902",
+        "title": "SSH Key Wallet",
+        "icon": "/images/SSH Key Wallet.avif",
+        "description": "SSH Key Wallet is the easiest way to manage SSH encryption keys and SSH Config files in ~/.ssh/ based on OpenSSH.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "15(Sequoia)"
+          }
+        ],
+        "supportPage": "./product/sshkeywallet",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
         "id": "id6470128646",
         "title": "Mahjong Tile Converter",
         "icon": "/images/Mahjong Tile Converter.avif",
@@ -9,7 +23,7 @@
         "supportedPlatforms": [
           {
             "os": "macOS",
-            "version": "14(Sonoma)"
+            "version": "26(Tahoe)"
           }
         ],
         "supportPage": "./product/mahjongtileconverter",
@@ -23,11 +37,11 @@
         "supportedPlatforms": [
           {
             "os": "iOS",
-            "version": "17"
+            "version": "17.4"
           },
           {
             "os": "iPadOS",
-            "version": "17"
+            "version": "17.4"
           },
           {
             "os": "visionOS",
@@ -35,11 +49,11 @@
           },
           {
             "os": "macOS",
-            "version": "14(Sonoma)"
+            "version": "14.4(Sonoma)"
           },
           {
             "os": "watchOS",
-            "version": "10"
+            "version": "10.4"
           },
           {
             "os": "tvOS",
@@ -83,19 +97,19 @@
         "supportedPlatforms": [
           {
             "os": "iOS",
-            "version": "17"
+            "version": "18"
           },
           {
             "os": "iPadOS",
-            "version": "17"
+            "version": "18"
           },
           {
             "os": "visionOS",
-            "version": "1"
+            "version": "2"
           },
           {
             "os": "macOS",
-            "version": "14(Sonoma)"
+            "version": "15(Sequoia)"
           }
         ],
         "supportPage": "./product/uncheckx",
@@ -133,19 +147,19 @@
         "supportedPlatforms": [
           {
             "os": "iOS",
-            "version": "17"
+            "version": "18"
           },
           {
             "os": "iPadOS",
-            "version": "17"
+            "version": "18"
           },
           {
             "os": "visionOS",
-            "version": "1"
+            "version": "2"
           },
           {
             "os": "macOS",
-            "version": "14(Sonoma)"
+            "version": "15(Sequoia)"
           }
         ],
         "media": [

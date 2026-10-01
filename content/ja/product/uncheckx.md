@@ -21,10 +21,10 @@ Uncheck Xには以下の特徴があります。
 ## 対応プラットフォーム
 | OS | バージョン |
 | ---- | ---- |
-| iOS | 17 ~ |
-| iPadOS | 17 ~ |
-| visionOS | 1 ~ |
-| macOS | 14(Sonoma) ~ |
+| iOS | 18 ~ |
+| iPadOS | 18 ~ |
+| visionOS | 2 ~ |
+| macOS | 15(Sequoia) ~ |
 
 ## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。

@@ -20,10 +20,10 @@ Word Filter Xには以下の特徴があります。
 ## 対応プラットフォーム
 | OS       | バージョン   |
 | -------- | ------------ |
-| iOS      | 16 ~         |
-| iPadOS   | 16 ~         |
-| visionOS | 1 ~          |
-| macOS    | 13(Ventura) ~ |
+| iOS | 17 ~ |
+| iPadOS | 17 ~ |
+| visionOS | 1 ~ |
+| macOS | 14(Sonoma) ~ |
 
 ## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。

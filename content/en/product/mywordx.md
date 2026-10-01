@@ -36,11 +36,11 @@ In addition, the following information can be registered in the word information
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| iOS | 17 ~ |
-| iPadOS | 17 ~ |
+| iOS | 17.4 ~ |
+| iPadOS | 17.4 ~ |
 | visionOS | 1 ~ |
-| macOS | 14(Sonoma) ~ |
-| watchOS | 10 ~ |
+| macOS | 14.4(Sonoma) ~ |
+| watchOS | 10.4 ~ |
 | tvOS | 17 ~ |
 
 ## Privacy Policy

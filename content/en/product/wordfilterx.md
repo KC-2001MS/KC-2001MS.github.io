@@ -17,10 +17,10 @@ This extension has the following features
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| iOS | 16 ~ |
-| iPadOS | 16 ~ |
+| iOS | 17 ~ |
+| iPadOS | 17 ~ |
 | visionOS | 1 ~ |
-| macOS | 13(Ventura) ~ |
+| macOS | 14(Sonoma) ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.

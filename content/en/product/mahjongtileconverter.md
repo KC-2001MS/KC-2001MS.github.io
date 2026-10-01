@@ -15,7 +15,7 @@ The following features also make it easier to use
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| macOS | 14(Sonoma) ~ |
+| macOS | 26(Tahoe) ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.

@@ -21,10 +21,10 @@ This extension has the following features
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| iOS | 17 ~ |
-| iPadOS | 17 ~ |
-| visionOS | 1 ~ |
-| macOS | 14(Sonoma) ~ |
+| iOS | 18 ~ |
+| iPadOS | 18 ~ |
+| visionOS | 2 ~ |
+| macOS | 15(Sequoia) ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.
