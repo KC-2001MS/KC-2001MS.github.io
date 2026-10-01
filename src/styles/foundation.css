@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* スクロールバーが常に表示される設定では、スクロールできるページとできないページ（トップ）で中央揃えの位置がずれるため、幅を常に確保する */
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     margin: 0;
     padding: 0;

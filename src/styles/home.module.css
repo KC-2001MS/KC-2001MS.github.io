@@ -17,8 +17,8 @@
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
-    /* 背景色を付けると、Safariのアドレスバーなどがその色（他のページのヘッダーの色）に染まるため透明にする */
-    background-color: transparent;
+    /* Safari 26はbodyの背景色でタブバーを染める（写真は使えない）ため、写真の上端の平均色にすりガラスの暗さを重ねた色にする */
+    background-color: #60665f;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,6 +80,13 @@
     color: var(--defaultWhite);
 }
 
+/* 縦長の写真は上端が暗い緑のため、それに合わせる */
+@media (orientation: portrait) {
+    :global(body):has(#backgroundImage) {
+        background-color: #384038;
+    }
+}
+
 @media (max-width: 1080px) and (orientation: portrait) {
     :global(body):has(#backgroundImage) {
         background-image: url(/images/出雲大社607P.avif);
@@ -137,12 +144,13 @@
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* 境界線はborderだと高さが増えて他のページと位置がずれるため、内側の影で描く */
 :global(body):has(#backgroundImage) :global(header) {
-    border-bottom: var(--glassBorder);
+    box-shadow: inset 0 -0.5px 0 rgba(255, 255, 255, 0.2);
 }
 
 :global(body):has(#backgroundImage) :global(footer) {
-    border-top: var(--glassBorder);
+    box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* ライトモードでも写真の上の文字は白にする */
