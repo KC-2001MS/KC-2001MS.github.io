@@ -259,6 +259,24 @@
   ],
   "frameworks": [
     {
+      "id": "swift-window-launcher",
+      "title": "SwiftWindowLauncher",
+      "description": "CLIやmain関数から簡単にウインドウを開くことができるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftWindowLauncher"
+    },
+    {
+      "id": "information",
+      "title": "Information",
+      "description": "マクロを用いてInfo.plistの値に型安全にアクセスできるパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/Information"
+    },
+    {
+      "id": "animated-image",
+      "title": "AnimatedImage",
+      "description": "SwiftUIでGIF・APNG・アニメーションWebPを表示するためのパッケージ。",
+      "repositoryUrl": "https://github.com/KC-2001MS/AnimatedImage"
+    },
+    {
       "id": "swift-storage",
       "title": "SwiftStorage",
       "description": "Userdefaultsによる永続化に対応したObservationのコードを生成するマクロ。",

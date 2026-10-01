@@ -232,6 +232,24 @@
   ],
   "frameworks": [
     {
+      "id": "swift-window-launcher",
+      "title": "SwiftWindowLauncher",
+      "description": "Package that makes it easy to open windows from the CLI or the main function.",
+      "repositoryUrl": "https://github.com/KC-2001MS/SwiftWindowLauncher"
+    },
+    {
+      "id": "information",
+      "title": "Information",
+      "description": "Package that provides type-safe access to Info.plist values using macros.",
+      "repositoryUrl": "https://github.com/KC-2001MS/Information"
+    },
+    {
+      "id": "animated-image",
+      "title": "AnimatedImage",
+      "description": "Package for displaying GIF, APNG and animated WebP images in SwiftUI.",
+      "repositoryUrl": "https://github.com/KC-2001MS/AnimatedImage"
+    },
+    {
       "id": "swift-storage",
       "title": "SwiftStorage",
       "description": "Macro to generate Observation code for persistence by Userdefaults.",
