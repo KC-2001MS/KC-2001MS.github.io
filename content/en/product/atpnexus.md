@@ -27,7 +27,7 @@ This app has the following features
 | iPadOS | 26.1 ~ |
 | visionOS | 26.1 ~ |
 | macOS | 26.1(Tahoe) ~ |
-| watchOS | 26 ~ |
+| watchOS | 26.1 ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.

@@ -27,7 +27,7 @@ ATP Nexusには以下の特徴があります。
 | iPadOS | 26.1 ~ |
 | visionOS | 26.1 ~ |
 | macOS | 26.1(Tahoe) ~ |
-| watchOS | 26 ~ |
+| watchOS | 26.1 ~ |
 
 ## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。

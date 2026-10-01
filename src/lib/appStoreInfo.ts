@@ -34,11 +34,10 @@ function formatVersion(os: string, version: string): string {
 
 // 表示順
 const OS_ORDER = ["iOS", "iPadOS", "visionOS", "macOS", "watchOS", "tvOS"];
-// 取得に失敗することがあるOS（取得できなかった場合はproduct.jsonやMarkdownの値を使う）
-// watchOSはApp Storeのページから取得しているため、ページ構成の変更等で取得できない場合がある
+// App Store Connect APIで取得できないOS（product.jsonやMarkdownの値を使う）
 const NON_API_OS = ["watchOS"];
 
-// API の結果を正として対応プラットフォームを組み立てる（APIに無いOSは除外、watchOSは取得できなかった場合のみ既存の値を使う）
+// API の結果を正として対応プラットフォームを組み立てる（APIに無いOSは除外、watchOSのみ既存の値を使う）
 function mergePlatforms(versions: Record<string, string>, existing: Platform[]): Platform[] {
   return OS_ORDER.flatMap((os) => {
     if (versions[os]) return [{ os, version: formatVersion(os, versions[os]) }];

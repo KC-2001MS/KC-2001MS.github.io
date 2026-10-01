@@ -10,7 +10,7 @@ const PRODUCT_JSON_PATHS = ["content/ja/product.json", "content/en/product.json"
 const API_BASE_URL = "https://api.appstoreconnect.apple.com/v1";
 
 // App Store ConnectのプラットフォームとサイトのOS名の対応
-// watchOSはAPIで取得できないため、App Storeのページ（JSON-LDのoperatingSystem）から取得する
+// watchOSはAPIで取得できないため対象外（product.jsonやMarkdownの値を使う）
 const PLATFORM_TO_OS = {
   IOS: ["iOS", "iPadOS"],
   MAC_OS: ["macOS"],
@@ -91,24 +91,6 @@ async function fetchMinOsVersions(appId, token) {
   return result;
 }
 
-// App Storeのページの構造化データ（例: "Requires iOS 17.4 and watchOS 10.4 or later."）からwatchOSの最低バージョンを取得する
-// 日本のみで配信しているアプリは米国のページが無いため、日本のページも確認する
-async function fetchWatchOsVersion(appId) {
-  for (const country of ["us", "jp"]) {
-    const response = await fetch(`https://apps.apple.com/${country}/app/id${appId}`);
-    if (response.status === 404) continue;
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const html = await response.text();
-    const operatingSystem = html.match(/"operatingSystem"\s*:\s*"([^"]*)"/)?.[1] ?? "";
-    const version = operatingSystem.match(/watchOS\s*([\d.]+)/)?.[1];
-    return version ? formatVersion(version) : undefined;
-  }
-  return undefined;
-}
-
 async function main() {
   const { ASC_ISSUER_ID, ASC_KEY_ID, ASC_PRIVATE_KEY } = process.env;
   if (!ASC_ISSUER_ID || !ASC_KEY_ID || !ASC_PRIVATE_KEY) {
@@ -122,14 +104,6 @@ async function main() {
   for (const appId of getAppIds()) {
     try {
       const versions = await fetchMinOsVersions(appId, token);
-      if (versions.iOS) {
-        try {
-          const watchOS = await fetchWatchOsVersion(appId);
-          if (watchOS) versions.watchOS = watchOS;
-        } catch (err) {
-          console.warn(`id${appId}: failed to fetch watchOS version (${err.message})`);
-        }
-      }
       if (Object.keys(versions).length > 0) {
         info[`id${appId}`] = versions;
       }
