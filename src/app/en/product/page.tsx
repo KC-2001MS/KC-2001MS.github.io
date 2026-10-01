@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import AppStoreLink from '@/components/AppStoreLink';
 import AppIcon from "@/components/AppIcon";
-import { getSupportedPlatforms } from "@/lib/appStoreInfo";
 import "@styles/content.css";
 import "@styles/product.css";
 import { Language } from "@/lib/Language";
@@ -106,7 +105,7 @@ export default function Product() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {getSupportedPlatforms(app).map((platform, index) => (
+                                        {app.supportedPlatforms.map((platform, index) => (
                                             <tr key={index}>
                                                 <td className="osItem">{platform.os}</td>
                                                 <td className="vrItem">{platform.version} ~</td>
@@ -165,7 +164,7 @@ export default function Product() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {getSupportedPlatforms(app).map((platform, index) => (
+                                        {app.supportedPlatforms.map((platform, index) => (
                                             <tr key={index}>
                                                 <td className="osItem">{platform.os}</td>
                                                 <td className="vrItem">{platform.version} ~</td>
@@ -220,7 +219,7 @@ export default function Product() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {getSupportedPlatforms(app).map((platform, index) => (
+                                        {app.supportedPlatforms.map((platform, index) => (
                                             <tr key={index}>
                                                 <td className="osItem">{platform.os}</td>
                                                 <td className="vrItem">{platform.version} ~</td>
