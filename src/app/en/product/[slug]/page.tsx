@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import { applyPlatformVersions } from "@/lib/appStoreInfo";
 import "@styles/content.css";
 
 type ProductPageProps = {
@@ -117,7 +118,7 @@ async function getProduct(slug: string) {
     return options[randomIndex];
   }
 
-  const { content } = matter(fileContents);
+  const { content, data } = matter(fileContents);
   const processedContent = await remark()
     .use(remarkGfm)
     .use(remarkBreaks)
@@ -130,7 +131,7 @@ async function getProduct(slug: string) {
       'div': 'title',
       'h1': getRandomString()
     })
-    .process(content);
+    .process(applyPlatformVersions(content, data.appId));
 
   return {
     content: processedContent.toString(),
