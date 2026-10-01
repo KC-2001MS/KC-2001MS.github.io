@@ -92,16 +92,21 @@ async function fetchMinOsVersions(appId, token) {
 }
 
 // App Storeのページの構造化データ（例: "Requires iOS 17.4 and watchOS 10.4 or later."）からwatchOSの最低バージョンを取得する
+// 日本のみで配信しているアプリは米国のページが無いため、日本のページも確認する
 async function fetchWatchOsVersion(appId) {
-  const response = await fetch(`https://apps.apple.com/us/app/id${appId}`, { headers: { "Accept-Language": "en-US" } });
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}`);
-  }
+  for (const country of ["us", "jp"]) {
+    const response = await fetch(`https://apps.apple.com/${country}/app/id${appId}`);
+    if (response.status === 404) continue;
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
 
-  const html = await response.text();
-  const operatingSystem = html.match(/"operatingSystem"\s*:\s*"([^"]*)"/)?.[1] ?? "";
-  const version = operatingSystem.match(/watchOS\s+([\d.]+)/)?.[1];
-  return version ? formatVersion(version) : undefined;
+    const html = await response.text();
+    const operatingSystem = html.match(/"operatingSystem"\s*:\s*"([^"]*)"/)?.[1] ?? "";
+    const version = operatingSystem.match(/watchOS\s*([\d.]+)/)?.[1];
+    return version ? formatVersion(version) : undefined;
+  }
+  return undefined;
 }
 
 async function main() {
