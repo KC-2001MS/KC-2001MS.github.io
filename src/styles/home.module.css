@@ -24,6 +24,11 @@
     background-repeat: no-repeat;
 }
 
+/* スクロールバー用の幅を確保すると、その部分に写真が表示されないため、スクロールしないトップ・404では確保しない */
+:global(html):has(#backgroundImage) {
+    scrollbar-gutter: auto;
+}
+
 #goal {
     /* 下線を一番長い行（見出し）の幅に合わせるため、中身の幅にする */
     width: fit-content;
