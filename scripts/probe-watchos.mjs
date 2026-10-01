@@ -53,7 +53,12 @@ for (const appId of APP_IDS) {
 
   // 5. include で取れる関連を一通り
   const inc = await api(`/builds/${buildId}?include=buildBundles,appEncryptionDeclaration,preReleaseVersion`);
-  show("[5] included types", (inc.included ?? []).map((i) => i.type));
+  for (const item of (inc.included ?? []).filter((i) => i.type === "buildBundles")) {
+    show(`[5] included buildBundle ${item.id}`, item.attributes);
+    const sizes = await api(`/buildBundles/${item.id}/buildBundleFileSizes?limit=200`);
+    const rows = (sizes.data ?? []).map((s) => `${s.attributes.deviceModel} / ${s.attributes.osVersion}`);
+    console.log(`  [5b] fileSizes (${rows.length}):`, rows.filter((r) => /watch/i.test(r)).slice(0, 20), rows.slice(0, 5));
+  }
 
   // 6. iTunes Lookup API
   for (const country of ["jp", "us"]) {
