@@ -17,6 +17,8 @@
     flex-direction: column;
     min-height: 100vh;
     min-height: 100dvh;
+    /* 背景色を付けると、Safariのアドレスバーなどがその色（他のページのヘッダーの色）に染まるため透明にする */
+    background-color: transparent;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
