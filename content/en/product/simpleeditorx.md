@@ -26,10 +26,10 @@ Registered text can be inserted.
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| iOS | 17 ~ |
-| iPadOS | 17 ~ |
-| visionOS | 1 ~ |
-| macOS | 14(Sonoma) ~ |
+| iOS | 26 ~ |
+| iPadOS | 26 ~ |
+| visionOS | 26 ~ |
+| macOS | 26(Tahoe) ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.

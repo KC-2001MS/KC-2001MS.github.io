@@ -38,10 +38,10 @@ In addition, the following information can be registered in the word information
 | ---- | ---- |
 | iOS | 17.4 ~ |
 | iPadOS | 17.4 ~ |
-| visionOS | 1 ~ |
+| visionOS | 1.1 ~ |
 | macOS | 14.4(Sonoma) ~ |
 | watchOS | 10.4 ~ |
-| tvOS | 17 ~ |
+| tvOS | 17.4 ~ |
 
 ## Privacy Policy
 Please see our [Privacy Policy](/en/privacy) for more details.

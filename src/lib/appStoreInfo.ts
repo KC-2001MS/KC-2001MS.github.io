@@ -32,23 +32,38 @@ function formatVersion(os: string, version: string): string {
   return name ? `${version}(${name})` : version;
 }
 
-// App Store Connectから取得できたOSのバージョンだけを上書きする
-export function getSupportedPlatforms(app: { id: string; supportedPlatforms: Platform[] }): Platform[] {
-  const versions = loadAppStoreInfo()[app.id];
-  if (!versions) return app.supportedPlatforms;
+// 表示順
+const OS_ORDER = ["iOS", "iPadOS", "visionOS", "macOS", "watchOS", "tvOS"];
+// App Store Connect APIで取得できないOS（product.jsonやMarkdownの値を使う）
+const NON_API_OS = ["watchOS"];
 
-  return app.supportedPlatforms.map((platform) =>
-    versions[platform.os] ? { os: platform.os, version: formatVersion(platform.os, versions[platform.os]) } : platform
-  );
+// API の結果を正として対応プラットフォームを組み立てる（APIに無いOSは除外、watchOSのみ既存の値を使う）
+function mergePlatforms(versions: Record<string, string>, existing: Platform[]): Platform[] {
+  return OS_ORDER.flatMap((os) => {
+    if (versions[os]) return [{ os, version: formatVersion(os, versions[os]) }];
+    const current = existing.find((platform) => platform.os === os);
+    return current && NON_API_OS.includes(os) ? [current] : [];
+  });
 }
 
-// Markdownの対応プラットフォーム表（| OS | バージョン ~ |）のバージョンを上書きする
+export function getSupportedPlatforms(app: { id: string; supportedPlatforms: Platform[] }): Platform[] {
+  const versions = loadAppStoreInfo()[app.id];
+  return versions ? mergePlatforms(versions, app.supportedPlatforms) : app.supportedPlatforms;
+}
+
+// Markdownの対応プラットフォーム表（| OS | バージョン |）の行をAPIの結果で作り直す
 export function applyPlatformVersions(markdown: string, appId?: string): string {
   if (!appId) return markdown;
   const versions = loadAppStoreInfo()[`id${appId}`];
   if (!versions) return markdown;
 
-  return markdown.replace(/^\|\s*(\w+)\s*\|\s*[^|\n]+~\s*\|$/gm, (row, os: string) =>
-    versions[os] ? `| ${os} | ${formatVersion(os, versions[os])} ~ |` : row
-  );
+  return markdown.replace(/(^\|\s*OS\s*\|[^\n]*\n\|[-\s|]+\|\n)((?:\|[^\n]*\|(?:\n|$))+)/m, (_, header: string, rows: string) => {
+    const existing = rows
+      .trim()
+      .split("\n")
+      .map((row) => row.split("|").map((cell) => cell.trim()))
+      .map(([, os, version]) => ({ os, version: version.replace(/\s*~$/, "") }));
+    const merged = mergePlatforms(versions, existing);
+    return header + merged.map(({ os, version }) => `| ${os} | ${version} ~ |`).join("\n") + "\n";
+  });
 }

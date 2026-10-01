@@ -19,10 +19,10 @@ appId: "6477782786"
 ## 対応プラットフォーム
 | OS | バージョン |
 | ---- | ---- |
-| iOS | 17 ~ |
-| iPadOS | 17 ~ |
-| visionOS | 1 ~ |
-| macOS | 14(Sonoma) ~ |
+| iOS | 26 ~ |
+| iPadOS | 26 ~ |
+| visionOS | 26 ~ |
+| macOS | 26(Tahoe) ~ |
 
 ## プライバシーポリシー
 詳細は[プライバシーポリシー](/privacy)をご覧ください。

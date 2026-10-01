@@ -23,10 +23,10 @@ This app has the following features
 ## Supported Platforms
 | OS | Version |
 | ---- | ---- |
-| iOS | 26 ~ |
-| iPadOS | 26 ~ |
-| visionOS | 26 ~ |
-| macOS | 26(Tahoe) ~ |
+| iOS | 26.1 ~ |
+| iPadOS | 26.1 ~ |
+| visionOS | 26.1 ~ |
+| macOS | 26.1(Tahoe) ~ |
 | watchOS | 26 ~ |
 
 ## Privacy Policy
