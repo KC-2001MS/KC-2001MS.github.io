@@ -2,6 +2,37 @@
   "apps": {
     "development": [
       {
+        "id": "id6760347335",
+        "title": "ATP Nexus",
+        "icon": "/images/ATP Nexus Light.avif",
+        "darkIcon": "/images/ATP Nexus Dark.avif",
+        "description": "ATP Nexus is a client app for Bluesky, the social network built on the AT Protocol. Enjoy your feeds and lists freely, with features optimized for Apple devices such as multiple accounts, Handoff and widgets.",
+        "supportedPlatforms": [
+          {
+            "os": "iOS",
+            "version": "26"
+          },
+          {
+            "os": "iPadOS",
+            "version": "26"
+          },
+          {
+            "os": "visionOS",
+            "version": "26"
+          },
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          },
+          {
+            "os": "watchOS",
+            "version": "26"
+          }
+        ],
+        "supportPage": "./product/atpnexus",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
         "icon": "/images/SSH Key Wallet Light.avif",
