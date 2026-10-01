@@ -33,6 +33,21 @@
         "feedback": "mailto:iroiro.work1234@gmail.com"
       },
       {
+        "id": "id6755629616",
+        "title": "FileSprout",
+        "icon": "/images/FileSprout Light.avif",
+        "darkIcon": "/images/FileSprout Dark.avif",
+        "description": "FileSprout is a menu bar app that creates empty files with any name and extension. Add them right where you need them by dragging and dropping or copying them to the clipboard.",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/filesprout",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
         "icon": "/images/SSH Key Wallet Light.avif",

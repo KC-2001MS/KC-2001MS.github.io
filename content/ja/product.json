@@ -33,6 +33,21 @@
         "feedback": "mailto:iroiro.work1234@gmail.com"
       },
       {
+        "id": "id6755629616",
+        "title": "FileSprout",
+        "icon": "/images/FileSprout Light.avif",
+        "darkIcon": "/images/FileSprout Dark.avif",
+        "description": "FileSproutは、好きな名前と拡張子の空のファイルをメニューバーから作成できるアプリです。ドラッグアンドドロップやクリップボードへのコピーで、作ったファイルを必要な場所へすぐに追加できます。",
+        "supportedPlatforms": [
+          {
+            "os": "macOS",
+            "version": "26(Tahoe)"
+          }
+        ],
+        "supportPage": "./product/filesprout",
+        "feedback": "mailto:iroiro.work1234@gmail.com"
+      },
+      {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
         "icon": "/images/SSH Key Wallet Light.avif",
