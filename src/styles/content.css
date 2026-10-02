@@ -40,11 +40,14 @@
 
 /* 表（カードと同じく角丸の枠で囲み、行の区切りだけを薄い線で示す） */
 /* 画面に収まらない表は、ページ全体ではなく表だけを横にスクロールできるようにする */
-table {
-    display: block;
-    width: fit-content;
+/* 表を囲む .tableScroll（rehypeWrapTables で付ける）をスクロールさせ、表自体は通常の表のまま広がるようにする */
+.tableScroll {
     max-width: 100%;
     overflow-x: auto;
+}
+
+table {
+    overflow: hidden;
     border-collapse: separate;
     border-spacing: 0;
     border: var(--surfaceBorder);

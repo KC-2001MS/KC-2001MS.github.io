@@ -6,6 +6,7 @@ import remarkBreaks from "remark-breaks";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
+import rehypeWrapTables from "@/lib/rehypeWrapTables";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
@@ -118,6 +119,7 @@ async function getTip(slug: string) {
       allowDangerousHtml: true,
     })
     .use(rehypeRaw)
+    .use(rehypeWrapTables)
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',

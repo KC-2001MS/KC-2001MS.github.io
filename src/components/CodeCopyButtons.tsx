@@ -66,7 +66,7 @@ const CodeCopyButtons = () => {
         });
 
         // 横にスクロールできるコードや表を、キーボードでもスクロールできるようにする（Tabで選んで矢印キーで動かせる）
-        document.querySelectorAll<HTMLElement>(".markdown pre > code, .markdown table").forEach((element) => {
+        document.querySelectorAll<HTMLElement>(".markdown pre > code, .markdown .tableScroll").forEach((element) => {
             if (element.scrollWidth > element.clientWidth && !element.hasAttribute("tabindex")) {
                 element.tabIndex = 0;
             }

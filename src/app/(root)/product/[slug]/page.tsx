@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
+import rehypeWrapTables from "@/lib/rehypeWrapTables";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
@@ -119,6 +120,7 @@ async function getProduct(slug: string) {
       allowDangerousHtml: true,
     })
     .use(rehypeRaw)
+    .use(rehypeWrapTables)
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',
