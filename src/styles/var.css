@@ -5,8 +5,13 @@
     --defaultWhite: rgb(230, 230, 230, 1);
     --erDark: rgb(55, 55, 55, 1);
     --erLight: rgb(200, 200, 200, 1);
-    --linkNotVisited: rgb(100, 100, 255);
-    --linkVisited: rgb(127.5, 100, 127.5);
+    /* リンクと価格の色：色相と鮮やかさ（OKLCHのhueとchroma）はもとの色のまま、明るさだけをモードごとに変える */
+    /* ライト・ダークどちらでも、背景とカードの上で文字のコントラスト比4.5以上（WCAG AA）になる明るさにしている */
+    /* もとの色 リンク: rgb(100, 100, 255)、訪問済み: rgb(127.5, 100, 127.5)、価格: rgb(255, 80, 80) */
+    /* 訪問済みは、もとの色が灰色に近くくすんで見えたため、紫のまま鮮やかさを上げ、コントラスト比5.5にしている */
+    --linkNotVisited: rgb(78, 70, 223);
+    --linkVisited: rgb(116, 58, 140);
+    --priceColor: rgb(192, 0, 31);
     --accentColor1: rgb(200, 100, 100);
     --accentColor2: rgb(100, 200, 100);
     --accentColor3: rgb(100, 100, 200);
@@ -21,6 +26,14 @@
     --cornerRadius: 16px;
     --surfaceBackground: color-mix(in srgb, currentColor 6%, transparent);
     --surfaceBorder: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --linkNotVisited: rgb(119, 128, 254);
+        --linkVisited: rgb(193, 131, 219);
+        --priceColor: rgb(252, 77, 77);
+    }
 }
 
 @media (min-width: 800px) {
