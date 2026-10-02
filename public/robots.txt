@@ -25,6 +25,7 @@ Disallow: /en/404
 Disallow: /test-page/
 Disallow: /flutter_test_page/
 Disallow: /portfolio-test/
+Disallow: /swift-vapor-test-page/
 Allow: /
 
 Sitemap: https://kc-2001ms.github.io/sitemap.xml
