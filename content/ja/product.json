@@ -64,10 +64,10 @@
       },
       {
         "id": "id6477782786",
-        "title": "日本企業情報",
+        "title": "日本法人情報",
         "icon": "/images/Japan Corp Info Light.avif",
         "darkIcon": "/images/Japan Corp Info Dark.avif",
-        "description": "日本企業情報は、日本の法人情報を簡単に管理する最適な方法です。",
+        "description": "日本法人情報は、日本の法人情報を簡単に管理する最適な方法です。",
         "supportedPlatforms": [
           {
             "os": "iOS",

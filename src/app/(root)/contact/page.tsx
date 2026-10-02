@@ -1,14 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkBreaks from "remark-breaks";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeWrapTables from "@/lib/rehypeWrapTables";
-import rehypeStringify from "rehype-stringify";
-import addClasses from "rehype-class-names";
+import { markdownToHtml } from "@/lib/markdown";
+import DonationSection from "@/components/DonationSection";
+import { Language } from "@/lib/Language";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -81,6 +76,8 @@ export default async function Contact() {
     <main>
     <div id="maincard">
     <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        {/* 寄付の案内は記事末尾と共通の部品を使う */}
+        <DonationSection lang={Language.Japanese} />
     </div>
   </main>
   );
@@ -92,21 +89,9 @@ async function getContact() {
 
 
   const { content } = matter(fileContents);
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkBreaks)
-    .use(remarkRehype, {
-      allowDangerousHtml: true,
-    })
-    .use(rehypeRaw)
-    .use(rehypeWrapTables)
-    .use(rehypeStringify)
-    .use(addClasses, {
-      'div': 'title',
-    })
-    .process(content);
+  const processedContent = await markdownToHtml(content);
 
   return {
-    content: processedContent.toString(),
+    content: processedContent,
   };
 }

@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollbarWidth from '@/components/ScrollbarWidth';
 import CodeCopyButtons from '@/components/CodeCopyButtons';
+import LazyEmbeds from '@/components/LazyEmbeds';
 import "@styles/var.css";
 import "@styles/foundation.css";
 import "@styles/content.css";
@@ -108,6 +109,7 @@ export default function RootLayout({
         <span id="content" tabIndex={-1} />
         {children}
         <CodeCopyButtons />
+        <LazyEmbeds />
         <Footer />
       </body>
     </html>

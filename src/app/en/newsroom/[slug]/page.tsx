@@ -1,20 +1,11 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkBreaks from "remark-breaks";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeRaw from "rehype-raw";
-import rehypeWrapTables from "@/lib/rehypeWrapTables";
-import rehypeMarkdownImages from "@/lib/rehypeMarkdownImages";
-import rehypeStringify from "rehype-stringify";
-import addClasses from "rehype-class-names";
 import { Metadata } from "next";
 import DonationSection from "@/components/DonationSection";
 import { Language } from "@/lib/Language";
 import { notFound } from "next/navigation";
-import { EMPTY_SLUG, getStaticSlugs } from "@/lib/markdown";
+import { EMPTY_SLUG, getStaticSlugs, markdownToHtml } from "@/lib/markdown";
 
 type NewsroomDetailPageProps = {
   params: Promise<{ slug: string; }>;
@@ -128,24 +119,10 @@ async function getNewsroom(slug: string) {
 
 
   const { content } = matter(fileContents);
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkBreaks)
-    .use(remarkRehype, {
-      allowDangerousHtml: true,
-    })
-    .use(rehypeRaw)
-    .use(rehypeWrapTables)
-    .use(rehypeMarkdownImages)
-    .use(rehypeStringify)
-    .use(addClasses, {
-      'div': 'title',
-      'img': 'markdown-image'
-    })
-    .process(content);
+  const processedContent = await markdownToHtml(content);
 
   return {
-    content: processedContent.toString(),
+    content: processedContent,
   };
 }
 

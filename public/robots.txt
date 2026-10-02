@@ -29,4 +29,4 @@ Disallow: /portfolio-test/
 Disallow: /swift-vapor-test-page/
 Allow: /
 
-Sitemap: https://kc-2001ms.github.io/sitemap.xml
+Sitemap: https://iroiro.dev/sitemap.xml

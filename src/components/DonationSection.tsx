@@ -1,7 +1,7 @@
 import DonationButtons from "@/components/DonationButtons";
 import { Language } from "@/lib/Language";
 
-// 記事の末尾に置く寄付の案内（ブログ・ニュースルーム・Tips）
+// 記事の末尾に置く寄付の案内（ブログ・ニュースルーム・Tips・問い合わせ）
 const DonationSection = ({ lang = Language.Japanese }: { lang?: Language }) => {
     const text = lang === Language.EnglishUS
         ? {

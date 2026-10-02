@@ -1,7 +1,7 @@
 import { Language } from "@/lib/Language";
 
 // 寄付のボタン（Buy Me a Coffee・PayPal・GitHub Sponsors）
-// 問い合わせページ（content/*/contact.md）でも同じクラス名のHTMLを使っている
+// 寄付の案内（DonationSection）の中で使う
 const DonationButtons = ({ lang = Language.Japanese }: { lang?: Language }) => {
     // 新しいタブで開くことを、スクリーンリーダーにだけ伝える
     const newTab = lang === Language.EnglishUS ? " (opens in a new tab)" : "（新しいタブで開きます）";
@@ -13,7 +13,7 @@ const DonationButtons = ({ lang = Language.Japanese }: { lang?: Language }) => {
                 <span className="visuallyHidden">{newTab}</span>
             </a>
             <a className="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal<span className="visuallyHidden">{newTab}</span></a>
-            <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height={32} width={114} loading="lazy"></iframe>
+            <iframe data-src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height={32} width={114}></iframe>
         </div>
     );
 };

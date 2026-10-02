@@ -1,14 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import rehypeRaw from "rehype-raw";
-import rehypeWrapTables from "@/lib/rehypeWrapTables";
-import rehypeStringify from "rehype-stringify";
-import { remark } from "remark";
-import remarkBreaks from "remark-breaks";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import addClasses from "rehype-class-names";
+import { markdownToHtml } from "@/lib/markdown";
 import { Metadata } from "next";
 import DonationSection from "@/components/DonationSection";
 
@@ -111,22 +104,10 @@ async function getTip(slug: string) {
 
 
   const { content } = matter(fileContents);
-  const processedContent = await remark()
-    .use(remarkGfm)
-    .use(remarkBreaks)
-    .use(remarkRehype, {
-      allowDangerousHtml: true,
-    })
-    .use(rehypeRaw)
-    .use(rehypeWrapTables)
-    .use(rehypeStringify)
-    .use(addClasses, {
-      'div': 'title',
-    })
-    .process(content);
+  const processedContent = await markdownToHtml(content);
 
   return {
-    content: processedContent.toString(),
+    content: processedContent,
   };
 }
 
