@@ -7,13 +7,13 @@ I work under the account name "Iroiro." My main focus is on developing applicati
 | Date | Details |
 | ---- | ---- |
 | 2023/7/19 | Established this site |
-| 2024/12/3 | Renewal of this sitee |
+| 2024/12/3 | Renewal of this site |
 
 ### Contact
 - Email Address：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
 - Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
 - Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
-- mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
+- Mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
 - GitHub：[https://github.com](https://github.com/KC-2001MS)
 - Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
 - Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)

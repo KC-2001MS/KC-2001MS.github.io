@@ -17,7 +17,7 @@
 - メールアドレス：[iroiro.work1234@gmail.com](mailto:iroiro.work1234@gmail.com)
 - Twitter：[https://twitter.com](https://twitter.com/IroIro1234work)
 - Bluesky：[https://bsky.app](https://bsky.app/profile/bluesky.iroiro.me)
-- mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
+- Mastodon：[https://mastodon.social](https://mastodon.social/@Iroiro)
 - GitHub：[https://github.com](https://github.com/KC-2001MS)
 - Hugging Face：[https://huggingface.co](https://huggingface.co/Iroiro)
 - Stack Overflow：[https://stackoverflow.com](https://stackoverflow.com/users/21741409/iroiro)
@@ -25,7 +25,7 @@
 
 ### 販売
 - App Store：[https://apps.apple.com](https://apps.apple.com/developer/id1586934587)
-- booth：[https://iroirowork.booth.pm](https://iroirowork.booth.pm)
+- BOOTH：[https://iroirowork.booth.pm](https://iroirowork.booth.pm)
 
 ### 動画
 - YouTube：[https://www.youtube.com](https://www.youtube.com/@IroiroWork)

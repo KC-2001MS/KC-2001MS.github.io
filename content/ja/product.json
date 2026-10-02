@@ -265,7 +265,7 @@
       {
         "id": "id1574021257",
         "title": "Declutter for Safari",
-        "description": "Declutter for Safariは軽量の拡張機能で重複したタブを自動的に閉じることができます。質問とフィードバックがございましたら、 英語で連絡をお願いします。",
+        "description": "Declutter for Safariは軽量の拡張機能で重複したタブを自動的に閉じることができます。質問とフィードバックがございましたら、英語で連絡をお願いします。",
         "supportedPlatforms": [
           {
             "os": "macOS",
@@ -329,7 +329,7 @@
     {
       "id": "swift-storage",
       "title": "SwiftStorage",
-      "description": "Userdefaultsによる永続化に対応したObservationのコードを生成するマクロ。",
+      "description": "UserDefaultsによる永続化に対応したObservationのコードを生成するマクロ。",
       "repositoryUrl": "https://github.com/KC-2001MS/SwiftStorage"
     },
     {

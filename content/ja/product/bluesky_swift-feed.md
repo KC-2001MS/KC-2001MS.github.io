@@ -10,7 +10,7 @@ Swiftフィードは、BlueskyでSwift言語の関連情報を簡単に入手で
 
 Swiftフィードは、Swift言語だけでなく、以下の情報も簡単に入手することができます。
 - Swift
-- pkl
+- Pkl
 - MSL
 - Objective-C
 - SwiftUI
@@ -71,4 +71,4 @@ data-bluesky-cid="bafyreifq4hfwm66oflnrpog32qw3tdjv6d2ahfjieqcchkcefixjjjtpde">
 このフィードに投稿したい場合は、SwiftFeedタグをつけて投稿してください。
 
 ## ライセンス
-このフィードはSkyFeedで作成され、MITライセンスを適応しています。Skyfeedの設定を記載したjsonファイルが配布されていますのでご確認ください。
+このフィードはSkyFeedで作成され、MITライセンスを適用しています。SkyFeedの設定を記載したjsonファイルが配布されていますのでご確認ください。

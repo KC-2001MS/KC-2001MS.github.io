@@ -4,9 +4,9 @@ import styles from "@styles/home.module.css";
 export const metadata: Metadata = {
     title: "This page does not exist.",
     description:
-        "This page does not exist in the Iroiro's portfolios.",
+        "This page does not exist in Iroiro's portfolio.",
     abstract:
-        "This page does not exist in the Iroiro's portfolios.",
+        "This page does not exist in Iroiro's portfolio.",
     applicationName: "Iroiro's portfolio",
     authors: [
         {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "https://iroiro.dev/en/404",
         title: "This page does not exist.",
         description:
-            "This page does not exist in the Iroiro's portfolios.",
+            "This page does not exist in Iroiro's portfolio.",
         siteName: "Iroiro's portfolio",
         images: [
             {

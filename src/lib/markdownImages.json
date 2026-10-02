@@ -1,0 +1,34 @@
+{
+  "/images/m5stacknanoc6.png": {
+    "width": 798,
+    "height": 798,
+    "widths": [
+      500,
+      798
+    ]
+  },
+  "/images/m5stacknanoc6-pinmap.png": {
+    "width": 1605,
+    "height": 325,
+    "widths": [
+      500,
+      1000
+    ]
+  },
+  "/images/m5stacknanoc6-blinking1.jpg": {
+    "width": 4032,
+    "height": 3024,
+    "widths": [
+      500,
+      1000
+    ]
+  },
+  "/images/m5stacknanoc6-blinking2.jpg": {
+    "width": 4032,
+    "height": 3024,
+    "widths": [
+      500,
+      1000
+    ]
+  }
+}

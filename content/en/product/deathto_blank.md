@@ -8,12 +8,12 @@ appId: "1672080999"
 # Death To _blank
 Have you ever clicked on a link and experienced an increase in tabs? By removing the _blank attribute, which causes links to open in a new tab, from your website, you can eliminate this phenomenon and clean up your tabs.
 This extension is a ported version of the "Death To _blank" extension as a Safari extension. The code of this extension is used under agreement with the developer.
-※ Attributes other than _blank, which has the effect of opening a new tab, will also work.
+※ Attributes other than _blank, which have the effect of opening a new tab, will also work.
 
 This extension has the following features
 - Prevent tabs from increasing automatically on Safari
 - Easily turn extensions on and off from the toolbar
-- Support shortcut apps and set actions
+- Support the Shortcuts app and set actions
 - Turn extensions on and off from Siri
 
 ## Supported Platforms

@@ -9,7 +9,7 @@ date: 2025/9/9
 Due to sandboxing constraints, macOS apps cannot freely access files. In most cases, this is because URLs within the sandbox are returned. This time, we'll learn how to access specific paths directly under the Home directory while adhering to sandboxing restrictions.
 This method has actually passed App Review, so it's a safe approach. Why not give it a try?
 
-## 環境
+## Environment
 - macOS 15.4 (Sequoia)
 - Xcode 16.3
   
@@ -36,7 +36,7 @@ Actually, the code is terrifyingly simple. This time, we'll try it in ~/.ssh/con
 ```swift
 func getSSHConfigDirectoryURL() -> URL? {
     guard let userName = ProcessInfo.processInfo.environment["USER"] else { return nil }
-    return URL(string: "file:///Users/\(user)/.ssh/config")
+    return URL(string: "file:///Users/\(userName)/.ssh/config")
 }
 ```
 This is code that everyone should be able to understand. Of course, you've probably tried it before. While this alone won't work, this is the code we'll be using.

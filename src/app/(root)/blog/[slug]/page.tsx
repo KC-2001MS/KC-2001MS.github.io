@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import rehypeRaw from "rehype-raw";
 import rehypeWrapTables from "@/lib/rehypeWrapTables";
+import rehypeMarkdownImages from "@/lib/rehypeMarkdownImages";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkBreaks from "remark-breaks";
@@ -133,6 +134,7 @@ async function getBlogDetail(slug: string) {
     })
     .use(rehypeRaw)
     .use(rehypeWrapTables)
+    .use(rehypeMarkdownImages)
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',

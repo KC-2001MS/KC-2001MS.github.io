@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeWrapTables from "@/lib/rehypeWrapTables";
+import rehypeMarkdownImages from "@/lib/rehypeMarkdownImages";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
@@ -135,6 +136,7 @@ async function getNewsroom(slug: string) {
     })
     .use(rehypeRaw)
     .use(rehypeWrapTables)
+    .use(rehypeMarkdownImages)
     .use(rehypeStringify)
     .use(addClasses, {
       'div': 'title',

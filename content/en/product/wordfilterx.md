@@ -11,7 +11,7 @@ Word Filter X is an application that hides words you don't like on Safari websit
 This extension has the following features
 - iCloud synchronization is supported to synchronize settings such as words to block and sites not to filter.
 - It is possible to set which words to block, which words to replace, and which text color to display.
-- Settings can be shared via json files.
+- Settings can be shared via JSON files.
 - It is available not only in Japanese, but also in English and French.
 
 ## Supported Platforms
@@ -83,16 +83,16 @@ There is an icon on the Safari toolbar. You can turn this extension on and off b
 If the extension is on, a filter icon will be displayed. If the extension is off, you will see an icon with a slash added.
 
 ## Siri and Shortcuts
-Adding Word Filter X actions to shortcut app shortcuts allows for a more efficient workflow.
+Adding Word Filter X actions to Shortcuts app shortcuts allows for a more efficient workflow.
 You can also talk to Siri to set up a Word Filter X extension.
 ### Turn on/off Word Filter X extension from Siri
 It can be turned on and off with the following words
-- 「"Turn off Word Filter X."
+- "Turn off Word Filter X."
 - "Turn on Word Filter X."
 ### Register words you want to block with Word Filter X from Siri
 You can register the words you want to block with the following words
 - "Register the words you want to block in Word Filter X."
-### Add Word Filter X action to shortcut app
-1. Add a new shortcut from the shortcut application.
+### Add Word Filter X action to the Shortcuts app
+1. Add a new shortcut from the Shortcuts app.
 2. From Actions in Word Filter X, select the action you want to add to the shortcut and add it by drag-and-drop.
 3. If the action has a setting item, tap to select the item.

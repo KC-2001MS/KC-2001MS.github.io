@@ -6,7 +6,7 @@ genre: Swift
 date: 2025/9/9
 ---
 # macOSの特定のパスにアクセスして、読み書きを行う
-macOSアプリにおいて、サンドボックスの制約上自由にファイルにアクセスすることはできません。ほとんどの場合において、サンドボックス内のURLが返されるからです。今回は、Sandboxの制約を守りつつHomeリレクトリ直下の特定のパスにアクセスする方法を学びます。
+macOSアプリにおいて、サンドボックスの制約上自由にファイルにアクセスすることはできません。ほとんどの場合において、サンドボックス内のURLが返されるからです。今回は、Sandboxの制約を守りつつHomeディレクトリ直下の特定のパスにアクセスする方法を学びます。
 実際に、App Reviewを通過した方法のため問題のない方法です。ぜひ、採用してみてはどうでしょうか。
 
 ## 環境
@@ -36,7 +36,7 @@ let home = FileManager.homeDirectoryURL
 ```swift
 func getSSHConfigDirectoryURL() -> URL? {
     guard let userName = ProcessInfo.processInfo.environment["USER"] else { return nil }
-    return URL(string: "file:///Users/\(user)/.ssh/config")
+    return URL(string: "file:///Users/\(userName)/.ssh/config")
 }
 ```
 これは、みんなが理解できるコードかと思います。もちろん試したこともあるはずです。これだけではうまくいかないのですが、使用するのはこのコードです。
@@ -50,7 +50,7 @@ func getSSHConfigDirectoryURL() -> URL? {
 これでアクセスができるはずです。
 
 ## 最後に
-エンタイトルメントファイルに上の内容を追加するだけということで、アクセスすることができました。エンタイトルファイルが必要な関係上、すべてのプロジェクトで採用できるわけではないと思いますが、とても簡単な方法で、回避策ではない安全な方法ではないでしょうか。
+エンタイトルメントファイルに上の内容を追加するだけということで、アクセスすることができました。エンタイトルメントファイルが必要な関係上、すべてのプロジェクトで採用できるわけではないと思いますが、とても簡単な方法で、回避策ではない安全な方法ではないでしょうか。
 
 ## 参考資料
 - [How to get user home directory path (Users/"user name") without knowing the username in Swift3](https://stackoverflow.com/questions/41383054/how-to-get-user-home-directory-path-users-user-name-without-knowing-the-user)

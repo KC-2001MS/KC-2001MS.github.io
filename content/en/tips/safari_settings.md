@@ -8,7 +8,7 @@ keywords: ["Safari"]
 # How to Activate and Configure Safari Extensions
 This section describes the necessary operations to start using the Safari Extension.
 
-## Validation
+## Activation
 1. Launch Safari settings
 Open Safari Settings and go to the Extensions screen or Extensions tab.
 2. Turn on extensions
@@ -16,7 +16,7 @@ Turn on the target extension item on the Extensions screen or Extensions tab.
 1. Allow access
 From the Access Rights section, grant access to "All Web Sites" or "Other Web Sites".
 
-## Private Browse Settings
+## Private Browsing Settings
 
 (iOS17[^1]･iPadOS17[^1]･macOS14[^2] Only) You can configure not to run this extension in Private Browsing. Please set according to your preference.
 1. Launch Safari settings

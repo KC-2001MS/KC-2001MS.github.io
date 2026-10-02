@@ -17,7 +17,7 @@ It analyzes the text and identifies the language. If the text is in English, the
 3. Synchronization by iCloud
 This feature allows you to sync your settings and text files with the Simple Editor X app on other devices. This feature eliminates the need to customize settings multiple times.
 4. Display text information
-It can display the number of characters or words in a text, the number of sentences or paragraphs. It can also display the size of the dext.
+It can display the number of characters or words in a text, the number of sentences or paragraphs. It can also display the size of the text.
 5. Insert canned text
 Registered text can be inserted.
 
@@ -59,15 +59,15 @@ Please see our [Privacy Policy](/en/privacy) for more details.
 ## Add canned text
 1. Open the settings screen
 Open the settings screen from "Settings" on the menu bar.
-2. Open a canned tag
+2. Open the canned text tab
 3. Press the "Add" button.
 
 ## Siri and Shortcuts
-Adding Simple Editor X actions to shortcut app shortcuts allows for a more efficient workflow.
+Adding Simple Editor X actions to Shortcuts app shortcuts allows for a more efficient workflow.
 ### Register canned text from Siri to Simple Editor X
-You can initiate an action to add a word with the following words
+You can initiate an action to add canned text with the following words
 - "Add template to Simple Editor X."
-### Add Simple Editor X action to shortcut app
-1. Add a new shortcut from the shortcut application.
+### Add Simple Editor X action to the Shortcuts app
+1. Add a new shortcut from the Shortcuts app.
 2. From Actions in Simple Editor X, select the action you wish to add to the shortcut and add it by drag-and-drop.
 3. If the action has a setting item, tap to select the item.

@@ -82,7 +82,7 @@ Please see our [Privacy Policy](/en/privacy) for more details.
 
 ## Conversion to Unicode
 1. Press the 🀟 icon on the menu bar to display a pop-up window.
-2. Enter the tiles you wish to represent in MPSZ format[^1] in the text feed.
+2. Enter the tiles you wish to represent in MPSZ format[^1] in the text field.
 3. Press the "Convert" button.
 
 [^1]: Please refer to ["What is the MPSZ format for representing mahjong tiles?"](/en/product/tips/mpsz) for more information about MPSZ format.

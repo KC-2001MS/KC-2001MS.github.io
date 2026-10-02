@@ -9,7 +9,7 @@ keywords: ["Bluesky", "Feed", "Swift"]
 
 The Swift feed provides easy access not only to the Swift language, but also to
 - Swift
-- pkl
+- Pkl
 - MSL
 - Objective-C
 - SwiftUI
@@ -22,7 +22,7 @@ The Swift feed provides easy access not only to the Swift language, but also to
 - WWDC
 - Xcode
 - Xcode Playground
-- Swift Playground
+- Swift Playgrounds
 - iOSDC
 - try! Swift
 
@@ -44,4 +44,4 @@ Please see our [Privacy Policy](/en/privacy) for more details.
 If you wish to post to this feed, please tag it with the SwiftFeed tag.
 
 ## License
-This feed was created with SkyFeed and is adapted from the MIT license. [json files](https://github.com/KC-2001MS/SwiftFeed) describing the Skyfeed configuration are distributed for your review.
+This feed was created with SkyFeed and is licensed under the MIT license. [json files](https://github.com/KC-2001MS/SwiftFeed) describing the SkyFeed configuration are distributed for your review.

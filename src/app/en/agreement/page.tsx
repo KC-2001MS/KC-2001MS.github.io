@@ -73,17 +73,17 @@ export default function Agreement() {
                         These terms and conditions of use (hereinafter referred to as &quot;Terms and Conditions&quot;) shall be
                         governed by and construed in accordance with the laws of Japan. This Terms of Use (hereinafter
                         referred to as the &quot;Terms of Use&quot;) applies to the services provided by Keisuke Chinone (activity
-                        name: Iroiro) (hereinafter referred to as the &quot;Company&quot;) (activity name: Various) (hereinafter
-                        referred to as the &quot;Company&quot;) provides on the application or website (hereinafter referred to as the
+                        name: Iroiro) (hereinafter referred to as the &quot;Company&quot;)
+                        provides on the application or website (hereinafter referred to as the
                         &quot;Service&quot;). This document sets forth the terms and conditions of use of the services provided by
-                        Keisuke Kayanne (activity name: Various) (hereinafter referred to as the &quot;Company&quot;) on the
+                        Keisuke Chinone (activity name: Iroiro) (hereinafter referred to as the &quot;Company&quot;) on the
                         application or website (hereinafter referred to as the &quot;Service&quot;). Users (hereinafter referred to as
                         &quot;Users&quot;) are requested to comply with these Terms of Use. Users are requested to use the Service in
                         accordance with these Terms of Use.
                     </p>
                     <div className="card">
                         <h2>Application</h2>
-                        <p>1. These Terms of Use shall apply to all relationships between the user and SBM concerning the
+                        <p>1. These Terms of Use shall apply to all relationships between the user and the Company concerning the
                             use of the Service.</p>
                         <p>2. In addition to the Terms of Service, the Company may stipulate various rules regarding the use
                             of the Service (hereinafter referred to as &quot;Individual Regulations&quot;). In addition to these Terms
@@ -124,7 +124,7 @@ export default function Agreement() {
                     </div>
                     <div className="card">
                         <h2>Suspension, etc., of the Provision of this Service</h2>
-                        <p>1. MCC reserves the right to suspend or discontinue all or part of the Service without prior
+                        <p>1. The Company reserves the right to suspend or discontinue all or part of the Service without prior
                             notice to the user for any of the following reasons</p>
                         <ul>
                             <li>When performing maintenance inspections or updating of computer systems related to this
@@ -157,16 +157,16 @@ export default function Agreement() {
                             but not limited to, defects in safety, reliability, accuracy, completeness, validity, fitness
                             for a particular purpose, security, etc., errors and bugs, and infringement of rights).</p>
                         <p>2. Our company shall not be liable for any and all damages incurred by the user arising from the
-                            Service, except in cases of intentional or gross negligence on the part of MUTOH HOLDINGS.
-                            However, this disclaimer shall not apply if the contract between MEDINET and the user (including
+                            Service, except in cases of intentional or gross negligence on the part of the Company.
+                            However, this disclaimer shall not apply if the contract between the Company and the user (including
                             this agreement) regarding the Service constitutes a consumer contract as defined in the Consumer
-                            Contract Act. However, this disclaimer does not apply when the contract between MTI and a user
+                            Contract Act. However, this disclaimer does not apply when the contract between the Company and a user
                             for the Service (including this Agreement) is a consumer contract as defined in the Consumer
                             Contract Act.</p>
-                        <p>3. Even in the case of the proviso of the preceding paragraph, SBM shall not be liable for
-                            damages arising out of special circumstances (including cases in which SBM or the User foresaw
+                        <p>3. Even in the case of the proviso of the preceding paragraph, the Company shall not be liable for
+                            damages arising out of special circumstances (including cases in which the Company or the User foresaw
                             or could have foreseen the occurrence of the damages) among damages incurred by the User due to
-                            negligence (excluding gross negligence), default of obligation by SBM, or tort. (2) Even in the
+                            negligence (excluding gross negligence), default of obligation by the Company, or tort. (2) Even in the
                             case of the proviso of the preceding paragraph, the Company shall not be liable for damages
                             arising out of special circumstances (including cases where the Company or the User foresaw or
                             could have foreseen the occurrence of damages) among damages incurred by the User due to default

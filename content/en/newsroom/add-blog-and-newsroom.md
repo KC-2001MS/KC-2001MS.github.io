@@ -1,16 +1,16 @@
 ---
 title: A blog and newsroom have been added to this site
 description: A blog and newsroom have been added to this site to provide a new venue for information dissemination.
-keywords: [“portfolio”]
+keywords: ["portfolio"]
 genre: Release
 date: 2025/1/14
 ---
 
 # Added blog and newsroom on this site
-I have added a blog and newsroom in our Iroiro's portfolio. This change will allow us to announce information here that I have been announcing on X, Mastodon, and Bluesky. In addition, I will be able to communicate our findings on our technical blog in both English and Japanese.
+I have added a blog and newsroom to Iroiro's portfolio. This change will allow us to announce information here that I have been announcing on X, Mastodon, and Bluesky. In addition, I will be able to communicate our findings on our technical blog in both English and Japanese.
 
 I have been using our portfolio to communicate our services and contact information. With the addition of the blog and newsroom, I expect that people will be able to learn about our activities in one place. In addition, I believe this will be the best way for both English and Japanese speakers to stay informed.
-Currently, the English articles are translated by Deepl into machine translation and then slightly modified.
+Currently, the English articles are translated by DeepL into machine translation and then slightly modified.
 
 I hope you will take this opportunity to visit our portfolio site.
 

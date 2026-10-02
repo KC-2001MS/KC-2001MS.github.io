@@ -73,6 +73,8 @@ thead th {
 .markdown-image {
     width: 90%;
     max-width: 500px;
+    /* width・height属性は縦横比を伝えるためのもので、表示の大きさは幅に合わせる */
+    height: auto;
     object-fit: contain;
     margin: 10px;
 }

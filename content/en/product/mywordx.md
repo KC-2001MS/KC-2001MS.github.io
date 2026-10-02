@@ -15,7 +15,7 @@ My Word X has the following features
 - Edit Lock
 - Hidden
 - Viewing and editing status with Live Activity
-- Register words from the Shortcut App
+- Register words from the Shortcuts app
 - Keyboard shortcuts (iPadOS and macOS only)
 - Widget displays word of the day
 
@@ -101,11 +101,11 @@ Please see our [Privacy Policy](/en/privacy) for more details.
 There is a plus icon on the toolbar. Clicking this icon will take you to the Add Word screen.
 
 ## Siri and Shortcuts
-Adding My Word X actions to shortcut app shortcuts allows for a more efficient workflow.
+Adding My Word X actions to Shortcuts app shortcuts allows for a more efficient workflow.
 ### Register words from Siri to My Word X
 You can initiate an action to add a word with the following words
 "Add a word to My Word X."
-### Add My Word X action to the Shortcut App
-1. Add a new shortcut from the shortcut application.
+### Add My Word X action to the Shortcuts app
+1. Add a new shortcut from the Shortcuts app.
 2. From Actions in My Word X, select the action you want to add to the shortcut and add it by drag-and-drop.
 3. If the action has a setting item, tap to select the item.

@@ -302,7 +302,7 @@
     {
       "id": "swift-storage",
       "title": "SwiftStorage",
-      "description": "Macro to generate Observation code for persistence by Userdefaults.",
+      "description": "Macro to generate Observation code for persistence by UserDefaults.",
       "repositoryUrl": "https://github.com/KC-2001MS/SwiftStorage"
     },
     {
