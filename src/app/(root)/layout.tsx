@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://iroiro.dev/en/",
+    canonical: "https://iroiro.dev/",
     languages: {
       ja: "https://iroiro.dev/",
       en: "https://iroiro.dev/en/",
@@ -89,13 +89,11 @@ export default function RootLayout({
         gtag('config', 'G-L32Y5LGJEB');
       `}
         </Script>
-        <Script async src={"https://embed.bsky.app/static/embed.js"} charSet="utf-8" />
-        <Script async src={"https://platform.twitter.com/widgets.js"} charSet="utf-8" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <Script src={"https://embed.bsky.app/static/embed.js"} charSet="utf-8" strategy="lazyOnload" />
+        <Script src={"https://platform.twitter.com/widgets.js"} charSet="utf-8" strategy="lazyOnload" />
+        <link rel="preload" href="/fonts/material-symbols-outlined-subset.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <meta name="date" content={formattedDate} />
         <meta name="google" content="nositelinkssearchbox" />
-        <link rel="preconnect" href="https://www.youtube-nocookie.com" />
-        <link rel="preconnect" href="https://www.youtube.com" />
         <meta name="language" content="Japanese" />
         <meta httpEquiv="content-language" content="ja" />
         <meta name="author" content="茅根啓介" />

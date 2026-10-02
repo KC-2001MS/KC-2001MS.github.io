@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://iroiro.dev/en/contact",
+    canonical: "https://iroiro.dev/en/blog",
     languages: {
-      ja: "https://iroiro.dev/contact",
-      en: "https://iroiro.dev/en/contact",
+      ja: "https://iroiro.dev/blog",
+      en: "https://iroiro.dev/en/blog",
     },
   },
   icons: [
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://iroiro.dev/en/contact",
-    title: "Contact Iroiro",
+    url: "https://iroiro.dev/en/blog",
+    title: "Iroiro's blog",
     description:
-      "Contact information for inquiries about applications, projects and services developed by Keisuke Chinone (activity name: Iroiro).",
+      "This is a blog to output various contents about various technologies.",
     siteName: "Iroiro's portfolio",
     images: [
       {

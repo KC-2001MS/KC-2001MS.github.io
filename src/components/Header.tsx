@@ -9,8 +9,7 @@ const Header = ({ lang = Language.Japanese }) => {
                               <Link className="header" href="/">
                                     <h1 className="header">いろいろポートフォリオ</h1>
                               </Link>
-                              <ul className="tabContainaer">
-                                    <div className="landscape-only">
+                              <ul className="tabContainaer landscape-only">
                                     <li className="tab underline">
                                           <Link className="header" href="/">
                                                 ホーム
@@ -36,39 +35,38 @@ const Header = ({ lang = Language.Japanese }) => {
                                                 問い合わせ
                                           </Link>
                                     </li>
-                                    </div>
-                                    <div className="portrait-only">
+                              </ul>
+                              <ul className="tabContainaer portrait-only">
                                     <li className="tab underline">
                                           <Link className="header" href="/">
                                           <span className="material-symbols-outlined">home</span>
-                                          <h4 className="iconLabel">ホーム</h4>
+                                          <span className="iconLabel">ホーム</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/product">
                                           <span className="material-symbols-outlined">apps</span>
-                                          <h4 className="iconLabel">コンテンツ</h4>
+                                          <span className="iconLabel">コンテンツ</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/blog">
                                           <span className="material-symbols-outlined">article</span>
-                                          <h4 className="iconLabel">ブログ</h4>
+                                          <span className="iconLabel">ブログ</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/newsroom">
                                           <span className="material-symbols-outlined">newspaper</span>
-                                          <h4 className="iconLabel">ニュースルーム</h4>
+                                          <span className="iconLabel">ニュースルーム</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/contact">
                                           <span className="material-symbols-outlined">contact_page</span>
-                                          <h4 className="iconLabel">問い合わせ</h4>
+                                          <span className="iconLabel">問い合わせ</span>
                                           </Link>
                                     </li>
-                                    </div>
                               </ul>
                         </header>
                   );
@@ -78,8 +76,7 @@ const Header = ({ lang = Language.Japanese }) => {
                               <Link className="header" href="/en/">
                                     <h1 className="header">Iroiro&apos;s portfolio</h1>
                               </Link>
-                              <ul className="tabContainaer">
-                              <div className="landscape-only">
+                              <ul className="tabContainaer landscape-only">
                                     <li className="tab underline">
                                           <Link className="header" href="/en/">
                                                 Home
@@ -105,39 +102,38 @@ const Header = ({ lang = Language.Japanese }) => {
                                                 Contact
                                           </Link>
                                     </li>
-                                    </div>
-                                    <div className="portrait-only">
+                              </ul>
+                              <ul className="tabContainaer portrait-only">
                                     <li className="tab underline">
                                           <Link className="header" href="/en/">
                                           <span className="material-symbols-outlined">home</span>
-                                          <h4 className="iconLabel">Home</h4>
+                                          <span className="iconLabel">Home</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/en/product">
                                           <span className="material-symbols-outlined">apps</span>
-                                          <h4 className="iconLabel">Contents</h4>
+                                          <span className="iconLabel">Contents</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/en/blog">
                                           <span className="material-symbols-outlined">article</span>
-                                          <h4 className="iconLabel">Blog</h4>
+                                          <span className="iconLabel">Blog</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/en/newsroom">
                                           <span className="material-symbols-outlined">newspaper</span>
-                                          <h4 className="iconLabel">Newsroom</h4>
+                                          <span className="iconLabel">Newsroom</span>
                                           </Link>
                                     </li>
                                     <li className="tab underline">
                                           <Link className="header" href="/en/contact">
                                           <span className="material-symbols-outlined">contact_page</span>
-                                          <h4 className="iconLabel">Contact</h4>
+                                          <span className="iconLabel">Contact</span>
                                           </Link>
                                     </li>
-                                    </div>
                               </ul>
                         </header>
                   );

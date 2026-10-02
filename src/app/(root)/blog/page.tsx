@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://iroiro.dev/contact",
+    canonical: "https://iroiro.dev/blog",
     languages: {
-      ja: "https://iroiro.dev/contact",
-      en: "https://iroiro.dev/en/contact",
+      ja: "https://iroiro.dev/blog",
+      en: "https://iroiro.dev/en/blog",
     },
   },
   icons: [
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "article",
-    url: "https://iroiro.dev/contact",
-    title: "いろいろへのお問い合わせ",
+    url: "https://iroiro.dev/blog",
+    title: "いろいろのブログ",
     description:
-      "茅根啓介（活動名：いろいろ）の展開したアプリやプロジェクト・サービスについてのお問い合わせ先です。",
+      "いろいろがさまざまな技術についての内容をアウトプットするためのブログです。",
     siteName: 'いろいろのポートフォリオ',
     images: [
       {

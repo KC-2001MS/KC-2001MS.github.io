@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: TipsPageProps): Promise<Metad
       follow: true,
     },
     alternates: {
-      canonical: `https://iroiro.dev/en/product/tips/${slug}`,
+      canonical: `https://iroiro.dev/product/tips/${slug}`,
       languages: {
         ja: `https://iroiro.dev/product/tips/${slug}`,
         en: `https://iroiro.dev/en/product/tips/${slug}`,
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: TipsPageProps): Promise<Metad
     ],
     openGraph: {
       type: "article",
-      url: `https://iroiro.dev/en/product/tips/${slug}`,
+      url: `https://iroiro.dev/product/tips/${slug}`,
       title: data.title || defaultTitle,
       description: data.description || defaultDescription,
       siteName: defaultAppName,

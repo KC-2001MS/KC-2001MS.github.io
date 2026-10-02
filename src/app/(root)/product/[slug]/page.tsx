@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       follow: true,
     },
     alternates: {
-      canonical: `https://iroiro.dev/en/product/${slug}`,
+      canonical: `https://iroiro.dev/product/${slug}`,
       languages: {
         ja: `https://iroiro.dev/product/${slug}`,
         en: `https://iroiro.dev/en/product/${slug}`,

@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
       follow: true,
     },
     alternates: {
-      canonical: `https://iroiro.dev/en/blog/${slug}`,
+      canonical: `https://iroiro.dev/blog/${slug}`,
       languages: {
         ja: `https://iroiro.dev/blog/${slug}`,
         en: `https://iroiro.dev/en/blog/${slug}`,

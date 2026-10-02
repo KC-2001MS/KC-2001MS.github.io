@@ -110,14 +110,42 @@ hr {
     font-weight: bold;
 }
 
+/* Material Symbols（Google Fonts）のうち、サイトで使うアイコンだけを含むフォントをサイト内から配信する */
+/* 外部のCSSを読み込むと描画が遅れるため。アイコンを追加したときは、icon_namesに名前を足して取得し直す */
+/* https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=apps,article,check,contact_page,content_copy,home,newspaper&display=block */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(/fonts/material-symbols-outlined-subset.woff2) format('woff2');
+}
+
 .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
     display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
     vertical-align: middle;
     text-align: center;
 }
 
+/* アイコンの下のラベル（以前はh4だったため、同じ見た目になるようにしている） */
 .iconLabel {
+    display: block;
+    margin: 1.33em 0;
     font-size: 8px;
+    font-weight: bold;
 }
 
 @media (max-width: 540px) or (orientation: portrait) {

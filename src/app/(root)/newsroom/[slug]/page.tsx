@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: NewsroomDetailPageProps): Pro
       follow: true,
     },
     alternates: {
-      canonical: `https://iroiro.dev/en/newsroom/${slug}`,
+      canonical: `https://iroiro.dev/newsroom/${slug}`,
       languages: {
         ja: `https://iroiro.dev/newsroom/${slug}`,
         en: `https://iroiro.dev/en/newsroom/${slug}`,
