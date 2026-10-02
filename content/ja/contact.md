@@ -34,7 +34,7 @@
 寄付をご希望の方は、こちらをクリックしてください。ご寄付いただいたお金は、私のプログラミング・スキルの向上とアプリケーションのメンテナンスに使わせていただきます。
 
 <div class="donationButtons">
-    <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60"><span class="visuallyHidden">（新しいタブで開きます）</span></a>
+    <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60" loading="lazy"><span class="visuallyHidden">（新しいタブで開きます）</span></a>
     <a class="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal<span class="visuallyHidden">（新しいタブで開きます）</span></a>
-    <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height="32" width="114"></iframe>
+    <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height="32" width="114" loading="lazy"></iframe>
 </div>

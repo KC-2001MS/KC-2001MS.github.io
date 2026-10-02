@@ -9,11 +9,11 @@ const DonationButtons = ({ lang = Language.Japanese }: { lang?: Language }) => {
         <div className="donationButtons">
             <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width={217} height={60} />
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width={217} height={60} loading="lazy" />
                 <span className="visuallyHidden">{newTab}</span>
             </a>
             <a className="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal<span className="visuallyHidden">{newTab}</span></a>
-            <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height={32} width={114}></iframe>
+            <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height={32} width={114} loading="lazy"></iframe>
         </div>
     );
 };
