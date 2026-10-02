@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import addClasses from "rehype-class-names";
 import { Metadata } from "next";
+import SocialEmbedScripts from "@/components/SocialEmbedScripts";
 
 type ProductPageProps = {
   params: Promise<{ slug: string; }>;
@@ -98,6 +99,7 @@ export default async function ProductDetail({ params }: ProductPageProps) {
     <main>
       <div id="maincard">
         <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        <SocialEmbedScripts html={content} />
       </div>
     </main>
   );

@@ -93,8 +93,6 @@ export default function RootLayout({
         gtag('config', 'G-L32Y5LGJEB');
       `}
         </Script>
-        <Script src={"https://embed.bsky.app/static/embed.js"} charSet="utf-8" strategy="lazyOnload" />
-        <Script src={"https://platform.twitter.com/widgets.js"} charSet="utf-8" strategy="lazyOnload" />
         <link rel="preload" href="/fonts/material-symbols-outlined-subset.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <meta name="date" content={formattedDate} />
         <meta name="google" content="nositelinkssearchbox" />
