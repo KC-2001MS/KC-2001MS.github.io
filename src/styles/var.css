@@ -25,6 +25,9 @@
     --cardDarkVisited: rgb(45, 45, 45, 1);
     --cardLightVisited: rgb(210, 210, 210, 1);
     /* カード・表・コードブロック共通の面（ライト・ダークどちらでも背景より少しだけ浮いた面になる） */
+    /* 文字の大きさはremで指定し、ブラウザやOSの文字サイズ設定に追従させる（標準設定では従来のpxと同じ大きさ） */
+    /* --remScale は通常1。iPhoneのDynamic Typeに合わせるときだけ accessibility.css で調整する */
+    --remScale: 1;
     --cornerRadius: 16px;
     --surfaceBackground: color-mix(in srgb, currentColor 6%, transparent);
     --surfaceBorder: 1px solid color-mix(in srgb, currentColor 10%, transparent);
@@ -60,22 +63,22 @@
 
 @media (min-width: 800px) {
     :root {
-        --h1size: 35px;
-        --h2size: 30px;
-        --h3size: 22px;
-        --h4size: 18px;
-        --psize: 16px;
-        --h5size: 12px;
+        --h1size: calc(2.1875rem * var(--remScale));
+        --h2size: calc(1.875rem * var(--remScale));
+        --h3size: calc(1.375rem * var(--remScale));
+        --h4size: calc(1.125rem * var(--remScale));
+        --psize: calc(1rem * var(--remScale));
+        --h5size: calc(0.75rem * var(--remScale));
     }
 }
 
 @media (max-width: 799px) {
     :root {
-        --h1size: 30px;
-        --h2size: 26px;
-        --h3size: 20px;
-        --h4size: 17px;
-        --psize: 16px;
-        --h5size: 12px;
+        --h1size: calc(1.875rem * var(--remScale));
+        --h2size: calc(1.625rem * var(--remScale));
+        --h3size: calc(1.25rem * var(--remScale));
+        --h4size: calc(1.0625rem * var(--remScale));
+        --psize: calc(1rem * var(--remScale));
+        --h5size: calc(0.75rem * var(--remScale));
     }
 }

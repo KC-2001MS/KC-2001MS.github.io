@@ -104,7 +104,8 @@ export default async function BlogDetail({ params }: BlogDetailPageProps) {
   return (
     <main>
       <div id="maincard">
-        <div className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
+        {/* 記事の本文（Safariのリーダー表示などが本文として認識できるよう article にする） */}
+        <article className="card markdown" dangerouslySetInnerHTML={{ __html: content }} />
         <DonationSection lang={Language.EnglishUS} />
       </div>
     </main>

@@ -168,7 +168,7 @@ export default function Product() {
                                     {item.description}
                                     An overview is available from the <a href={item.repositoryUrl}>{item.title} repository</a>.
                                     {item.downloadUrl && (
-                                        <a href={item.downloadUrl}>Download</a>
+                                        <a href={item.downloadUrl} aria-label={`Download ${item.title}`}>Download</a>
                                     )}
                                 </div>
                             ) : (
@@ -204,7 +204,7 @@ export default function Product() {
                                 An overview is available from the <a href={script.repositoryUrl}>{script.title} repository</a>.
                                 {script.downloadUrl && (
                                     <h3>
-                                        <a href={script.downloadUrl}>Download</a>
+                                        <a href={script.downloadUrl} aria-label={`Download ${script.title}`}>Download</a>
                                     </h3>
                                 )}
                             </div>

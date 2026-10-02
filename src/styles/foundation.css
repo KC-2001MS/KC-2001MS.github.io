@@ -15,7 +15,7 @@ body {
 header,
 footer {
     text-align: center;
-    font-size: 16px;
+    font-size: calc(1rem * var(--remScale));
 }
 
 main {
@@ -116,7 +116,7 @@ hr {
 
 /* 注釈（本文より控えめな色） */
 .caption {
-    font-size: 10px;
+    font-size: calc(0.625rem * var(--remScale));
     color: color-mix(in srgb, currentColor var(--mutedTextRatio), transparent);
 }
 
@@ -145,7 +145,7 @@ hr {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;
+    font-size: calc(1.5rem * var(--remScale));
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -176,7 +176,7 @@ hr {
 .iconLabel {
     display: block;
     margin: 1.33em 0;
-    font-size: 8px;
+    font-size: calc(0.5rem * var(--remScale));
     font-weight: bold;
 }
 

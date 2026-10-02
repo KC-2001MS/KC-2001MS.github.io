@@ -58,7 +58,7 @@
 
 #goalTitle {
     margin: 0;
-    font-size: clamp(40px, 6vw, 72px);
+    font-size: clamp(calc(2.5rem * var(--remScale)), 6vw, calc(4.5rem * var(--remScale)));
     font-weight: bold;
     line-height: 1.2;
     /* 日本語の字詰め */
@@ -68,7 +68,7 @@
 
 .goalSubtitle {
     margin: 16px 0 0;
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: clamp(calc(1.125rem * var(--remScale)), 2vw, calc(1.375rem * var(--remScale)));
     line-height: 1.7;
     font-feature-settings: "palt";
     letter-spacing: 0.06em;

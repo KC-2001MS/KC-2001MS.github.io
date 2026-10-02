@@ -123,13 +123,10 @@ pre.hasCopyButton>code {
     opacity: 1;
 }
 
-/* アイコンフォントの読み込み前に、アイコン名の文字がはみ出さないようにする */
-.copyButton {
-    overflow: hidden;
-}
+/* アイコンフォントの読み込み前に、アイコン名の文字がはみ出さないようにする（アイコン自体を1文字分の箱に固定している） */
 
 .copyButton .material-symbols-outlined {
-    font-size: 18px;
+    font-size: calc(1.125rem * var(--remScale));
     line-height: 1;
 }
 
@@ -223,7 +220,7 @@ pre.hasCopyButton>code {
     border-radius: 8px;
     background-color: #0070ba;
     color: #ffffff;
-    font-size: 18px;
+    font-size: calc(1.125rem * var(--remScale));
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.2s;
@@ -257,7 +254,7 @@ pre.hasCopyButton>code {
 
 .mahjongTable small {
     display: block;
-    font-size: 12px;
+    font-size: calc(0.75rem * var(--remScale));
 }
 
 .tile {
@@ -283,7 +280,7 @@ pre.hasCopyButton>code {
     margin-top: 3em;
     padding-top: 10px;
     border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
-    font-size: 12px;
+    font-size: calc(0.75rem * var(--remScale));
     color: color-mix(in srgb, currentColor var(--mutedTextRatio), transparent);
 }
 

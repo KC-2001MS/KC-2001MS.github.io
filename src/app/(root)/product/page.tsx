@@ -131,7 +131,7 @@ export default async function Product() {
                                             <h4>{app.originalSource.platform}版について</h4>
                                             <p>
                                                 Safari拡張機能の元となっている{app.originalSource.platform}拡張機能があります。もし、{app.originalSource.platform}で使用したい場合は
-                                                <a href={app.originalSource.url}>こちら</a>
+                                                <a href={app.originalSource.url} aria-label={`こちら：${app.originalSource.platform}版の${app.title}`}>こちら</a>
                                                 をご利用ください。
                                             </p>
                                             <p>※{app.originalSource.platform}版のサポートは<a href={`mailto:${app.originalSource.supportEmail}`}>{app.originalSource.platform}版の製作者のメールアドレス</a>にお願いします。こちらではサポートを受け付けておりませんのでご注意ください。</p>
@@ -177,7 +177,7 @@ export default async function Product() {
                                     {item.description}
                                     概要は<a href={item.repositoryUrl}>{item.title}リポジトリ</a>からご確認ください。
                                     {item.downloadUrl && (
-                                        <p><a href={item.downloadUrl}>ダウンロード</a></p>
+                                        <p><a href={item.downloadUrl} aria-label={`ダウンロード：${item.title}`}>ダウンロード</a></p>
                                     )}
                                 </div>
                             ) : (
@@ -212,7 +212,7 @@ export default async function Product() {
                                 {script.description}
                                 概要は<a href={script.repositoryUrl}>{script.title}リポジトリ</a>からご確認ください。
                                 {script.downloadUrl && (
-                                    <a href={script.downloadUrl}>ダウンロード</a>
+                                    <a href={script.downloadUrl} aria-label={`ダウンロード：${script.title}`}>ダウンロード</a>
                                 )}
                             </div>
                         </div>

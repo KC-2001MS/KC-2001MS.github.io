@@ -8,7 +8,7 @@ export default function Home() {
         <p className={styles.goalSubtitle}>I create what I want<br />with my own hands.</p>
       </div>
       <div id={styles.language}>
-        Language : <a id={styles.languageItem} href="../" lang="ja" hrefLang="ja">日本語</a>
+        Language : <a id={styles.languageItem} className="hitTarget" href="../" lang="ja" hrefLang="ja">日本語</a>
       </div>
     </main>
   );

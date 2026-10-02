@@ -22,9 +22,43 @@
 }
 
 /* キーボードで操作したときだけ、フォーカス位置を枠で示す */
+/* 枠は文字と同じ色（背景に対して十分なコントラストがある）で3pxにし、写真の上でも見えるようにする */
 :focus-visible {
-    outline: 2px solid var(--linkNotVisited);
+    outline: 3px solid currentColor;
     outline-offset: 2px;
+}
+
+/* 押せる範囲を、見た目はそのまま44×44px以上に広げる（小さなリンクやボタン） */
+/* 透明な ::before を中央に重ね、要素より小さいときだけ44pxまで広げる */
+/* コピーボタンは元から position: absolute なので、ここでは指定しない */
+#header a,
+footer a,
+.hitTarget {
+    position: relative;
+}
+
+#header a::before,
+footer a::before,
+.copyButton::before,
+.hitTarget::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max(100%, 44px);
+    height: max(100%, 44px);
+    transform: translate(-50%, -50%);
+}
+
+/* 指で操作する端末では、さらに少し広げる */
+@media (pointer: coarse) {
+    #header a::before,
+    footer a::before,
+    .copyButton::before,
+    .hitTarget::before {
+        width: max(100%, 48px);
+        height: max(100%, 48px);
+    }
 }
 
 /* 「本文へ移動」リンク：普段は画面の外に置き、キーボードでフォーカスしたときだけ表示する */
@@ -33,7 +67,7 @@
     top: -100px;
     left: 8px;
     z-index: 1000;
-    padding: 8px 16px;
+    padding: 12px 16px;
     border-radius: 8px;
     background-color: var(--defaultWhite);
     color: var(--defaultBlack);
@@ -46,6 +80,25 @@
 
 .skipLink:focus {
     top: 8px;
+}
+
+/* iPhone・iPad の Safari：設定の「画面表示と明るさ → テキストサイズ」（Dynamic Type）に文字の大きさを合わせる */
+/* -apple-system-body の標準の大きさは17pxなので、標準設定のときに従来どおり16pxになるよう16/17を掛ける */
+/* （-webkit-touch-callout は iOS の Safari だけが対応しているため、Mac の Safari には適用されない） */
+@supports (font: -apple-system-body) and (-webkit-touch-callout: none) {
+    html {
+        font: -apple-system-body;
+        line-height: normal;
+    }
+
+    :root {
+        --remScale: calc(16 / 17);
+    }
+
+    /* 大きさを指定していない文字も、標準設定で従来どおり16pxになるようにする */
+    body {
+        font-size: calc(1rem * var(--remScale));
+    }
 }
 
 /* OSで「視差効果を減らす」「動きを減らす」を有効にしたとき：アニメーションを止める */
