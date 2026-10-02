@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* アクセシビリティ：OSやブラウザの設定・キーボード操作のときだけ働き、通常の表示は変えない */
+/* 色の値は var.css（prefers-contrast）で、トップページのすりガラスは home.module.css で切り替えている */
+
+/* 画面には表示せず、スクリーンリーダーにだけ読ませる文字（「新しいタブで開きます」など） */
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ページ内リンク（脚注など）で移動したとき、移動先が画面の端に張り付かないようにする */
+:target {
+    scroll-margin-top: 1em;
+}
+
+/* キーボードで操作したときだけ、フォーカス位置を枠で示す */
+:focus-visible {
+    outline: 2px solid var(--linkNotVisited);
+    outline-offset: 2px;
+}
+
+/* 「本文へ移動」リンク：普段は画面の外に置き、キーボードでフォーカスしたときだけ表示する */
+.skipLink {
+    position: absolute;
+    top: -100px;
+    left: 8px;
+    z-index: 1000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--defaultWhite);
+    color: var(--defaultBlack);
+    font-weight: bold;
+}
+
+.skipLink:visited {
+    color: var(--defaultBlack);
+}
+
+.skipLink:focus {
+    top: 8px;
+}
+
+/* OSで「視差効果を減らす」「動きを減らす」を有効にしたとき：アニメーションを止める */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Windowsのハイコントラストなど、OSが色を強制するとき：メニューの下線が消えないようにする */
+@media (forced-colors: active) {
+    .underline::after {
+        forced-color-adjust: none;
+        background: CanvasText;
+    }
+}
+
+/* iPhone・Macの「スマート反転」を有効にしたとき：写真やアイコンまで色が反転しないよう、元に戻す */
+@media (inverted-colors: inverted) {
+    img,
+    picture,
+    video,
+    iframe {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+/* 印刷するとき：画面用の部品を省き、白い紙に黒い文字で読みやすくする */
+@media print {
+    header nav,
+    .skipLink,
+    .copyButton,
+    .donationButtons,
+    #copyStatus {
+        display: none !important;
+    }
+
+    body,
+    main {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+
+    a,
+    a:visited {
+        color: #000000 !important;
+        text-decoration: underline;
+    }
+
+    /* 外部リンクは、紙でも行き先が分かるようにURLを添える */
+    main a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        word-break: break-all;
+    }
+
+    pre,
+    table,
+    img {
+        break-inside: avoid;
+    }
+}

@@ -18,7 +18,7 @@ const DonationSection = ({ lang = Language.Japanese }: { lang?: Language }) => {
             <hr />
             <h2 className="donationTitle">{text.title}</h2>
             <p>{text.body}</p>
-            <DonationButtons />
+            <DonationButtons lang={lang} />
         </>
     );
 };

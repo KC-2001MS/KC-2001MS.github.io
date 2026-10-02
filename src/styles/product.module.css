@@ -96,6 +96,7 @@
 }
 
 .appStoreLink img {
+    width: auto;
     height: 40px;
 }
 

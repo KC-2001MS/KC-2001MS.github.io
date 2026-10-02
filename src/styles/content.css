@@ -133,8 +133,9 @@ pre.hasCopyButton>code {
     line-height: 1;
 }
 
-/* 文中のコード */
+/* 文中のコード（長いパスなどが画面からはみ出さないよう、必要なときだけ折り返す） */
 :not(pre)>code {
+    overflow-wrap: anywhere;
     padding: 0.1em 0.4em;
     border-radius: 6px;
     background-color: color-mix(in srgb, currentColor 10%, transparent);
@@ -233,6 +234,11 @@ pre.hasCopyButton>code {
 }
 
 /* 麻雀牌の文字（Unicode）は本文の大きさだと小さいため、大きく表示する */
+/* 赤牌（赤ドラ）：価格と同じ、モードごとにコントラストを確保した赤を使う */
+.redTile {
+    color: var(--priceColor);
+}
+
 .mahjongTiles {
     font-size: 2em;
     line-height: 1.4;
@@ -278,7 +284,7 @@ pre.hasCopyButton>code {
     padding-top: 10px;
     border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
     font-size: 12px;
-    color: color-mix(in srgb, currentColor 55%, transparent);
+    color: color-mix(in srgb, currentColor var(--mutedTextRatio), transparent);
 }
 
 .footnotes ol {

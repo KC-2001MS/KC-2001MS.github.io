@@ -40,9 +40,9 @@ MPSZ形式は、麻雀の牌姿（手牌などの牌の並び）を、数字とm
 
 赤ドラの5は、5の代わりに`0`を使って表します。
 
-- `0m` = <span class="tile" style="color:red">🀋</span>（赤五萬）
-- `0p` = <span class="tile" style="color:red">🀝</span>（赤五筒）
-- `0s` = <span class="tile" style="color:red">🀔</span>（赤五索）
+- `0m` = <span class="tile redTile">🀋</span>（赤五萬）
+- `0p` = <span class="tile redTile">🀝</span>（赤五筒）
+- `0s` = <span class="tile redTile">🀔</span>（赤五索）
 
 ## 拡張された書き方
 
@@ -50,7 +50,7 @@ MPSZ形式は、麻雀の牌姿（手牌などの牌の並び）を、数字とm
 
 | 書き方 | 意味 | 例 |
 | ---- | ---- | ---- |
-| `r`＋牌 | 赤牌（`0`と同じ） | `r5m` = <span class="tile" style="color:red">🀋</span> |
+| `r`＋牌 | 赤牌（`0`と同じ） | `r5m` = <span class="tile redTile">🀋</span> |
 | `-` | 牌の裏面 | `-` = <span class="tile">🀫</span> |
 
 ## 牌の一覧
@@ -59,9 +59,9 @@ MPSZ形式は、麻雀の牌姿（手牌などの牌の並び）を、数字とm
 
 | 文字 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0（赤） |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| m | 🀇 | 🀈 | 🀉 | 🀊 | 🀋 | 🀌 | 🀍 | 🀎 | 🀏 | <span style="color:red">🀋</span> |
-| p | 🀙 | 🀚 | 🀛 | 🀜 | 🀝 | 🀞 | 🀟 | 🀠 | 🀡 | <span style="color:red">🀝</span> |
-| s | 🀐 | 🀑 | 🀒 | 🀓 | 🀔 | 🀕 | 🀖 | 🀗 | 🀘 | <span style="color:red">🀔</span> |
+| m | 🀇 | 🀈 | 🀉 | 🀊 | 🀋 | 🀌 | 🀍 | 🀎 | 🀏 | <span class="redTile">🀋</span> |
+| p | 🀙 | 🀚 | 🀛 | 🀜 | 🀝 | 🀞 | 🀟 | 🀠 | 🀡 | <span class="redTile">🀝</span> |
+| s | 🀐 | 🀑 | 🀒 | 🀓 | 🀔 | 🀕 | 🀖 | 🀗 | 🀘 | <span class="redTile">🀔</span> |
 | z | 🀀<small>東</small> | 🀁<small>南</small> | 🀂<small>西</small> | 🀃<small>北</small> | 🀆<small>白</small> | 🀅<small>發</small> | 🀄︎<small>中</small> | | | |
 
 </div>

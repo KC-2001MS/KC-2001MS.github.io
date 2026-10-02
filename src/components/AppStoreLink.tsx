@@ -17,7 +17,7 @@ const AppStoreLink = ({ lang = Language.Japanese, appId }: AppStoreLinkProps) =>
                 <Link className={styles.appStoreLink} href={embedUrl}>
                     <picture>
                         <source srcSet={`/images/Download-on-the-App-Store/JP/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg`} media="(prefers-color-scheme: dark)" />
-                        <img src={`/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg`} alt="App Storeからダウンロード" />
+                        <img src={`/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg`} width={109} height={40} alt="App Storeからダウンロード" />
                     </picture>
                 </Link>
             );
@@ -26,7 +26,7 @@ const AppStoreLink = ({ lang = Language.Japanese, appId }: AppStoreLinkProps) =>
                 <Link className={styles.appStoreLink} href={embedUrl}>
                     <picture>
                         <source srcSet={`/images/Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg`} media="(prefers-color-scheme: dark)" />
-                        <img src={`/images/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg`} alt="App Storeからダウンロード" />
+                        <img src={`/images/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg`} width={120} height={40} alt="Download on the App Store" />
                     </picture>
                 </Link>
             );

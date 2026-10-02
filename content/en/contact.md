@@ -28,7 +28,7 @@ I work under the account name "Iroiro." My main focus is on developing applicati
 If you would like to make a donation, please click here. The money you donate will be used to improve my programming skills and maintain the application.
 
 <div class="donationButtons">
-    <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60"></a>
-    <a class="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal</a>
+    <a href="https://www.buymeacoffee.com/iroiro" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="217" height="60"><span class="visuallyHidden"> (opens in a new tab)</span></a>
+    <a class="paypal" href="https://paypal.me/iroiroWork" target="_blank" rel="noopener noreferrer">Pay by PayPal<span class="visuallyHidden"> (opens in a new tab)</span></a>
     <iframe src="https://github.com/sponsors/KC-2001MS/button" title="Sponsor KC-2001MS" height="32" width="114"></iframe>
 </div>

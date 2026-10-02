@@ -192,3 +192,18 @@
 :global(body):has(#backgroundImage) :global(footer):focus-within {
     background-color: var(--glassBackgroundActive);
 }
+
+/* OSで「透明度を下げる」「コントラストを上げる」を有効にしたとき：すりガラスをやめ、不透明な背景にする */
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+    :global(body):has(#backgroundImage) {
+        --glassBackground: rgb(30, 30, 30);
+        --glassBackgroundActive: rgb(45, 45, 45);
+    }
+
+    #language,
+    :global(body):has(#backgroundImage) :global(header),
+    :global(body):has(#backgroundImage) :global(footer) {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+}

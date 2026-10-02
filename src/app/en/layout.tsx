@@ -8,6 +8,7 @@ import { Language } from "@/lib/Language";
 import "@styles/var.css";
 import "@styles/foundation.css";
 import "@styles/content.css";
+import "@styles/accessibility.css";
 
 export const metadata: Metadata = {
   title: "Iroiro's portfolio【SwiftUI】",
@@ -106,7 +107,9 @@ export default function RootLayout({
         <ScrollbarWidth />
       </head>
       <body>
+        <a className="skipLink" href="#content">Skip to main content</a>
         <Header lang={Language.EnglishUS} />
+        <span id="content" tabIndex={-1} />
         {children}
         <CodeCopyButtons />
         <Footer lang={Language.EnglishUS} />

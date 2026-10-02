@@ -40,9 +40,9 @@ Each digit belongs to the suit of the next letter that follows it, so `123m44p` 
 
 A red five (aka dora) is written with `0` instead of `5`.
 
-- `0m` = <span class="tile" style="color:red">🀋</span> (red five of characters)
-- `0p` = <span class="tile" style="color:red">🀝</span> (red five of dots)
-- `0s` = <span class="tile" style="color:red">🀔</span> (red five of bamboo)
+- `0m` = <span class="tile redTile">🀋</span> (red five of characters)
+- `0p` = <span class="tile redTile">🀝</span> (red five of dots)
+- `0s` = <span class="tile redTile">🀔</span> (red five of bamboo)
 
 ## Extended notation
 
@@ -50,7 +50,7 @@ The following notation is available in some tools, such as [Mahjong Tile Convert
 
 | Notation | Meaning | Example |
 | ---- | ---- | ---- |
-| `r` + tile | Red tile (same as `0`) | `r5m` = <span class="tile" style="color:red">🀋</span> |
+| `r` + tile | Red tile (same as `0`) | `r5m` = <span class="tile redTile">🀋</span> |
 | `-` | Back of a tile | `-` = <span class="tile">🀫</span> |
 
 ## List of tiles
@@ -59,9 +59,9 @@ The following notation is available in some tools, such as [Mahjong Tile Convert
 
 | Letter | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 (red) |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| m | 🀇 | 🀈 | 🀉 | 🀊 | 🀋 | 🀌 | 🀍 | 🀎 | 🀏 | <span style="color:red">🀋</span> |
-| p | 🀙 | 🀚 | 🀛 | 🀜 | 🀝 | 🀞 | 🀟 | 🀠 | 🀡 | <span style="color:red">🀝</span> |
-| s | 🀐 | 🀑 | 🀒 | 🀓 | 🀔 | 🀕 | 🀖 | 🀗 | 🀘 | <span style="color:red">🀔</span> |
+| m | 🀇 | 🀈 | 🀉 | 🀊 | 🀋 | 🀌 | 🀍 | 🀎 | 🀏 | <span class="redTile">🀋</span> |
+| p | 🀙 | 🀚 | 🀛 | 🀜 | 🀝 | 🀞 | 🀟 | 🀠 | 🀡 | <span class="redTile">🀝</span> |
+| s | 🀐 | 🀑 | 🀒 | 🀓 | 🀔 | 🀕 | 🀖 | 🀗 | 🀘 | <span class="redTile">🀔</span> |
 | z | 🀀<small>East</small> | 🀁<small>South</small> | 🀂<small>West</small> | 🀃<small>North</small> | 🀆<small>White</small> | 🀅<small>Green</small> | 🀄︎<small>Red</small> | | | |
 
 </div>

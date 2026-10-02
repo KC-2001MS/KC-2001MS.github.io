@@ -7,6 +7,7 @@ import CodeCopyButtons from '@/components/CodeCopyButtons';
 import "@styles/var.css";
 import "@styles/foundation.css";
 import "@styles/content.css";
+import "@styles/accessibility.css";
 
 export const metadata: Metadata = {
   title: "【SwiftUIアプリ開発】いろいろポートフォリオ",
@@ -102,7 +103,9 @@ export default function RootLayout({
         <ScrollbarWidth />
       </head>
       <body>
+        <a className="skipLink" href="#content">本文へ移動</a>
         <Header />
+        <span id="content" tabIndex={-1} />
         {children}
         <CodeCopyButtons />
         <Footer />

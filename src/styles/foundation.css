@@ -67,6 +67,26 @@ a:visited {
     color: var(--linkVisited);
 }
 
+/* 文章の中のリンクは、色だけでは周りの文字と見分けにくいため、控えめな下線を付ける */
+main p a,
+main li a,
+main td a,
+main blockquote a,
+main .card > div > a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+main p a:hover,
+main li a:hover,
+main td a:hover,
+main blockquote a:hover,
+main .card > div > a:hover {
+    text-decoration-color: currentColor;
+}
+
 h1 {
     font-size: var(--h1size);
 }
@@ -97,7 +117,7 @@ hr {
 /* 注釈（本文より控えめな色） */
 .caption {
     font-size: 10px;
-    color: color-mix(in srgb, currentColor 55%, transparent);
+    color: color-mix(in srgb, currentColor var(--mutedTextRatio), transparent);
 }
 
 #copyright {
@@ -138,6 +158,18 @@ hr {
     -webkit-font-smoothing: antialiased;
     vertical-align: middle;
     text-align: center;
+    /* フォントの読み込み前後で大きさが変わらないよう、1文字分の正方形に固定する */
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+}
+
+/* ヘッダーのサイト名（見出しではないが、見た目は以前のh1と同じにする） */
+.siteTitle {
+    display: block;
+    margin: 0.67em 0;
+    font-size: var(--h1size);
+    font-weight: bold;
 }
 
 /* アイコンの下のラベル（以前はh4だったため、同じ見た目になるようにしている） */

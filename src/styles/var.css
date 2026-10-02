@@ -12,6 +12,8 @@
     --linkNotVisited: rgb(78, 70, 223);
     --linkVisited: rgb(116, 58, 140);
     --priceColor: rgb(192, 0, 31);
+    /* 注釈・脚注などの控えめな文字：文字色をこの割合で背景に混ぜる（10〜12pxの小さな文字でもコントラスト比4.5以上） */
+    --mutedTextRatio: 64%;
     --accentColor1: rgb(200, 100, 100);
     --accentColor2: rgb(100, 200, 100);
     --accentColor3: rgb(100, 100, 200);
@@ -33,6 +35,26 @@
         --linkNotVisited: rgb(119, 128, 254);
         --linkVisited: rgb(193, 131, 219);
         --priceColor: rgb(252, 77, 77);
+        --mutedTextRatio: 55%;
+    }
+}
+
+/* OSで「コントラストを上げる」を有効にしたとき：同じ色相のまま、コントラスト比7以上（WCAG AAA）にする */
+@media (prefers-contrast: more) {
+    :root {
+        --linkNotVisited: rgb(58, 33, 190);
+        --linkVisited: rgb(99, 41, 123);
+        --priceColor: rgb(140, 4, 21);
+        --mutedTextRatio: 100%;
+        --surfaceBorder: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+    }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+    :root {
+        --linkNotVisited: rgb(158, 170, 252);
+        --linkVisited: rgb(215, 152, 241);
+        --priceColor: rgb(253, 145, 138);
     }
 }
 
