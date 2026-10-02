@@ -74,13 +74,16 @@ export default async function Blog() {
 
   return (
     <main>
-    <div id="maincard">
-    {blogList.length === 0 ? (
-      <div className="card"><EmptyMessage message="There are currently no blog posts." /></div>
-    ) : blogList.map((blog, index) => (
-      <PageCard key={index} title={blog.title} description={blog.description} date={blog.date} genre={blog.genre} path={blog.path} />
-    ))}
-    </div>
+      <div id="maincard">
+        <div className="card">
+          <h1>Blog</h1>
+            {blogList.length === 0 ? (
+              <EmptyMessage message="There are currently no blog posts." />
+            ) : blogList.map((blog, index) => (
+              <PageCard key={index} title={blog.title} description={blog.description} date={blog.date} genre={blog.genre} path={blog.path} />
+            ))}
+        </div>
+      </div>
   </main>
   );
 }

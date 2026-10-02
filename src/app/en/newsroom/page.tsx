@@ -75,11 +75,14 @@ export default async function Newsroom() {
   return (
     <main>
     <div id="maincard">
+      <div className="card">
+      <h1>Newsroom</h1>
     {newsroomList.length === 0 ? (
-      <div className="card"><EmptyMessage message="There is currently no news." /></div>
+      <EmptyMessage message="There is currently no news." />
     ) : newsroomList.map((newsroom, index) => (
       <PageCard key={index} title={newsroom.title} description={newsroom.description} date={newsroom.date} genre={newsroom.genre} path={newsroom.path} />
     ))}
+      </div>
     </div>
   </main>
   );
