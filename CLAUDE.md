@@ -45,6 +45,10 @@ The site includes sections for:
 - `sitemap.xml` generated from the content files (`src/app/sitemap.ts`; paths disallowed in `public/robots.txt` are left out)
 - App catalog JSON for the developer's own apps: `/api/v1/ja/apps.json` and `/api/v1/en/apps.json`, generated from `content/*/product.json` (`src/lib/appCatalog.ts`). Apps fetch it and filter on their side. Within v1, only add fields; never remove, rename, or change the type of a field.
 
+### Adding an app
+
+Only content files are needed: add the entry to `content/ja/product.json` (and `content/en/product.json`), the support page `content/{ja,en}/product/<slug>.md`, and the icons `public/images/<Name> Light.avif` / `<Name> Dark.avif`. The product list, product page, sitemap and app catalog JSON pick them up automatically. Resized icons (`public/images/icons/<Name> Light 88|176|264.avif`) are optional; without them the original icon is used.
+
 ### Styling
 
 Plain CSS with custom CSS variables for theming (light/dark via `prefers-color-scheme`). Material Symbols font is loaded for icons.

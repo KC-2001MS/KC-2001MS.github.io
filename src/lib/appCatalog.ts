@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { hasIconVariants, iconVariantPath } from "@/lib/appIcons";
 
 // アプリ向けのアプリ一覧（/api/v1/<lang>/apps.json）の中身を content/<lang>/product.json から作る
 // アプリはこれを取得して表示するだけで、自分自身を除くなどの絞り込みはアプリ側で行う
@@ -9,7 +10,7 @@ export const CATALOG_LANGUAGES = ["ja", "en"] as const;
 export type CatalogLanguage = (typeof CATALOG_LANGUAGES)[number];
 
 const SITE = "https://iroiro.dev";
-// アイコンは縮小版（public/images/icons）のうち一番大きいものを使う
+// アイコンは縮小版（public/images/icons）のうち一番大きいものを使う（縮小版がなければ元の画像）
 const ICON_SIZE = 264;
 // 自分が公開しているアプリの区分（translation は他の開発者のアプリの翻訳のため含めない）
 const CATEGORIES = ["development", "transplanting"] as const;
@@ -41,7 +42,7 @@ export type CatalogApp = {
 export type AppCatalog = { schemaVersion: 1; apps: CatalogApp[] };
 
 // "/images/X Light.avif" → "https://iroiro.dev/images/icons/X Light 264.avif"（空白などはURLエンコードする）
-const iconURL = (icon: string) => SITE + encodeURI(icon.replace(/^\/images\//, "/images/icons/").replace(/\.avif$/, ` ${ICON_SIZE}.avif`));
+const iconURL = (icon: string) => SITE + encodeURI(hasIconVariants(icon) ? iconVariantPath(icon, ICON_SIZE) : icon);
 
 // "26(Tahoe)" や "26" を、アプリで比較しやすい "26.0" の形にする
 const normalizeVersion = (version: string) => {

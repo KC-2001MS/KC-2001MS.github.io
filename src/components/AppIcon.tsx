@@ -1,4 +1,5 @@
 import styles from "@styles/product.module.css";
+import { hasIconVariants, ICON_WIDTHS, iconVariantPath } from "@/lib/appIcons";
 
 type AppIconProps = {
     icon: string;
@@ -8,9 +9,9 @@ type AppIconProps = {
 
 // 表示サイズ（88px）に合わせた縮小版（public/images/icons/）を、画面の解像度に応じて選ばせる
 // 縮小版は「<元のファイル名> <幅>.avif」で、元の512pxの画像から作っている
-const sizes = [88, 176, 264];
+// 縮小版がまだないアイコンは、元の画像をそのまま表示する
 const srcSet = (src: string) =>
-    sizes.map((w) => `${encodeURI(src.replace("/images/", "/images/icons/").replace(/\.avif$/, ` ${w}.avif`))} ${w}w`).join(", ");
+    hasIconVariants(src) ? ICON_WIDTHS.map((w) => `${encodeURI(iconVariantPath(src, w))} ${w}w`).join(", ") : encodeURI(src);
 
 const AppIcon = ({ icon, darkIcon, alt }: AppIconProps) => {
     // eslint-disable-next-line @next/next/no-img-element
