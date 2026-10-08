@@ -4,6 +4,7 @@
       {
         "id": "id6760347335",
         "title": "ATP Nexus",
+        "subtitle": "Apple製品向けBlueskyクライアント",
         "icon": "/images/ATP Nexus Light.avif",
         "darkIcon": "/images/ATP Nexus Dark.avif",
         "description": "ATP Nexusは、AT Protocolに準拠したSNS Blueskyを利用するためのクライアントアプリです。フィードやリストを自由に楽しめ、マルチアカウントやHandoff、WidgetなどAppleデバイスに最適化された機能を備えています。",
@@ -35,6 +36,7 @@
       {
         "id": "id6755629616",
         "title": "FileSprout",
+        "subtitle": "メニューバーから空のファイルを作成",
         "icon": "/images/FileSprout Light.avif",
         "darkIcon": "/images/FileSprout Dark.avif",
         "description": "FileSproutは、好きな名前と拡張子の空のファイルをメニューバーから作成できるアプリです。ドラッグアンドドロップやクリップボードへのコピーで、作ったファイルを必要な場所へすぐに追加できます。",
@@ -50,6 +52,7 @@
       {
         "id": "id6743005902",
         "title": "SSH Key Wallet",
+        "subtitle": "SSH鍵とSSH Configを簡単に管理",
         "icon": "/images/SSH Key Wallet Light.avif",
         "darkIcon": "/images/SSH Key Wallet Dark.avif",
         "description": "SSH Key Walletは、OpenSSHをベースとした~/.ssh/内のSSH暗号鍵とSSH Configファイルを最も簡単に管理する方法です。",
@@ -65,6 +68,7 @@
       {
         "id": "id6477782786",
         "title": "日本法人情報",
+        "subtitle": "日本の法人情報を簡単に管理",
         "icon": "/images/Japan Corp Info Light.avif",
         "darkIcon": "/images/Japan Corp Info Dark.avif",
         "description": "日本法人情報は、日本の法人情報を簡単に管理する最適な方法です。",
@@ -92,6 +96,7 @@
       {
         "id": "id6470128646",
         "title": "麻雀牌コンバータ",
+        "subtitle": "MPSZ形式の牌姿を麻雀牌の文字に変換",
         "icon": "/images/Mahjong Tile Converter Light.avif",
         "darkIcon": "/images/Mahjong Tile Converter Dark.avif",
         "description": "麻雀牌コンバータは、MPSZ形式で表現された牌姿をUnicodeを用いたグラフィカルな表記に変換します。",
@@ -107,6 +112,7 @@
       {
         "id": "id6450119338",
         "title": "My Word X",
+        "subtitle": "詳しく覚えられるオリジナル単語帳",
         "icon": "/images/My Word X Light.avif",
         "darkIcon": "/images/My Word X Dark.avif",
         "description": "My Word Xは、オリジナルな単語帳を作成するアプリケーションです。様々な情報を登録できるため、より詳しくその単語を覚えることができます。",
@@ -142,6 +148,7 @@
       {
         "id": "id1668831130",
         "title": "Word Filter X",
+        "subtitle": "Safariで苦手な言葉を隠す",
         "icon": "/images/Word Filter X Light.avif",
         "darkIcon": "/images/Word Filter X Dark.avif",
         "description": "Word Filter XはSafariのWebサイト上の苦手な言葉を隠すアプリケーションです。Safari上の苦手な言葉を隠すことで、自身の心を穏やかにすることができます。このアプリはブラウザ拡張機能とiOSアプリの「ひよこフィルター」をベースに設定の同期機能や置き換える単語を変更する機能など機能を追加した派生版です。",
@@ -169,6 +176,7 @@
       {
         "id": "id6446932202",
         "title": "Uncheck X",
+        "subtitle": "同意していないチェックを自動で外す",
         "icon": "/images/Uncheck X Light.avif",
         "darkIcon": "/images/Uncheck X Dark.avif",
         "description": "物を買うときやあるサービスのアカウントを作るとき、自分が同意していない項目に勝手にチェックがつけられていたことはありませんか。Uncheck Xをインストールすれば、いつの間にかメールマガジンが送られることはありません。",
@@ -196,6 +204,7 @@
       {
         "id": "id1612026794",
         "title": "Simple Editor X",
+        "subtitle": "読み上げ・定型文対応のシンプルなメモ帳",
         "icon": "/images/Simple Editor X Light.avif",
         "darkIcon": "/images/Simple Editor X Dark.avif",
         "description": "Simple Editor Xは、テキストファイルとして保存することができるシンプルなメモ帳・テキストエディタです。最低限の機能を持つテキストエディターですが、音声の読み上げ機能や定型文の挿入機能があります。",
@@ -225,6 +234,7 @@
       {
         "id": "id1672080999",
         "title": "Death To _blank",
+        "subtitle": "リンクを新規タブで開かせない",
         "icon": "/images/Death To _blank Light.avif",
         "darkIcon": "/images/Death To _blank Dark.avif",
         "description": "リンクをクリックしたらタブが増えた経験はありませんか。リンクを新規タブで開く原因である_blank属性をWebサイトから取り除くことで、この現象を無くしてタブをスッキリさせます。この拡張機能は、\"Death To _blank\"拡張機能をSafari拡張機能として移植したバージョンとなります。この拡張機能のコードは、開発者との合意に基づいて利用されています。※ 新規タブを開く効果がある_blank以外の属性でも動作します。",

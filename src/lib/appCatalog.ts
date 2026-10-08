@@ -17,6 +17,7 @@ const CATEGORIES = ["development", "transplanting"] as const;
 type ProductApp = {
     id: string;
     title: string;
+    subtitle?: string;
     icon?: string;
     darkIcon?: string;
     description: string;
@@ -62,7 +63,7 @@ export function buildAppCatalog(lang: CatalogLanguage): AppCatalog {
                 id: app.id,
                 appStoreId,
                 name: app.title,
-                subtitle: "",
+                subtitle: app.subtitle ?? "",
                 description: app.description,
                 category,
                 image: { kind: "url", lightURL: iconURL(app.icon!), darkURL: iconURL(app.darkIcon ?? app.icon!) },
