@@ -27,6 +27,7 @@ Disallow: /flutter_test_page/
 Disallow: /flutter-test-page/
 Disallow: /portfolio-test/
 Disallow: /swift-vapor-test-page/
+Disallow: /api/
 Allow: /
 
 Sitemap: https://iroiro.dev/sitemap.xml

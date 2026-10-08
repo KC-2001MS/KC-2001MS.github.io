@@ -42,6 +42,8 @@ The site includes sections for:
 - Blog with dynamic routing (`/blog/[slug]`)
 - Newsroom with dynamic routing (`/newsroom/[slug]`)
 - Static pages (contact, privacy, agreement, 404)
+- `sitemap.xml` generated from the content files (`src/app/sitemap.ts`; paths disallowed in `public/robots.txt` are left out)
+- App catalog JSON for the developer's own apps: `/api/v1/ja/apps.json` and `/api/v1/en/apps.json`, generated from `content/*/product.json` (`src/lib/appCatalog.ts`). Apps fetch it and filter on their side. Within v1, only add fields; never remove, rename, or change the type of a field.
 
 ### Styling
 
