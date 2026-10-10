@@ -23,7 +23,6 @@ Disallow: /en/prodact.html
 Disallow: /404
 Disallow: /en/404
 Disallow: /test-page/
-Disallow: /flutter_test_page/
 Disallow: /flutter-test-page/
 Disallow: /portfolio-test/
 Disallow: /swift-vapor-test-page/
