@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ThirdPartyServiceList from "@/components/ThirdPartyServiceList";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -69,6 +70,7 @@ export default function Privacy() {
       <div id="maincard">
         <div className="card">
           <h1>Privacy Policy</h1>
+          <p>Last updated: October 20, 2026</p>
           <p>Our privacy policy is <strong>a statement that defines how we treat the information we collect from you</strong>. All of our services provide a better experience by treating the information we collect as described in our privacy policy.</p>
           <p>This page describes the privacy policy for services provided by Keisuke Chinone (activity name:
             Iroiro).</p>
@@ -105,55 +107,67 @@ export default function Privacy() {
             </div>
           </div>
           <div className="card">
-            <h1>What is personal information?</h1>
-            <p>Personal information generally refers to the following information about a customer and
-              information that can be used to identify the following information</p>
-            <ul>
-              <li>Name</li>
-              <li>Address</li>
-              <li>Phone number</li>
-              <li>Email Address</li>
-              <li>Credit Card Information</li>
-            </ul>
-            <p>In addition, any data entered and stored by you within the Service is also included in your
-              personal information. Hereafter, personal information is based on this definition.</p>
+            <h1>Terms used in this privacy policy</h1>
+            <div className="card">
+              <h2>Personal information</h2>
+              <p>Personal information refers to the following information about you and information that can be used to identify the following information.</p>
+              <ul>
+                <li>Name</li>
+                <li>Address</li>
+                <li>Phone number</li>
+                <li>Email Address</li>
+                <li>Credit Card Information</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h2>Input data</h2>
+              <p>Input data refers to any data you enter and store within the service, such as posts, settings, and search terms.</p>
+            </div>
           </div>
           <div className="card">
             <h1>Information to be obtained by the service</h1>
-            <p>Iroiro&apos;s app does not collect any information. However, we do use App Analytics to collect the
-              following information on the App Store; please check with Apple regarding App Store privacy.</p>
-            <ul>
-              <li>App access status</li>
-              <li>Number of App purchases and countries</li>
-              <li>Number of in-app purchases and countries</li>
-              <li>Number of pre-orders in App and country</li>
-              <li>Number of App updates and countries</li>
-              <li>Other information that can be obtained from the App Store (not including personal
-                information)</li>
-            </ul>
-            <p>Iroiro&apos;s website uses Google Analytics and Google Search Console to obtain the following
-              information</p>
-            <ul>
-              <li>Information about access to this web service</li>
-              <li>Information about Google Search</li>
-              <li>Other information obtainable from Google Analytics and Google Search Console (not including
-                personal information)</li>
-            </ul>
+            <p>Iroiro obtains the following information. This information does not include personal information or input data.</p>
+            <div className="card">
+              <h2>Apps</h2>
+              <p>We use App Analytics to obtain the following information on the App Store. Please check with Apple regarding App Store privacy.</p>
+              <ul>
+                <li>App access status</li>
+                <li>Number of App purchases and countries</li>
+                <li>Number of in-app purchases and countries</li>
+                <li>Number of pre-orders in App and country</li>
+                <li>Number of App updates and countries</li>
+                <li>Other information that can be obtained from the App Store</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h2>Website</h2>
+              <p>We use Google Analytics and Google Search Console to obtain the following information.</p>
+              <ul>
+                <li>Information about access to this web service</li>
+                <li>Information about Google Search</li>
+                <li>Other information obtainable from Google Analytics and Google Search Console</li>
+              </ul>
+            </div>
           </div>
           <div className="card">
             <h1>Information not obtained by the service</h1>
-            <p>
-              Iroiro&apos;s services do not collect any information other than the above. We do not collect any
-              personal information.</p>
-            <p>However, if the app uses a third party service, the third party service may collect
-              information. Currently, we do not have any such apps, but if we do, we will post a notice on
-              this page, in the App Store, and in the app itself.
-            </p>
-            <p>
-              When the app asks for personal information, it will only be used as <strong>information entered
-                within the app</strong>. The information is stored locally and in iCloud and cannot be
-              retrieved by various parties.
-            </p>
+            <p>Iroiro does not obtain any information other than the above, and never obtains personal information or input data. In addition, the apps do not send any information to Iroiro.</p>
+            <p>Personal information and input data are stored on your device and in iCloud. They are not used outside the app, except when the app sends them to a third-party service for its features. Iroiro cannot obtain this information.</p>
+          </div>
+          <div className="card">
+            <h1>Third-party services</h1>
+            <p>The third-party services used by the apps are operated by their respective operators, not by Iroiro. How each service defines and handles information differs from service to service, and may differ from the definitions in this privacy policy.</p>
+            <p>Note that communicating with any service sends that service the information needed for the communication, such as your IP address.</p>
+            <div className="card">
+              <h2>Services that may handle personal information</h2>
+              <p>These are services that may collect personal information, or information that the service treats as personal information. Information is handled in accordance with the service&apos;s terms of use and privacy policy. For a service that has not published terms of use or a privacy policy, information is handled as determined by its operator, and the service is marked &quot;No published terms or policy&quot; in the list below.</p>
+              <h3>ATP Nexus</h3>
+              <ThirdPartyServiceList linkLabel="Privacy Policy" />
+            </div>
+            <div className="card">
+              <h2>Services that do not handle personal information</h2>
+              <p>These are services that handle only input data. We do not guarantee how they handle information. Information you have deleted may remain on these services for some time.</p>
+            </div>
           </div>
         </div>
       </div>
