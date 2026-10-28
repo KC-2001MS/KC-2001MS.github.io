@@ -11,7 +11,7 @@ date: 2026/10/28
 
 ![The home screen of ATP Nexus](/images/newsroom/atpnexus-202610-home.webp "The home screen of ATP Nexus")
 
-October 28, 2026 — Today, the latest update to ATP Nexus, the Bluesky client for Apple devices, was announced. With this update, the app steps outside the world of Bluesky and integrates with a range of services on the AT Protocol, including blogs, live streams, communities and events. It also brings new features that make the most of Apple devices, including split view designed for iPhone Duo, thread explanations and alt text generation with Apple Intelligence, and expanded actions for Siri and Shortcuts.
+October 28, 2026 — Today, the latest update to [ATP Nexus](https://apps.apple.com/app/id6760347335), the Bluesky client for Apple devices, was announced. With this update, the app steps outside the world of Bluesky and integrates with a range of services on the AT Protocol, including blogs, live streams, communities and events. It also brings new features that make the most of Apple devices, including split view designed for iPhone Duo, thread explanations and alt text generation with Apple Intelligence, and expanded actions for Siri and Shortcuts.
 
 ## The world of the AT Protocol, in one app
 Beyond Bluesky, a growing number of services are being built on the AT Protocol, from blogs and live streams to communities and events. With new integrations in ATP Nexus Pro, you can enjoy these experiences right inside the app.
@@ -35,7 +35,7 @@ More actions are now available in Siri and Shortcuts, including sending DMs and 
 Swipe actions are now available for posts, accounts and the chat list. Posts longer than 300 characters are automatically split into a thread, so you can post without worrying about the character limit. Starter pack search and a setting to ask not to be shown in recommendation algorithms have also been added.
 
 ## Pricing and availability
-- The latest update to ATP Nexus is available today on the App Store.
+- The latest update to [ATP Nexus](https://apps.apple.com/app/id6760347335) is available today on the App Store.
 - It supports iOS 27.0, iPadOS 27.0, visionOS 27.0, macOS 27.0 (Golden Gate) and watchOS 26.1 or later.
 - Integrations with standard.site-based articles, Streamplace, Frontpage and atmo.rsvp are available with ATP Nexus Pro, a paid in-app plan.
 - Video captions are temporarily unavailable.

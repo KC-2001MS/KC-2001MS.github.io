@@ -11,7 +11,7 @@ genre: リリース
 
 ![ATP Nexusのホーム画面](/images/newsroom/atpnexus-202610-home.webp "ATP Nexusのホーム画面")
 
-2026年10月28日 — 本日、Apple製品向けBlueskyクライアント「ATP Nexus」の最新アップデートを発表しました。今回のアップデートでBlueskyの世界を飛び出し、AT Protocol上に広がるブログ、ライブ配信、コミュニティ、イベントといったサービスと新たに連携します。さらに、iPhone Duoのために設計された分割表示、Apple Intelligenceによるスレッドの解説と代替テキストの生成、拡充されたSiriとショートカットの操作など、Appleデバイスの力を最大限に引き出す新機能が加わりました。
+2026年10月28日 — 本日、Apple製品向けBlueskyクライアント「[ATP Nexus](https://apps.apple.com/app/id6760347335)」の最新アップデートを発表しました。今回のアップデートでBlueskyの世界を飛び出し、AT Protocol上に広がるブログ、ライブ配信、コミュニティ、イベントといったサービスと新たに連携します。さらに、iPhone Duoのために設計された分割表示、Apple Intelligenceによるスレッドの解説と代替テキストの生成、拡充されたSiriとショートカットの操作など、Appleデバイスの力を最大限に引き出す新機能が加わりました。
 
 ## AT Protocolの世界が、ひとつのアプリに
 AT Protocolの上では、Blueskyだけでなく、ブログやライブ配信、コミュニティ、イベントなど、さまざまなサービスが次々と生まれています。ATP Nexus Proでは、こうしたサービスとの新たな連携により、Blueskyの外に広がる体験をアプリの中でそのまま楽しめるようになりました。
@@ -35,7 +35,7 @@ Siriおよびショートカットで利用できる操作を拡充し、DMの�
 投稿およびアカウント、チャット一覧でスワイプ操作が利用できるようになりました。300文字を超える投稿は自動でスレッドに分割されるため、文字数を気にせず投稿できます。このほか、スターターパックの検索と、おすすめアルゴリズムへの表示を控えるよう求める設定を追加しました。
 
 ## 価格と提供状況
-- ATP Nexusの最新アップデートは、本日よりApp Storeで提供しています。
+- [ATP Nexus](https://apps.apple.com/app/id6760347335)の最新アップデートは、本日よりApp Storeで提供しています。
 - iOS 27.0、iPadOS 27.0、visionOS 27.0、macOS 27.0（Golden Gate）、watchOS 26.1以降に対応しています。
 - standard.site系の記事、Streamplace、Frontpage、atmo.rsvpとの連携機能は、アプリ内の有料プランであるATP Nexus Proでご利用いただけます。
 - 動画のキャプション機能は、一時的に停止しています。
