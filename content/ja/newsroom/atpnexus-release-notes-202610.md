@@ -36,7 +36,7 @@ Siriおよびショートカットで利用できる操作を拡充し、DMの�
 
 ## 価格と提供状況
 - ATP Nexusの最新アップデートは、本日よりApp Storeで提供しています。
-- iOS 27.0、iPadOS 27.0、visionOS 27.0、macOS 27.0、watchOS 26.1以降に対応しています。
+- iOS 27.0、iPadOS 27.0、visionOS 27.0、macOS 27.0（Golden Gate）、watchOS 26.1以降に対応しています。
 - standard.site系の記事、Streamplace、Frontpage、atmo.rsvpとの連携機能は、アプリ内の有料プランであるATP Nexus Proでご利用いただけます。
 - 動画のキャプション機能は、一時的に停止しています。
 - GIFを添付するには、設定でKLIPYを有効にする必要があります。

@@ -26,7 +26,7 @@ This app has the following features
 | iOS | 27.0 ~ |
 | iPadOS | 27.0 ~ |
 | visionOS | 27.0 ~ |
-| macOS | 27.0 ~ |
+| macOS | 27.0(Golden Gate) ~ |
 | watchOS | 26.1 ~ |
 
 ## Privacy Policy

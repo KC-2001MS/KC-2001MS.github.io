@@ -36,7 +36,7 @@ Swipe actions are now available for posts, accounts and the chat list. Posts lon
 
 ## Pricing and availability
 - The latest update to ATP Nexus is available today on the App Store.
-- It supports iOS 27.0, iPadOS 27.0, visionOS 27.0, macOS 27.0 and watchOS 26.1 or later.
+- It supports iOS 27.0, iPadOS 27.0, visionOS 27.0, macOS 27.0 (Golden Gate) and watchOS 26.1 or later.
 - Integrations with standard.site-based articles, Streamplace, Frontpage and atmo.rsvp are available with ATP Nexus Pro, a paid in-app plan.
 - Video captions are temporarily unavailable.
 - Attaching GIFs requires enabling KLIPY in Settings.
