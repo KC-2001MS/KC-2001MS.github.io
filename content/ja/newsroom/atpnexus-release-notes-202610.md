@@ -3,7 +3,7 @@ title: ATP Nexus、Blueskyの枠を超える新たな連携と、パワフルな
 description: 本日、AT Protocol上のブログ、ライブ配信、コミュニティ、イベントとの新たな連携、iPhone Duoのための分割表示、Apple Intelligenceによるスレッドの解説と代替テキストの生成などを含む、ATP Nexusの最新アップデートを発表しました。
 keywords: ["ATP Nexus", "Bluesky", "AT Protocol", "Apple Intelligence", "iPhone Duo"]
 date: 2026/10/28
-genre: プレスリリース
+genre: リリース
 ---
 
 # ATP Nexus、Blueskyの枠を超える新たな連携と、パワフルな新機能を追加

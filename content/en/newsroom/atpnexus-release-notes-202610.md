@@ -2,7 +2,7 @@
 title: ATP Nexus adds new integrations beyond Bluesky and powerful new features
 description: Today, the latest update to ATP Nexus was announced, featuring new integrations with blogs, live streams, communities and events on the AT Protocol, split view designed for iPhone Duo, and thread explanations and alt text generation with Apple Intelligence.
 keywords: ["ATP Nexus", "Bluesky", "AT Protocol", "Apple Intelligence", "iPhone Duo"]
-genre: Press Release
+genre: Release
 date: 2026/10/28
 ---
 
