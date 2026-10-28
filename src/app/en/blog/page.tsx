@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { Metadata } from "next";
 import PageCard from "@/components/PageCard";
 import EmptyMessage from "@/components/EmptyMessage";
-import { readMarkdownFilenames } from "@/lib/markdown";
+import { readMarkdownFilenames, sortByDateDesc } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "Iroiro's blog",
@@ -115,5 +115,5 @@ async function getBlog() {
     });
 
   // 必要なデータを配列として返す
-  return blogList;
+  return sortByDateDesc(blogList);
 }

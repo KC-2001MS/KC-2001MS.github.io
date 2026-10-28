@@ -22,6 +22,15 @@ export function readMarkdownFilenames(directory: string): string[] {
   }
 }
 
+// 記事一覧を日付（date）が新しい順に並べる（日付がない・読めない記事は末尾）
+export function sortByDateDesc<T extends { date: string }>(items: T[]): T[] {
+  const time = (date: string) => {
+    const t = new Date(String(date)).getTime();
+    return isNaN(t) ? -Infinity : t;
+  };
+  return [...items].sort((a, b) => time(b.date) - time(a.date));
+}
+
 // generateStaticParams用のslug一覧を生成
 export function getStaticSlugs(directory: string): { slug: string }[] {
   const slugs = readMarkdownFilenames(directory).map((filename) => ({
