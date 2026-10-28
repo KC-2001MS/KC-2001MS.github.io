@@ -11,19 +11,19 @@
         "supportedPlatforms": [
           {
             "os": "iOS",
-            "version": "26.1"
+            "version": "27.0"
           },
           {
             "os": "iPadOS",
-            "version": "26.1"
+            "version": "27.0"
           },
           {
             "os": "visionOS",
-            "version": "26.1"
+            "version": "27.0"
           },
           {
             "os": "macOS",
-            "version": "26.1(Tahoe)"
+            "version": "27.0"
           },
           {
             "os": "watchOS",
